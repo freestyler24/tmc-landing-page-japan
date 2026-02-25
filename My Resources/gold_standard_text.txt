@@ -1,0 +1,343 @@
+﻿ 
+ 
+ 
+     
+          ðŸ† Japan 2026 â€“ Gold Standard AI Coding Prompt   
+     
+          Institutional High-Converting Landing Page Build Specification   
+           
+     
+     
+          ROLE   
+          You are a senior full-stack engineer and CRO specialist.   
+          Build a high-converting institutional landing page for Japan 2026.   
+          This is NOT a brochure website.         This is a controlled, psychology-driven conversion environment.   
+           
+     
+     
+     
+          ðŸŽ¯ PRIMARY OBJECTIVE   
+          Maximize:         Secure Your Childâ€™s Seat for Japan 2026 registrations.   
+          Secondary:         Brochure downloads.   
+           
+     
+     
+          ðŸ§± TECH STACK   
+              Next.js (App Router)   
+              Vercel deployment   
+              Vercel serverless API routes   
+              Airtable as temporary CRM   
+              Mobile-first architecture   
+              Lighthouse score 90+   
+           
+     
+     
+          ðŸ§­ HEADER (SEPARATE FROM HERO)   
+          Header must be its own component.         It must NOT be embedded inside the hero section.   
+     
+          Header Structure   
+          Left:         JAPAN 2026 (Text logo)   
+          Center:         Anchor scroll links:         - Programme         - Safety         - Investment         - FAQs   
+          Right:         Primary CTA button:         Secure Your Childâ€™s Seat   
+     
+     
+          Header Rules   
+              Height: 72â€“80px   
+              White background   
+              Thin bottom divider   
+              Sticky on scroll   
+              No dropdown menus   
+              No external links   
+              No homepage link   
+              No social icons   
+              Clean minimal layout   
+          Mobile:         - Collapsible anchor menu         - CTA remains visible         - Sticky bottom CTA allowed   
+           
+     
+     
+     
+          ðŸŸ¥ HERO SECTION (SEPARATE COMPONENT)   
+          Hero must sit BELOW header.   
+          Hero includes:   
+              School logos (credibility layer)   
+              Outcome-driven headline   
+              Subheadline: 09 Days | 04 Cities | October 2026 | Limited to 45 Students   
+              3 benefit bullets (results focused)   
+              Countdown timer   
+              Primary CTA   
+          No navigation inside hero.   
+           
+     
+     
+          ðŸŽ¨ VISUAL &amp; DESIGN SYSTEM   
+     
+          Design Philosophy   
+          Japanese-inspired minimalism:   
+              Ma (intentional whitespace)   
+              Shibui (understated elegance)   
+              Precision   
+              Calm authority   
+          No tourism clutter.         No corporate template feel.   
+           
+     
+     
+          Color System   
+          Primary Red: #C8102E       Deep Charcoal: #111111       Warm Off-White: #F5F3EF       Kyoto Gold Accent: #B89B5E (minimal use)   
+          Rules:         - No gradients         - No neon         - No blue tech theme         - High contrast CTA   
+           
+     
+     
+          Typography   
+          Headings: Noto Serif JP (or similar Japanese serif)         Body: Inter (or clean sans-serif)   
+          Scale:         - H1: 56px         - H2: 40px         - H3: 26px         - Body: 17px         - Small: 14px   
+          Line-height: 1.6         Generous spacing.   
+           
+     
+     
+          Layout System   
+              Max width: 1200px   
+              Mobile-first CSS   
+              80px section spacing mobile   
+              120px section spacing desktop   
+              Clean vertical rhythm   
+          Background alternation:         Off-white â†’ Red â†’ Off-white â†’ Charcoal   
+           
+     
+     
+          Button System   
+          Primary:         - Red background         - White text         - 16px 32px padding         - 8px radius         - Subtle hover lift   
+          Secondary:         - Red outline         - Transparent         - Fill on hover   
+          One dominant CTA repeated throughout page.   
+           
+     
+     
+     
+          ðŸ§  CONVERSION STRUCTURE (ORDER LOCKED)   
+              Header (separate)   
+              Hero   
+              Trailer Video   
+              Problem â†’ Outcome   
+              Programme Experience   
+              Trust &amp; Safety   
+              Testimonials   
+              FAQ   
+              Investment   
+              Brochure Section   
+              Registration Section   
+              Final Conversion Block   
+              Footer   
+           
+     
+     
+          ðŸŽ¬ TRAILER VIDEO SECTION   
+              Headline: Experience the Journey   
+              Lazy-loaded YouTube embed   
+              16:9 responsive   
+              No autoplay with sound   
+              Supporting benefit copy   
+              CTA below video   
+           
+     
+     
+          â­ TESTIMONIAL SECTION   
+              3â€“6 real parent testimonials   
+              Clean responsive grid   
+              Optional subtle star rating   
+              CTA banner after section   
+           
+     
+     
+          ðŸ“˜ FAQ SECTION   
+          Accordion layout.         SEO FAQ schema included.         Only one expanded at a time.         Smooth 0.3s animation.   
+          CTA banner after FAQ.   
+           
+     
+     
+          ðŸ§¾ FORMS   
+     
+          Registration   
+          POST â†’ /api/register       Append to Airtable table         â€œProgramme Registrationsâ€       Redirect â†’ /thank-you-registration   
+     
+     
+          Brochure   
+          POST â†’ /api/brochure       Append to Airtable table         â€œBrochure Downloadsâ€       Auto-download correct PDF (DPS or SOi)       Redirect â†’ /thank-you-brochure   
+          School selection is mandatory.   
+           
+     
+     
+     
+          ðŸ” BACKEND   
+          Create:   
+          /api/register       /api/brochure   
+          Must:         - Validate inputs         - Sanitize inputs         - Use environment variables         - Never expose Airtable key client-side   
+           
+     
+     
+          âš¡ PERFORMANCE   
+              Mobile-first   
+              LCP &lt; 1.5s   
+              Optimized images   
+              Lazy-loaded video   
+              Minimal JS   
+              Clean component structure   
+           
+     
+     
+          ðŸ“Š TRACKING   
+          Track:         - programme_registration         - brochure_download         - brochure_to_registration_conversion         - CTA_click   
+           
+     
+     
+          ðŸŽ¯ SUCCESS CRITERIA   
+          Page must:   
+              Feel institutional   
+              Feel premium   
+              Feel structured   
+              Guide user intentionally   
+              Remove confusion   
+              Build trust progressively   
+              Convert significantly above brochure-style layout   
+          Primary KPI:         Programme Registrations   
+           
+          This document serves as the complete design, conversion, and technical build specification for the Japan 2026 landing page.   
+           
+     
+     
+          ðŸš€ BUILD EXECUTION ROADMAP   
+          This roadmap defines the recommended implementation order to reduce complexity, prevent rework, and maintain architectural clarity.   
+           
+     
+          Phase 1 â€“ Project Setup (Foundation)   
+              Initialize Next.js project (App Router enabled).   
+              Configure TypeScript.   
+              Set up global CSS and design tokens (colors, spacing, typography).   
+              Configure ESLint + Prettier.   
+              Connect GitHub repository.   
+              Connect Vercel project.   
+              Set environment variables in Vercel (Airtable API key, Base ID, Table IDs).   
+          Deliverable:         Working blank layout deployed to Vercel.   
+           
+     
+     
+          Phase 2 â€“ Core Layout System   
+              Build Header component (separate from hero).   
+              Implement anchor scroll behavior.   
+              Build Footer component.   
+              Create reusable Section wrapper component.   
+              Create reusable CTA Button component.   
+              Define container width system (max 1200px).   
+          Deliverable:         Clean structural shell with navigation + footer working.   
+           
+     
+     
+          Phase 3 â€“ Hero + Countdown   
+              Build Hero section.   
+              Add school logos layout.   
+              Implement headline + subheadline hierarchy.   
+              Build reusable Countdown Timer component.   
+              Add primary CTA.   
+          Deliverable:         Fully functional hero section with countdown.   
+           
+     
+     
+          Phase 4 â€“ Content Sections   
+          Build in this order:   
+              Trailer Video section (lazy-loaded embed).   
+              Problem â†’ Outcome section.   
+              Programme Experience section.   
+              Trust &amp; Safety section.   
+              Testimonials section.   
+              FAQ accordion (with structured data schema).   
+              Investment section.   
+          After each section:         - Add CTA banner.         - Validate mobile responsiveness.   
+          Deliverable:         Complete content flow without forms.   
+           
+     
+     
+          Phase 5 â€“ Form System   
+              Create reusable Form component.   
+              Add client-side validation.   
+              Build Registration form.   
+              Build Brochure form.   
+              Add school conditional logic.   
+              Implement PDF auto-download behavior.   
+          Deliverable:         Front-end forms functional (mock submission).   
+           
+     
+     
+          Phase 6 â€“ Backend API Routes   
+              Create /api/register route.   
+              Create /api/brochure route.   
+              Implement server-side validation.   
+              Integrate Airtable API.   
+              Handle error states.   
+              Return structured JSON responses.   
+          Deliverable:         Leads successfully stored in Airtable.   
+           
+     
+     
+          Phase 7 â€“ Thank You Pages   
+              Build /thank-you-registration page.   
+              Build /thank-you-brochure page.   
+              Embed YouTube videos.   
+              Add upgrade CTA on brochure thank-you page.   
+          Deliverable:         Complete end-to-end flow working.   
+           
+     
+     
+          Phase 8 â€“ Performance Optimization   
+              Optimize images.   
+              Ensure video is lazy-loaded.   
+              Minimize JavaScript bundle.   
+              Check Lighthouse performance.   
+              Validate LCP under 1.5s.   
+              Test mobile performance thoroughly.   
+          Deliverable:         90+ Lighthouse score.   
+           
+     
+     
+          Phase 9 â€“ Analytics &amp; Tracking   
+              Implement event tracking.   
+              Track CTA clicks.   
+              Track brochure downloads.   
+              Track registrations.   
+              Verify event firing.   
+          Deliverable:         Accurate conversion tracking system.   
+           
+     
+     
+          Phase 10 â€“ Final QA Checklist   
+              Mobile responsiveness verified.   
+              Sticky header behavior tested.   
+              Forms validated with invalid inputs.   
+              Airtable entries verified.   
+              Countdown accurate.   
+              Anchor scroll smooth.   
+              No console errors.   
+              Cross-browser testing completed.   
+           
+     
+     
+     
+          ðŸ Launch Criteria   
+          The page is ready to launch when:   
+              Conversion flow is uninterrupted.   
+              No visual clutter exists.   
+              CTA visibility is consistent.   
+              Trust elements are properly positioned.   
+              Performance benchmarks are met.   
+           
+          This roadmap ensures structured execution, minimal refactoring, and maximum conversion alignment.   
+     
+     
+       
+        
+                
+         
+        
+              
+       
+     
+   
+ 
+

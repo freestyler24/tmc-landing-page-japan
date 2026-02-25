@@ -1,26 +1,94 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary-red: #C8102E;
+  --color-charcoal: #111111;
+  --color-offwhite: #F5F3EF;
+  --color-kyoto-gold: #B89B5E;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: var(--font-noto-serif-jp), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  /* Re-map standard brand colors to our palette for easier use */
+  --color-background: var(--color-offwhite);
+  --color-foreground: var(--color-charcoal);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+  }
+
+  /* Typography Scale */
+  h1 {
+    font-size: 56px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 17px;
+  }
+
+  .text-small {
+    font-size: 14px;
+  }
+
+  /* Utility classes for background alternation */
+  .bg-alt-offwhite {
+    background-color: var(--color-offwhite);
+    color: var(--color-charcoal);
+  }
+
+  .bg-alt-red {
+    background-color: var(--color-primary-red);
+    color: var(--color-offwhite);
+  }
+
+  .bg-alt-charcoal {
+    background-color: var(--color-charcoal);
+    color: var(--color-offwhite);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .ma-spacing-mob {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .ma-spacing-desk {
+    @media (min-width: 768px) {
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+  }
+
+  .container-max {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

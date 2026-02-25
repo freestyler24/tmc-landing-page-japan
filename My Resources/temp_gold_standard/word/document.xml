@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing">
+<w:body>
+    <w:bookmarkStart w:id="22" w:name="Xc6d6da311f7b5f2c382cf17fb0f0bcf5fd2acfe" />
+    <w:p><w:pPr><w:pStyle w:val="Heading1" /></w:pPr><w:r><w:t xml:space="preserve">🏆 Japan 2026 – Gold Standard AI Coding Prompt</w:t></w:r></w:p>
+    <w:bookmarkStart w:id="20" w:name="X3892af53947e32da6467cd9611daa7c83d4d884" />
+    <w:p><w:pPr><w:pStyle w:val="Heading2" /></w:pPr><w:r><w:t xml:space="preserve">Institutional High-Converting Landing Page Build Specification</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="20" />
+    <w:bookmarkStart w:id="21" w:name="role" />
+    <w:p><w:pPr><w:pStyle w:val="Heading2" /></w:pPr><w:r><w:t xml:space="preserve">ROLE</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">You are a senior full-stack engineer and CRO specialist.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="BodyText" /></w:pPr><w:r><w:t xml:space="preserve">Build a high-converting institutional landing page for Japan 2026.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="BodyText" /></w:pPr><w:r><w:t xml:space="preserve">This is NOT a brochure website.</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">This is a controlled, psychology-driven conversion environment.</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="21" />
+    <w:bookmarkEnd w:id="22" />
+    <w:bookmarkStart w:id="23" w:name="primary-objective" />
+    <w:p><w:pPr><w:pStyle w:val="Heading1" /></w:pPr><w:r><w:t xml:space="preserve">🎯 PRIMARY OBJECTIVE</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Maximize:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">Secure Your Child’s Seat for Japan 2026 registrations.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="BodyText" /></w:pPr><w:r><w:t xml:space="preserve">Secondary:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">Brochure downloads.</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="23" />
+    <w:bookmarkStart w:id="24" w:name="tech-stack" />
+    <w:p><w:pPr><w:pStyle w:val="Heading1" /></w:pPr><w:r><w:t xml:space="preserve">🧱 TECH STACK</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1001" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Next.js (App Router)</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1001" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Vercel deployment</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1001" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Vercel serverless API routes</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1001" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Airtable as temporary CRM</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1001" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Mobile-first architecture</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1001" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Lighthouse score 90+</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="24" />
+    <w:bookmarkStart w:id="27" w:name="header-separate-from-hero" />
+    <w:p><w:pPr><w:pStyle w:val="Heading1" /></w:pPr><w:r><w:t xml:space="preserve">🧭 HEADER (SEPARATE FROM HERO)</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Header must be its own component.</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">It must NOT be embedded inside the hero section.</w:t></w:r></w:p>
+    <w:bookmarkStart w:id="25" w:name="header-structure" />
+    <w:p><w:pPr><w:pStyle w:val="Heading3" /></w:pPr><w:r><w:t xml:space="preserve">Header Structure</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Left:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">JAPAN 2026 (Text logo)</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="BodyText" /></w:pPr><w:r><w:t xml:space="preserve">Center:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">Anchor scroll links:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- Programme</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- Safety</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- Investment</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- FAQs</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="BodyText" /></w:pPr><w:r><w:t xml:space="preserve">Right:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">Primary CTA button:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">Secure Your Child’s Seat</w:t></w:r></w:p>
+    <w:bookmarkEnd w:id="25" />
+    <w:bookmarkStart w:id="26" w:name="header-rules" />
+    <w:p><w:pPr><w:pStyle w:val="Heading3" /></w:pPr><w:r><w:t xml:space="preserve">Header Rules</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1002" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Height: 72–80px</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1002" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">White background</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1002" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Thin bottom divider</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1002" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Sticky on scroll</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1002" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">No dropdown menus</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1002" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">No external links</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1002" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">No homepage link</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1002" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">No social icons</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1002" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Clean minimal layout</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Mobile:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- Collapsible anchor menu</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- CTA remains visible</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- Sticky bottom CTA allowed</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="26" />
+    <w:bookmarkEnd w:id="27" />
+    <w:bookmarkStart w:id="28" w:name="hero-section-separate-component" />
+    <w:p><w:pPr><w:pStyle w:val="Heading1" /></w:pPr><w:r><w:t xml:space="preserve">🟥 HERO SECTION (SEPARATE COMPONENT)</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Hero must sit BELOW header.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="BodyText" /></w:pPr><w:r><w:t xml:space="preserve">Hero includes:</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1003" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">School logos (credibility layer)</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1003" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Outcome-driven headline</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1003" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Subheadline: 09 Days | 04 Cities | October 2026 | Limited to 45 Students</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1003" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">3 benefit bullets (results focused)</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1003" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Countdown timer</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1003" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Primary CTA</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">No navigation inside hero.</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="28" />
+    <w:bookmarkStart w:id="34" w:name="visual-design-system" />
+    <w:p><w:pPr><w:pStyle w:val="Heading1" /></w:pPr><w:r><w:t xml:space="preserve">🎨 VISUAL &amp; DESIGN SYSTEM</w:t></w:r></w:p>
+    <w:bookmarkStart w:id="29" w:name="design-philosophy" />
+    <w:p><w:pPr><w:pStyle w:val="Heading2" /></w:pPr><w:r><w:t xml:space="preserve">Design Philosophy</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Japanese-inspired minimalism:</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1004" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Ma (intentional whitespace)</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1004" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Shibui (understated elegance)</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1004" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Precision</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1004" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Calm authority</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">No tourism clutter.</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">No corporate template feel.</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="29" />
+    <w:bookmarkStart w:id="30" w:name="color-system" />
+    <w:p><w:pPr><w:pStyle w:val="Heading2" /></w:pPr><w:r><w:t xml:space="preserve">Color System</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Primary Red: #C8102E</w:t></w:r><w:r><w:br /></w:r><w:r><w:t xml:space="preserve">Deep Charcoal: #111111</w:t></w:r><w:r><w:br /></w:r><w:r><w:t xml:space="preserve">Warm Off-White: #F5F3EF</w:t></w:r><w:r><w:br /></w:r><w:r><w:t xml:space="preserve">Kyoto Gold Accent: #B89B5E (minimal use)</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="BodyText" /></w:pPr><w:r><w:t xml:space="preserve">Rules:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- No gradients</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- No neon</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- No blue tech theme</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- High contrast CTA</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="30" />
+    <w:bookmarkStart w:id="31" w:name="typography" />
+    <w:p><w:pPr><w:pStyle w:val="Heading2" /></w:pPr><w:r><w:t xml:space="preserve">Typography</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Headings: Noto Serif JP (or similar Japanese serif)</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">Body: Inter (or clean sans-serif)</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="BodyText" /></w:pPr><w:r><w:t xml:space="preserve">Scale:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- H1: 56px</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- H2: 40px</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- H3: 26px</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- Body: 17px</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- Small: 14px</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="BodyText" /></w:pPr><w:r><w:t xml:space="preserve">Line-height: 1.6</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">Generous spacing.</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="31" />
+    <w:bookmarkStart w:id="32" w:name="layout-system" />
+    <w:p><w:pPr><w:pStyle w:val="Heading2" /></w:pPr><w:r><w:t xml:space="preserve">Layout System</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1005" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Max width: 1200px</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1005" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Mobile-first CSS</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1005" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">80px section spacing mobile</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1005" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">120px section spacing desktop</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1005" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Clean vertical rhythm</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Background alternation:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">Off-white → Red → Off-white → Charcoal</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="32" />
+    <w:bookmarkStart w:id="33" w:name="button-system" />
+    <w:p><w:pPr><w:pStyle w:val="Heading2" /></w:pPr><w:r><w:t xml:space="preserve">Button System</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Primary:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- Red background</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- White text</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- 16px 32px padding</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- 8px radius</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- Subtle hover lift</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="BodyText" /></w:pPr><w:r><w:t xml:space="preserve">Secondary:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- Red outline</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- Transparent</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- Fill on hover</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="BodyText" /></w:pPr><w:r><w:t xml:space="preserve">One dominant CTA repeated throughout page.</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="33" />
+    <w:bookmarkEnd w:id="34" />
+    <w:bookmarkStart w:id="35" w:name="conversion-structure-order-locked" />
+    <w:p><w:pPr><w:pStyle w:val="Heading1" /></w:pPr><w:r><w:t xml:space="preserve">🧠 CONVERSION STRUCTURE (ORDER LOCKED)</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1006" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Header (separate)</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1006" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Hero</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1006" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Trailer Video</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1006" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Problem → Outcome</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1006" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Programme Experience</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1006" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Trust &amp; Safety</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1006" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Testimonials</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1006" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">FAQ</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1006" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Investment</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1006" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Brochure Section</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1006" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Registration Section</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1006" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Final Conversion Block</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1006" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Footer</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="35" />
+    <w:bookmarkStart w:id="36" w:name="trailer-video-section" />
+    <w:p><w:pPr><w:pStyle w:val="Heading1" /></w:pPr><w:r><w:t xml:space="preserve">🎬 TRAILER VIDEO SECTION</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1007" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Headline: Experience the Journey</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1007" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Lazy-loaded YouTube embed</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1007" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">16:9 responsive</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1007" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">No autoplay with sound</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1007" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Supporting benefit copy</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1007" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">CTA below video</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="36" />
+    <w:bookmarkStart w:id="37" w:name="testimonial-section" />
+    <w:p><w:pPr><w:pStyle w:val="Heading1" /></w:pPr><w:r><w:t xml:space="preserve">⭐ TESTIMONIAL SECTION</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1008" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">3–6 real parent testimonials</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1008" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Clean responsive grid</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1008" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Optional subtle star rating</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1008" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">CTA banner after section</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="37" />
+    <w:bookmarkStart w:id="38" w:name="faq-section" />
+    <w:p><w:pPr><w:pStyle w:val="Heading1" /></w:pPr><w:r><w:t xml:space="preserve">📘 FAQ SECTION</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Accordion layout.</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">SEO FAQ schema included.</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">Only one expanded at a time.</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">Smooth 0.3s animation.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="BodyText" /></w:pPr><w:r><w:t xml:space="preserve">CTA banner after FAQ.</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="38" />
+    <w:bookmarkStart w:id="41" w:name="forms" />
+    <w:p><w:pPr><w:pStyle w:val="Heading1" /></w:pPr><w:r><w:t xml:space="preserve">🧾 FORMS</w:t></w:r></w:p>
+    <w:bookmarkStart w:id="39" w:name="registration" />
+    <w:p><w:pPr><w:pStyle w:val="Heading2" /></w:pPr><w:r><w:t xml:space="preserve">Registration</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">POST → /api/register</w:t></w:r><w:r><w:br /></w:r><w:r><w:t xml:space="preserve">Append to Airtable table</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">“Programme Registrations”</w:t></w:r><w:r><w:br /></w:r><w:r><w:t xml:space="preserve">Redirect → /thank-you-registration</w:t></w:r></w:p>
+    <w:bookmarkEnd w:id="39" />
+    <w:bookmarkStart w:id="40" w:name="brochure" />
+    <w:p><w:pPr><w:pStyle w:val="Heading2" /></w:pPr><w:r><w:t xml:space="preserve">Brochure</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">POST → /api/brochure</w:t></w:r><w:r><w:br /></w:r><w:r><w:t xml:space="preserve">Append to Airtable table</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">“Brochure Downloads”</w:t></w:r><w:r><w:br /></w:r><w:r><w:t xml:space="preserve">Auto-download correct PDF (DPS or SOi)</w:t></w:r><w:r><w:br /></w:r><w:r><w:t xml:space="preserve">Redirect → /thank-you-brochure</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="BodyText" /></w:pPr><w:r><w:t xml:space="preserve">School selection is mandatory.</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="40" />
+    <w:bookmarkEnd w:id="41" />
+    <w:bookmarkStart w:id="42" w:name="backend" />
+    <w:p><w:pPr><w:pStyle w:val="Heading1" /></w:pPr><w:r><w:t xml:space="preserve">🔐 BACKEND</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Create:</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="BodyText" /></w:pPr><w:r><w:t xml:space="preserve">/api/register</w:t></w:r><w:r><w:br /></w:r><w:r><w:t xml:space="preserve">/api/brochure</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="BodyText" /></w:pPr><w:r><w:t xml:space="preserve">Must:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- Validate inputs</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- Sanitize inputs</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- Use environment variables</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- Never expose Airtable key client-side</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="42" />
+    <w:bookmarkStart w:id="43" w:name="performance" />
+    <w:p><w:pPr><w:pStyle w:val="Heading1" /></w:pPr><w:r><w:t xml:space="preserve">⚡ PERFORMANCE</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1009" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Mobile-first</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1009" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">LCP &lt; 1.5s</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1009" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Optimized images</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1009" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Lazy-loaded video</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1009" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Minimal JS</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1009" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Clean component structure</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="43" />
+    <w:bookmarkStart w:id="44" w:name="tracking" />
+    <w:p><w:pPr><w:pStyle w:val="Heading1" /></w:pPr><w:r><w:t xml:space="preserve">📊 TRACKING</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Track:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- programme_registration</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- brochure_download</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- brochure_to_registration_conversion</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- CTA_click</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="44" />
+    <w:bookmarkStart w:id="45" w:name="success-criteria" />
+    <w:p><w:pPr><w:pStyle w:val="Heading1" /></w:pPr><w:r><w:t xml:space="preserve">🎯 SUCCESS CRITERIA</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Page must:</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1010" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Feel institutional</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1010" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Feel premium</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1010" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Feel structured</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1010" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Guide user intentionally</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1010" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Remove confusion</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1010" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Build trust progressively</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1010" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Convert significantly above brochure-style layout</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Primary KPI:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">Programme Registrations</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">This document serves as the complete design, conversion, and technical build specification for the Japan 2026 landing page.</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="45" />
+    <w:bookmarkStart w:id="56" w:name="build-execution-roadmap" />
+    <w:p><w:pPr><w:pStyle w:val="Heading1" /></w:pPr><w:r><w:t xml:space="preserve">🚀 BUILD EXECUTION ROADMAP</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">This roadmap defines the recommended implementation order to reduce complexity, prevent rework, and maintain architectural clarity.</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkStart w:id="46" w:name="phase-1-project-setup-foundation" />
+    <w:p><w:pPr><w:pStyle w:val="Heading2" /></w:pPr><w:r><w:t xml:space="preserve">Phase 1 – Project Setup (Foundation)</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1011" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Initialize Next.js project (App Router enabled).</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1011" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Configure TypeScript.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1011" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Set up global CSS and design tokens (colors, spacing, typography).</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1011" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Configure ESLint + Prettier.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1011" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Connect GitHub repository.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1011" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Connect Vercel project.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1011" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Set environment variables in Vercel (Airtable API key, Base ID, Table IDs).</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Deliverable:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">Working blank layout deployed to Vercel.</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="46" />
+    <w:bookmarkStart w:id="47" w:name="phase-2-core-layout-system" />
+    <w:p><w:pPr><w:pStyle w:val="Heading2" /></w:pPr><w:r><w:t xml:space="preserve">Phase 2 – Core Layout System</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1012" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Build Header component (separate from hero).</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1012" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Implement anchor scroll behavior.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1012" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Build Footer component.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1012" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Create reusable Section wrapper component.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1012" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Create reusable CTA Button component.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1012" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Define container width system (max 1200px).</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Deliverable:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">Clean structural shell with navigation + footer working.</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="47" />
+    <w:bookmarkStart w:id="48" w:name="phase-3-hero-countdown" />
+    <w:p><w:pPr><w:pStyle w:val="Heading2" /></w:pPr><w:r><w:t xml:space="preserve">Phase 3 – Hero + Countdown</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1013" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Build Hero section.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1013" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Add school logos layout.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1013" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Implement headline + subheadline hierarchy.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1013" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Build reusable Countdown Timer component.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1013" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Add primary CTA.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Deliverable:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">Fully functional hero section with countdown.</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="48" />
+    <w:bookmarkStart w:id="49" w:name="phase-4-content-sections" />
+    <w:p><w:pPr><w:pStyle w:val="Heading2" /></w:pPr><w:r><w:t xml:space="preserve">Phase 4 – Content Sections</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Build in this order:</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1014" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Trailer Video section (lazy-loaded embed).</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1014" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Problem → Outcome section.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1014" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Programme Experience section.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1014" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Trust &amp; Safety section.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1014" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Testimonials section.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1014" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">FAQ accordion (with structured data schema).</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1014" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Investment section.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">After each section:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- Add CTA banner.</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">- Validate mobile responsiveness.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="BodyText" /></w:pPr><w:r><w:t xml:space="preserve">Deliverable:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">Complete content flow without forms.</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="49" />
+    <w:bookmarkStart w:id="50" w:name="phase-5-form-system" />
+    <w:p><w:pPr><w:pStyle w:val="Heading2" /></w:pPr><w:r><w:t xml:space="preserve">Phase 5 – Form System</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1015" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Create reusable Form component.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1015" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Add client-side validation.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1015" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Build Registration form.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1015" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Build Brochure form.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1015" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Add school conditional logic.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1015" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Implement PDF auto-download behavior.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Deliverable:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">Front-end forms functional (mock submission).</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="50" />
+    <w:bookmarkStart w:id="51" w:name="phase-6-backend-api-routes" />
+    <w:p><w:pPr><w:pStyle w:val="Heading2" /></w:pPr><w:r><w:t xml:space="preserve">Phase 6 – Backend API Routes</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1016" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Create /api/register route.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1016" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Create /api/brochure route.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1016" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Implement server-side validation.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1016" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Integrate Airtable API.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1016" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Handle error states.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1016" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Return structured JSON responses.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Deliverable:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">Leads successfully stored in Airtable.</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="51" />
+    <w:bookmarkStart w:id="52" w:name="phase-7-thank-you-pages" />
+    <w:p><w:pPr><w:pStyle w:val="Heading2" /></w:pPr><w:r><w:t xml:space="preserve">Phase 7 – Thank You Pages</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1017" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Build /thank-you-registration page.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1017" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Build /thank-you-brochure page.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1017" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Embed YouTube videos.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1017" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Add upgrade CTA on brochure thank-you page.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Deliverable:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">Complete end-to-end flow working.</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="52" />
+    <w:bookmarkStart w:id="53" w:name="phase-8-performance-optimization" />
+    <w:p><w:pPr><w:pStyle w:val="Heading2" /></w:pPr><w:r><w:t xml:space="preserve">Phase 8 – Performance Optimization</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1018" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Optimize images.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1018" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Ensure video is lazy-loaded.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1018" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Minimize JavaScript bundle.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1018" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Check Lighthouse performance.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1018" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Validate LCP under 1.5s.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1018" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Test mobile performance thoroughly.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Deliverable:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">90+ Lighthouse score.</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="53" />
+    <w:bookmarkStart w:id="54" w:name="phase-9-analytics-tracking" />
+    <w:p><w:pPr><w:pStyle w:val="Heading2" /></w:pPr><w:r><w:t xml:space="preserve">Phase 9 – Analytics &amp; Tracking</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1019" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Implement event tracking.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1019" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Track CTA clicks.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1019" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Track brochure downloads.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1019" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Track registrations.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1019" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Verify event firing.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">Deliverable:</w:t></w:r><w:r><w:t xml:space="preserve"> </w:t></w:r><w:r><w:t xml:space="preserve">Accurate conversion tracking system.</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="54" />
+    <w:bookmarkStart w:id="55" w:name="phase-10-final-qa-checklist" />
+    <w:p><w:pPr><w:pStyle w:val="Heading2" /></w:pPr><w:r><w:t xml:space="preserve">Phase 10 – Final QA Checklist</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1020" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Mobile responsiveness verified.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1020" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Sticky header behavior tested.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1020" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Forms validated with invalid inputs.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1020" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Airtable entries verified.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1020" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Countdown accurate.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1020" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Anchor scroll smooth.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1020" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">No console errors.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1020" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Cross-browser testing completed.</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:bookmarkEnd w:id="55" />
+    <w:bookmarkEnd w:id="56" />
+    <w:bookmarkStart w:id="57" w:name="launch-criteria" />
+    <w:p><w:pPr><w:pStyle w:val="Heading1" /></w:pPr><w:r><w:t xml:space="preserve">🏁 Launch Criteria</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">The page is ready to launch when:</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1021" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Conversion flow is uninterrupted.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1021" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">No visual clutter exists.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1021" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">CTA visibility is consistent.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1021" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Trust elements are properly positioned.</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="Compact" /><w:numPr><w:ilvl w:val="0" /><w:numId w:val="1021" /></w:numPr></w:pPr><w:r><w:t xml:space="preserve">Performance benchmarks are met.</w:t></w:r></w:p>
+    <w:p><w:r><w:pict><v:rect style="width:0;height:1.5pt" o:hralign="center" o:hrstd="t" o:hr="t" /></w:pict></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="FirstParagraph" /></w:pPr><w:r><w:t xml:space="preserve">This roadmap ensures structured execution, minimal refactoring, and maximum conversion alignment.</w:t></w:r></w:p>
+    <w:bookmarkEnd w:id="57" />
+    <w:sectPr>
+      <w:footnotePr>
+        
+                
+        <w:numRestart w:val="eachSect" />
+        
+              
+      </w:footnotePr>
+    </w:sectPr>
+  </w:body>
+</w:document>
