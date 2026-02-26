@@ -99,16 +99,28 @@ export default function Registration() {
                     <h2 className="text-4xl md:text-5xl font-serif text-charcoal mb-4">
                         Register for the Parent Orientation <br className="hidden md:block" />— Japan 2026
                     </h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
-                        Submitting this form reserves your seat for the orientation session.
+                    <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto mb-8">
+                        Submitting this form reserves your seat for the orientation session where we will cover:
                     </p>
-                    <ul className="text-gray-600 max-w-md mx-auto text-left mt-4 space-y-2">
-                        <li className="flex items-start gap-2"><span className="text-primary-red">•</span> Review the complete itinerary</li>
-                        <li className="flex items-start gap-2"><span className="text-primary-red">•</span> Understand the safety framework</li>
-                        <li className="flex items-start gap-2"><span className="text-primary-red">•</span> See the full investment structure</li>
-                        <li className="flex items-start gap-2"><span className="text-primary-red">•</span> Ask your questions directly</li>
-                    </ul>
-                    <p className="text-gray-500 text-sm mt-4 italic">This does not confirm enrolment.</p>
+
+                    <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-8 text-left">
+                        {[
+                            { title: 'Complete Itinerary', desc: 'Review the detailed day-by-day schedule.' },
+                            { title: 'Safety Framework', desc: 'Understand our strict 1:20 supervision protocols.' },
+                            { title: 'Investment Structure', desc: 'See the full transparent financial breakdown.' },
+                            { title: 'Live Q&A', desc: 'Get all your specific questions answered directly.' }
+                        ].map((item, i) => (
+                            <div key={i} className="bg-white p-5 border border-gray-100 shadow-sm relative overflow-hidden group hover:border-gray-200 hover:shadow-md transition-all">
+                                <div className="absolute top-0 left-0 w-1 h-full bg-primary-red opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                                <h4 className="font-bold text-charcoal text-sm uppercase tracking-wider mb-1">{item.title}</h4>
+                                <p className="text-xs text-gray-500">{item.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="inline-block bg-gray-100 text-gray-600 px-4 py-2 rounded-sm text-xs font-semibold uppercase tracking-wider mb-4">
+                        Note: This does not confirm enrolment
+                    </div>
                 </motion.div>
 
                 <motion.div
