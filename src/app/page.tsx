@@ -24,8 +24,8 @@ export default function Home() {
       <Testimonials />
       <FAQ />
       <Investment />
-      <Brochure />
       <Registration />
+      <Brochure />
       <FinalCTA />
       <Footer />
     </main>

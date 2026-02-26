@@ -65,15 +65,17 @@ export default function Brochure() {
             <div className="container-max max-w-3xl">
 
                 <div className="inline-block border border-kyoto-gold text-kyoto-gold px-4 py-1 rounded-full text-xs font-bold tracking-widest mb-6">
-                    EXCLUSIVE ITINERARY
+                    STILL EXPLORING?
                 </div>
 
                 <h2 className="text-3xl md:text-4xl font-serif text-offwhite mb-6">
-                    Download the Detailed <br />Programme Overview
+                    Still Exploring? Download the Detailed <br />Programme Overview.
                 </h2>
 
                 <p className="text-gray-400 mb-10 max-w-xl mx-auto">
-                    If you would like the complete itinerary, safety framework, and payment structure, request the official brochure. Select your school to receive the correct branded version.
+                    If you would prefer to review the complete itinerary, inclusions, safety framework, and payment structure before attending the orientation, you may request the official brochure.
+                    <br /><br />
+                    Select your school to receive the correct branded version.
                 </p>
 
                 <div className="bg-gray-900 border border-gray-800 p-8 max-w-md mx-auto relative overflow-hidden">
@@ -135,12 +137,12 @@ export default function Brochure() {
                             disabled={isSubmitting}
                             className="w-full bg-transparent border border-kyoto-gold text-kyoto-gold hover:bg-kyoto-gold hover:text-charcoal px-6 py-3 font-semibold transition-colors mt-2 disabled:opacity-50 disabled:cursor-not-allowed"
                         >
-                            {isSubmitting ? 'Processing...' : 'Download Brochure'}
+                            {isSubmitting ? 'Processing...' : 'Download Programme Brochure'}
                         </button>
                     </form>
 
                     <p className="text-xs text-gray-500 mt-4 text-center">
-                        PDF auto-download starts after submission.
+                        No obligation. For informed decision-making.
                     </p>
                 </div>
 
