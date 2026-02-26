@@ -75,15 +75,20 @@ export default function Brochure() {
                         STILL EXPLORING?
                     </div>
 
-                    <h2 className="text-3xl md:text-4xl font-serif text-offwhite mb-6">
-                        Download the Detailed <br />Programme Overview.
+                    <h2 className="text-3xl md:text-5xl font-serif text-offwhite mb-8">
+                        Download the Detailed <br className="hidden md:block" />Programme Overview.
                     </h2>
 
-                    <p className="text-gray-400 mb-10 max-w-xl mx-auto">
-                        If you would prefer to review the complete itinerary, inclusions, safety framework, and payment structure before attending the orientation, you may request the official brochure.
-                        <br /><br />
-                        Select your school to receive the correct branded version.
-                    </p>
+                    <div className="max-w-3xl mx-auto bg-gray-900 bg-opacity-40 border border-gray-800 p-6 md:p-8 mb-12 shadow-inner">
+                        <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
+                            If you would prefer to review the complete itinerary, inclusions, safety framework, and payment structure before attending the orientation, you may request the official brochure.
+                        </p>
+                        <div className="flex items-center justify-center gap-3 text-kyoto-gold text-xs md:text-sm font-semibold uppercase tracking-widest">
+                            <span className="w-8 md:w-16 h-px bg-kyoto-gold opacity-50"></span>
+                            Select your school to receive the correct branded version
+                            <span className="w-8 md:w-16 h-px bg-kyoto-gold opacity-50"></span>
+                        </div>
+                    </div>
                 </motion.div>
 
                 <motion.div
