@@ -50,7 +50,8 @@ export async function POST(request: Request) {
             });
 
             if (!response.ok) {
-                console.error('Airtable Error:', await response.text());
+                const errText = await response.text();
+                console.error(`Airtable Error [${response.status}] BaseID=${AIRTABLE_BASE_ID} TableID=${TABLE_ID}:`, errText);
                 // We log the error but still redirect the user to not block their flow if CRM fails
             }
         } else {
