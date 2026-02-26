@@ -34,6 +34,75 @@ export default function Investment() {
                     </div>
                 </div>
 
+                {/* Installment Cards */}
+                <div className="grid md:grid-cols-3 gap-6 mt-12">
+                    {[
+                        {
+                            num: 1,
+                            title: 'First Installment',
+                            subtitle: 'Registration Fee',
+                            amount: '₹9,999',
+                            note: 'Non-refundable',
+                            date: '31st March 2026',
+                            payee: 'Travelstall'
+                        },
+                        {
+                            num: 2,
+                            title: 'Second Installment',
+                            subtitle: 'Mid-term Payment',
+                            amount: '₹1,20,000',
+                            note: null,
+                            date: '1st July 2026',
+                            payee: 'Travelstall'
+                        },
+                        {
+                            num: 3,
+                            title: 'Third Installment',
+                            subtitle: 'Final Payment',
+                            amount: '₹1,60,000',
+                            note: null,
+                            date: '1st September 2026',
+                            payee: 'TMC Nexus Pvt Ltd'
+                        }
+                    ].map((inst) => (
+                        <div key={inst.num} className="bg-white text-charcoal rounded-lg shadow-lg overflow-hidden border border-gray-100">
+                            {/* Red top accent bar */}
+                            <div className="h-1.5 bg-primary-red"></div>
+                            <div className="p-6">
+                                {/* Header */}
+                                <div className="flex items-center gap-3 mb-4">
+                                    <span className="w-9 h-9 rounded-full bg-red-50 text-primary-red font-bold text-sm flex items-center justify-center border border-red-200">
+                                        {inst.num}
+                                    </span>
+                                    <div>
+                                        <h4 className="font-bold text-lg leading-tight">{inst.title}</h4>
+                                        <p className="text-gray-500 text-xs">{inst.subtitle}</p>
+                                    </div>
+                                </div>
+
+                                {/* Amount */}
+                                <p className="text-primary-red text-3xl font-bold mb-1">{inst.amount}</p>
+                                {inst.note && (
+                                    <p className="text-gray-500 text-xs mb-4">{inst.note}</p>
+                                )}
+                                {!inst.note && <div className="mb-4"></div>}
+
+                                {/* Meta */}
+                                <div className="space-y-2 text-sm text-gray-600">
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-gray-400">📅</span>
+                                        {inst.date}
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-gray-400">🏢</span>
+                                        {inst.payee}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
                 <div className="mt-12 text-center text-red-50 text-sm opacity-80 max-w-3xl mx-auto leading-relaxed">
                     <p>
                         All financial details will be shared transparently during orientation.
