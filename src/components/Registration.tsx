@@ -28,9 +28,25 @@ export default function Registration() {
             return;
         }
         // Basic validation for Step 2
-        if (step === 2 && (!formData.parent_name || !formData.parent_email || !formData.parent_phone)) {
-            alert("Please fill in all fields before proceeding.");
-            return;
+        if (step === 2) {
+            if (!formData.parent_name || !formData.parent_email || !formData.parent_phone) {
+                alert("Please fill in all fields before proceeding.");
+                return;
+            }
+
+            // Email Validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(formData.parent_email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            // Phone Validation (simple: must have at least 10 digits when non-digits are stripped)
+            const phoneDigits = formData.parent_phone.replace(/\D/g, '');
+            if (phoneDigits.length < 10) {
+                alert("Please enter a valid phone number (at least 10 digits).");
+                return;
+            }
         }
         setStep(prev => prev + 1);
     };
