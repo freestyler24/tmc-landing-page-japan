@@ -69,7 +69,7 @@ export default function Brochure() {
                 </div>
 
                 <h2 className="text-3xl md:text-4xl font-serif text-offwhite mb-6">
-                    Still Exploring? Download the Detailed <br />Programme Overview.
+                    Download the Detailed <br />Programme Overview.
                 </h2>
 
                 <p className="text-gray-400 mb-10 max-w-xl mx-auto">
