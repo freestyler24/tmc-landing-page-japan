@@ -4,44 +4,46 @@ import { motion } from 'framer-motion';
 
 export default function FinalCTA() {
     return (
-        <section className="bg-primary-red text-white py-20 md:py-32 text-center border-t border-red-900/30 relative overflow-hidden">
-            <div className="absolute inset-0 z-0 bg-gradient-to-br from-black/40 to-transparent"></div>
+        <section className="bg-primary-red py-20 md:py-32 text-center relative overflow-hidden">
+            {/* Subtle dark gradient overlay */}
+            <div className="absolute inset-0 z-0" style={{ background: 'linear-gradient(135deg, rgba(0,0,0,0.3) 0%, transparent 50%, rgba(0,0,0,0.2) 100%)' }}></div>
 
             <div className="container-max max-w-5xl relative z-10">
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                    className="border border-white/20 p-8 md:p-16 backdrop-blur-md bg-black/20 shadow-2xl rounded-sm"
+                    transition={{ duration: 0.7 }}
                 >
                     <h2 className="text-4xl md:text-6xl font-serif text-white mb-8 md:mb-10 leading-tight">
                         Understand the Structure <br className="hidden md:block" />Before You Decide.
                     </h2>
 
+                    <div className="w-12 h-1 bg-white mx-auto mb-8" style={{ opacity: 0.5 }}></div>
+
                     <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-12">
-                        <div className="bg-white/10 text-white px-6 py-3 rounded-full text-xs md:text-sm font-bold tracking-widest border border-white/30 shadow-inner">
+                        <div className="text-white px-6 py-3 rounded-full text-xs md:text-sm font-bold tracking-widest" style={{ border: '1px solid rgba(255,255,255,0.4)', background: 'rgba(255,255,255,0.1)' }}>
                             09 DAYS. 04 CITIES.
                         </div>
-                        <div className="hidden md:block w-12 h-px bg-white opacity-40"></div>
-                        <div className="text-white text-opacity-90 font-serif text-lg md:text-xl italic">
+                        <div className="hidden md:block w-12 h-px bg-white" style={{ opacity: 0.4 }}></div>
+                        <div className="text-white font-serif text-lg md:text-xl italic" style={{ opacity: 0.9 }}>
                             One Transformational Educational Journey.
                         </div>
                     </div>
 
-                    <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-base md:text-lg text-white font-medium mb-12 opacity-90">
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-base md:text-lg text-white font-medium mb-12" style={{ opacity: 0.9 }}>
                         <div className="flex flex-col items-center">
-                            <span className="text-4xl font-serif text-white opacity-40 mb-2">1</span>
+                            <span className="text-4xl font-serif text-white mb-2" style={{ opacity: 0.4 }}>1</span>
                             <span className="tracking-wide">Join Parent Orientation</span>
                         </div>
-                        <div className="hidden md:block text-2xl opacity-40">→</div>
+                        <div className="hidden md:block text-2xl" style={{ opacity: 0.4 }}>→</div>
                         <div className="flex flex-col items-center">
-                            <span className="text-4xl font-serif text-white opacity-40 mb-2">2</span>
+                            <span className="text-4xl font-serif text-white mb-2" style={{ opacity: 0.4 }}>2</span>
                             <span className="tracking-wide">Review the framework</span>
                         </div>
-                        <div className="hidden md:block text-2xl opacity-40">→</div>
+                        <div className="hidden md:block text-2xl" style={{ opacity: 0.4 }}>→</div>
                         <div className="flex flex-col items-center">
-                            <span className="text-4xl font-serif text-white opacity-40 mb-2">3</span>
+                            <span className="text-4xl font-serif text-white mb-2" style={{ opacity: 0.4 }}>3</span>
                             <span className="tracking-wide">Decide with clarity</span>
                         </div>
                     </div>
@@ -50,7 +52,7 @@ export default function FinalCTA() {
                         href="#register"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="inline-block bg-white text-primary-red px-8 md:px-12 py-4 md:py-5 rounded-sm font-bold text-sm md:text-lg hover:bg-black hover:text-white transition-all uppercase tracking-widest shadow-xl ring-4 ring-white/20"
+                        className="inline-block bg-white text-primary-red px-8 md:px-12 py-4 md:py-5 rounded-sm font-bold text-sm md:text-lg hover:bg-black hover:text-white transition-all uppercase tracking-widest shadow-xl"
                     >
                         Register for the Parent Orientation
                     </motion.a>
