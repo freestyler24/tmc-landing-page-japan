@@ -17,6 +17,12 @@ export default function TrailerVideo() {
                 <div className="w-full max-w-4xl shadow-2xl bg-black mb-12 relative group cursor-pointer border border-red-800 rounded-sm overflow-hidden">
                     <Script src="https://fast.wistia.com/player.js" strategy="afterInteractive" />
                     <Script src="https://fast.wistia.com/embed/zwq5w6rf4r.js" strategy="afterInteractive" type="module" />
+                    <Script id="wistia-captions-disable" strategy="afterInteractive">
+                        {`
+                            window._wq = window._wq || [];
+                            _wq.push({ id: "zwq5w6rf4r", options: { plugin: { captions: { onByDefault: false } } } });
+                        `}
+                    </Script>
 
                     {/* Inject original DOM using dangerouslySetInnerHTML to ensure correct style parsing and custom element instantiation */}
                     <div dangerouslySetInnerHTML={{
