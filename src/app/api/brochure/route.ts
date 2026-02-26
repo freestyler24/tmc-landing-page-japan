@@ -32,9 +32,9 @@ export async function POST(request: Request) {
                         {
                             fields: {
                                 "Parent Name": parentName,
-                                "Phone Number": phoneNumber,
+                                "Phone": phoneNumber,
                                 "School": school,
-                                "Parent Email": email,
+                                "Email": email,
                                 "Timestamp": new Date().toISOString() // Tracking event
                             }
                         }

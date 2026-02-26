@@ -39,8 +39,8 @@ export async function POST(request: Request) {
                                 "Grade": grade || "",
                                 "School": school || "",
                                 "Parent Name": parentName || "",
-                                "Parent Email": email || "",
-                                "Parent Phone": phone || "",
+                                "Email": email || "",
+                                "Phone": phone || "",
                                 "Passport Status": passportStatus || "",
                                 "Status": "Pending Initial Block",
                                 "Timestamp": new Date().toISOString()
