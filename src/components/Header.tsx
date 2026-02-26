@@ -46,7 +46,7 @@ export default function Header() {
                         href="#register"
                         className="bg-primary-red text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-black transition-colors"
                     >
-                        Secure Your Child&apos;s Seat
+                        Register Now
                     </a>
                 </div>
 
@@ -89,7 +89,7 @@ export default function Header() {
                         className="mt-4 w-full text-center bg-primary-red text-white px-6 py-4 rounded-lg font-semibold"
                         onClick={() => setIsMenuOpen(false)}
                     >
-                        Secure Your Child&apos;s Seat
+                        Register Now
                     </a>
                 </div>
             )}

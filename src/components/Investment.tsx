@@ -4,7 +4,7 @@ export default function Investment() {
             <div className="container-max max-w-5xl">
 
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-serif mb-6">
+                    <h2 className="text-3xl md:text-5xl font-serif mb-4 md:mb-6">
                         Transparent Programme Investment
                     </h2>
                     <div className="w-16 h-1 bg-offwhite mx-auto mb-6 opacity-80"></div>

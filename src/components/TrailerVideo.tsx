@@ -5,14 +5,14 @@ export default function TrailerVideo() {
         <section className="bg-alt-red ma-spacing-mob ma-spacing-desk">
             <div className="container-max flex flex-col items-center text-center">
 
-                <h2 className="text-4xl md:text-5xl font-serif text-offwhite mb-6">
+                <h2 className="text-3xl md:text-5xl font-serif text-offwhite mb-4 md:mb-6">
                     See the Experience Before You Decide.
                 </h2>
 
-                <p className="max-w-2xl text-lg text-red-50 mb-4 opacity-90">
+                <p className="max-w-2xl text-base md:text-lg text-red-50 mb-3 md:mb-4 opacity-90">
                     Before reading further, take a moment to see what this journey feels like.
                 </p>
-                <p className="max-w-2xl text-lg text-red-50 mb-12 opacity-90">
+                <p className="max-w-2xl text-base md:text-lg text-red-50 mb-8 md:mb-12 opacity-90">
                     Notice the precision. The structure. The quiet discipline.<br />
                     This is not tourism. It is structured exposure.
                 </p>
@@ -46,7 +46,7 @@ export default function TrailerVideo() {
                 <div>
                     <a
                         href="#register"
-                        className="inline-block bg-transparent border-2 border-offwhite text-offwhite px-8 py-3 rounded-sm text-lg font-semibold hover:bg-offwhite hover:text-primary-red transition-colors"
+                        className="inline-block bg-transparent border-2 border-offwhite text-offwhite px-6 md:px-8 py-3 rounded-sm text-sm md:text-lg font-semibold hover:bg-offwhite hover:text-primary-red transition-colors"
                     >
                         Register for Parent Orientation
                     </a>

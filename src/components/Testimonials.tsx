@@ -18,16 +18,16 @@ export default function Testimonials() {
         <section className="bg-alt-charcoal ma-spacing-mob ma-spacing-desk relative overflow-hidden">
             <div className="container-max relative z-10">
 
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-serif text-offwhite mb-6">
+                <div className="text-center mb-10 md:mb-16">
+                    <h2 className="text-3xl md:text-5xl font-serif text-offwhite mb-4 md:mb-6">
                         They Returned More Independent. More Composed.
                     </h2>
                     <div className="w-16 h-1 bg-primary-red mx-auto"></div>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
+                <div className="grid md:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto mb-10 md:mb-16">
                     {testimonials.map((t, i) => (
-                        <div key={i} className="bg-gray-900 border border-gray-800 p-8 flex flex-col justify-between">
+                        <div key={i} className="bg-gray-900 border border-gray-800 p-6 md:p-8 flex flex-col justify-between">
                             <div>
                                 <div className="flex text-kyoto-gold mb-6 text-sm">
                                     ★★★★★

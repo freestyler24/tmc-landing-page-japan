@@ -3,20 +3,20 @@ export default function ProblemOutcome() {
         <section className="bg-alt-offwhite ma-spacing-mob ma-spacing-desk border-b border-gray-200">
             <div className="container-max max-w-5xl">
 
-                <div className="grid md:grid-cols-2 gap-16 items-center">
+                <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                     {/* Problem Side */}
                     <div className="space-y-6">
                         <h2 className="text-3xl md:text-4xl font-serif text-charcoal leading-tight">
                             Because Academics Alone Are No Longer Enough.
                         </h2>
                         <div className="w-12 h-1 bg-primary-red"></div>
-                        <p className="text-lg text-gray-600">
+                        <p className="text-base md:text-lg text-gray-600">
                             Your child lives in a world that rewards more than grades. It rewards adaptability, cultural awareness, and composure under uncertainty.
                         </p>
-                        <p className="text-lg text-gray-600">
+                        <p className="text-base md:text-lg text-gray-600">
                             Yet most exposure today is filtered through screens. Real-world systems thinking is rarely observed firsthand.
                         </p>
-                        <p className="text-lg text-gray-600">
+                        <p className="text-base md:text-lg text-gray-600">
                             Japan offers a rare opportunity to experience a society where heritage and innovation evolve together.
                         </p>
                     </div>
