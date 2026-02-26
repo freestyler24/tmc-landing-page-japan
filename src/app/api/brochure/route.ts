@@ -2,11 +2,13 @@ import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
     try {
-        const formData = await request.formData();
-        const email = formData.get('email');
-        const parentName = formData.get('parent_name');
-        const phoneNumber = formData.get('phone_number');
-        const school = formData.get('school');
+        const body = await request.json();
+        const {
+            email,
+            parent_name: parentName,
+            phone_number: phoneNumber,
+            school
+        } = body;
 
         // 1. Validate inputs
         if (!email || !parentName || !phoneNumber || !school) {
@@ -42,14 +44,8 @@ export async function POST(request: Request) {
             console.log('No Airtable credentials found. Mocking successful brochure request:', { parentName, phoneNumber, school, email });
         }
 
-        // 3. Redirect & Trigger Download
-        // A standard pattern to trigger a file download AND redirect is tricky in a single HTTP response.
-        // The easiest way for a Next.js server route that must redirect is to redirect to the Thank You page,
-        // and have the Thank You page handle the client-side download via a script or meta-refresh.
-        // Alternatively, we can return the PDF directly, but the spec asks to "Redirect -> /thank-you-brochure".
-
-        // For now, redirect to the Thank You page. We will pass a query param to trigger the download.
-        return NextResponse.redirect(new URL('/thank-you-brochure?download=true', request.url), 303);
+        // 3. Return generic JSON success
+        return NextResponse.json({ success: true }, { status: 200 });
 
     } catch (error) {
         console.error('Brochure Route Error:', error);

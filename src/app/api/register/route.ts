@@ -2,14 +2,16 @@ import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
     try {
-        const formData = await request.formData();
-        const studentName = formData.get('student_name');
-        const grade = formData.get('grade');
-        const school = formData.get('school');
-        const parentName = formData.get('parent_name');
-        const email = formData.get('parent_email');
-        const phone = formData.get('parent_phone');
-        const passportStatus = formData.get('passport_status');
+        const body = await request.json();
+        const {
+            student_name: studentName,
+            grade,
+            school,
+            parent_name: parentName,
+            parent_email: email,
+            parent_phone: phone,
+            passport_status: passportStatus
+        } = body;
 
         // 1. Validate inputs
         if (!studentName || !grade || !school || !parentName || !email || !phone || !passportStatus) {
@@ -55,9 +57,8 @@ export async function POST(request: Request) {
             console.log('No Airtable credentials found. Mocking successful submission:', { studentName, grade, school, parentName, email, phone, passportStatus });
         }
 
-        // 3. Redirect to Thank You page
-        return NextResponse.redirect(new URL('/thank-you-registration', request.url), 303);
-
+        // 3. Return JSON response
+        return NextResponse.json({ success: true }, { status: 200 });
     } catch (error) {
         console.error('Registration Error:', error);
         return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });

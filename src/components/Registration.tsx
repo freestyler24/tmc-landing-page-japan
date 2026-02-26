@@ -1,9 +1,12 @@
 "use client";
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function Registration() {
+    const router = useRouter();
     const [step, setStep] = useState(1);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     // Controlled form state for the new fields
     const [formData, setFormData] = useState({
@@ -53,6 +56,34 @@ export default function Registration() {
 
     const prevStep = () => setStep(prev => prev - 1);
 
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!formData.passport_status) {
+            alert("Please select a passport option before submitting.");
+            return;
+        }
+
+        setIsSubmitting(true);
+        try {
+            const res = await fetch('/api/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
+
+            if (res.ok) {
+                router.push('/thank-you-registration');
+            } else {
+                alert("Something went wrong. Please try again.");
+                setIsSubmitting(false);
+            }
+        } catch (error) {
+            console.error(error);
+            alert("Something went wrong. Please try again.");
+            setIsSubmitting(false);
+        }
+    };
+
     return (
         <section id="register" className="bg-alt-offwhite ma-spacing-mob ma-spacing-desk relative border-t border-gray-200">
             <div className="container-max max-w-4xl flex flex-col items-center">
@@ -75,7 +106,7 @@ export default function Registration() {
                         ))}
                     </div>
 
-                    <form action="/api/register" method="POST" className="space-y-6">
+                    <form onSubmit={handleSubmit} className="space-y-6">
 
                         {/* Hidden Inputs for Next.js Server Action / API Route parsing */}
                         {step !== 1 && (
@@ -282,15 +313,10 @@ export default function Registration() {
                                     </button>
                                     <button
                                         type="submit"
-                                        onClick={(e) => {
-                                            if (!formData.passport_status) {
-                                                e.preventDefault();
-                                                alert("Please select a passport option before submitting.");
-                                            }
-                                        }}
-                                        className="w-2/3 bg-primary-red text-white py-4 text-lg font-bold hover:bg-black transition-colors shadow-md"
+                                        disabled={isSubmitting}
+                                        className="w-2/3 bg-primary-red text-white py-4 text-lg font-bold hover:bg-black transition-colors shadow-md disabled:bg-opacity-50 disabled:cursor-not-allowed"
                                     >
-                                        Submit Form
+                                        {isSubmitting ? 'Submitting...' : 'Submit Form'}
                                     </button>
                                 </div>
                             </div>

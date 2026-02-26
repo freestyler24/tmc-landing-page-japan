@@ -1,11 +1,14 @@
 "use client";
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function Brochure() {
     const formRef = useRef<HTMLFormElement>(null);
+    const router = useRouter();
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         const form = e.currentTarget;
@@ -26,8 +29,35 @@ export default function Brochure() {
             return;
         }
 
-        // If valid, submit the form programmatically
-        form.submit();
+        // If valid, submit the form with JSON
+        setIsSubmitting(true);
+        const parentName = (form.elements.namedItem('parent_name') as HTMLInputElement).value;
+        const school = (form.elements.namedItem('school') as HTMLSelectElement).value;
+
+        try {
+            const res = await fetch('/api/brochure', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    parent_name: parentName,
+                    phone_number: phone,
+                    email: email,
+                    school: school
+                })
+            });
+
+            if (res.ok) {
+                // Redirect user and trigger download via the query string
+                router.push('/thank-you-brochure?download=true');
+            } else {
+                alert("Something went wrong. Please try again.");
+                setIsSubmitting(false);
+            }
+        } catch (error) {
+            console.error(error);
+            alert("Something went wrong. Please try again.");
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -49,7 +79,7 @@ export default function Brochure() {
                 <div className="bg-gray-900 border border-gray-800 p-8 max-w-md mx-auto relative overflow-hidden">
                     <div className="w-1 h-full bg-primary-red absolute left-0 top-0"></div>
 
-                    <form ref={formRef} onSubmit={handleSubmit} action="/api/brochure" method="POST" className="space-y-4 text-left">
+                    <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 text-left">
                         <div className="space-y-4">
                             <div>
                                 <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Parent's Name</label>
@@ -102,9 +132,10 @@ export default function Brochure() {
 
                         <button
                             type="submit"
-                            className="w-full bg-transparent border border-kyoto-gold text-kyoto-gold hover:bg-kyoto-gold hover:text-charcoal px-6 py-3 font-semibold transition-colors mt-2"
+                            disabled={isSubmitting}
+                            className="w-full bg-transparent border border-kyoto-gold text-kyoto-gold hover:bg-kyoto-gold hover:text-charcoal px-6 py-3 font-semibold transition-colors mt-2 disabled:opacity-50 disabled:cursor-not-allowed"
                         >
-                            Download Brochure
+                            {isSubmitting ? 'Processing...' : 'Download Brochure'}
                         </button>
                     </form>
 
