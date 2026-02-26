@@ -22,9 +22,10 @@ export async function POST(request: Request) {
         // 2. Airtable Integration (Server-side to protect keys)
         const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
         const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID;
+        const TABLE_ID = process.env.AIRTABLE_REG_TABLE || 'tblWMyXl1pWCELmPL';
 
         if (AIRTABLE_API_KEY && AIRTABLE_BASE_ID) {
-            const response = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/Programme%20Registrations`, {
+            const response = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${TABLE_ID}`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${AIRTABLE_API_KEY}`,

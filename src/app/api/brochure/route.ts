@@ -18,9 +18,10 @@ export async function POST(request: Request) {
         // 2. Airtable Integration
         const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
         const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID;
+        const TABLE_ID = process.env.AIRTABLE_BROCHURE_TABLE || 'tbloxr42tBAvDMZBJ';
 
         if (AIRTABLE_API_KEY && AIRTABLE_BASE_ID) {
-            await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/Brochure%20Downloads`, {
+            await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${TABLE_ID}`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${AIRTABLE_API_KEY}`,
