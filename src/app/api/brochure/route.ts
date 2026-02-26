@@ -34,8 +34,7 @@ export async function POST(request: Request) {
                                 "Parent Name": parentName,
                                 "Phone": phoneNumber,
                                 "School": school,
-                                "Email": email,
-                                "Timestamp": new Date().toISOString() // Tracking event
+                                "Email": email
                             }
                         }
                     ]

@@ -41,8 +41,7 @@ export async function POST(request: Request) {
                                 "Parent Name": parentName || "",
                                 "Email": email || "",
                                 "Phone": phone || "",
-                                "Passport Status": passportStatus || "",
-                                "Timestamp": new Date().toISOString()
+                                "Passport Status": passportStatus || ""
                             }
                         }
                     ]
