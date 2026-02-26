@@ -1,4 +1,35 @@
+"use client";
+
+import { useRef } from 'react';
+
 export default function Brochure() {
+    const formRef = useRef<HTMLFormElement>(null);
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        const form = e.currentTarget;
+        const phone = (form.elements.namedItem('phone_number') as HTMLInputElement).value;
+        const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+
+        // Email Validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        // Phone Validation (simple: must have at least 10 digits when non-digits are stripped)
+        const phoneDigits = phone.replace(/\D/g, '');
+        if (phoneDigits.length < 10) {
+            alert("Please enter a valid phone number (at least 10 digits).");
+            return;
+        }
+
+        // If valid, submit the form programmatically
+        form.submit();
+    };
+
     return (
         <section id="brochure" className="bg-alt-charcoal ma-spacing-mob ma-spacing-desk relative text-center border-t border-gray-800">
             <div className="container-max max-w-3xl">
@@ -18,7 +49,7 @@ export default function Brochure() {
                 <div className="bg-gray-900 border border-gray-800 p-8 max-w-md mx-auto relative overflow-hidden">
                     <div className="w-1 h-full bg-primary-red absolute left-0 top-0"></div>
 
-                    <form action="/api/brochure" method="POST" className="space-y-4 text-left">
+                    <form ref={formRef} onSubmit={handleSubmit} action="/api/brochure" method="POST" className="space-y-4 text-left">
                         <div className="space-y-4">
                             <div>
                                 <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Parent's Name</label>
