@@ -2,6 +2,7 @@
 
 import { useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
 
 export default function Brochure() {
     const formRef = useRef<HTMLFormElement>(null);
@@ -64,24 +65,37 @@ export default function Brochure() {
         <section id="brochure" className="bg-alt-charcoal ma-spacing-mob ma-spacing-desk relative text-center border-t border-gray-800">
             <div className="container-max max-w-3xl">
 
-                <div className="inline-block border border-kyoto-gold text-kyoto-gold px-4 py-1 rounded-full text-xs font-bold tracking-widest mb-6">
-                    STILL EXPLORING?
-                </div>
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.6 }}
+                >
+                    <div className="inline-block border border-kyoto-gold text-kyoto-gold px-4 py-1 rounded-full text-xs font-bold tracking-widest mb-6">
+                        STILL EXPLORING?
+                    </div>
 
-                <h2 className="text-3xl md:text-4xl font-serif text-offwhite mb-6">
-                    Download the Detailed <br />Programme Overview.
-                </h2>
+                    <h2 className="text-3xl md:text-4xl font-serif text-offwhite mb-6">
+                        Download the Detailed <br />Programme Overview.
+                    </h2>
 
-                <p className="text-gray-400 mb-10 max-w-xl mx-auto">
-                    If you would prefer to review the complete itinerary, inclusions, safety framework, and payment structure before attending the orientation, you may request the official brochure.
-                    <br /><br />
-                    Select your school to receive the correct branded version.
-                </p>
+                    <p className="text-gray-400 mb-10 max-w-xl mx-auto">
+                        If you would prefer to review the complete itinerary, inclusions, safety framework, and payment structure before attending the orientation, you may request the official brochure.
+                        <br /><br />
+                        Select your school to receive the correct branded version.
+                    </p>
+                </motion.div>
 
-                <div className="bg-gray-900 border border-gray-800 p-8 max-w-md mx-auto relative overflow-hidden">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="bg-gray-900 border border-gray-800 p-8 max-w-md mx-auto relative overflow-hidden shadow-2xl"
+                >
                     <div className="w-1 h-full bg-primary-red absolute left-0 top-0"></div>
 
-                    <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 text-left">
+                    <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 text-left relative z-10">
                         <div className="space-y-4">
                             <div>
                                 <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Parent's Name</label>
@@ -90,7 +104,7 @@ export default function Brochure() {
                                     name="parent_name"
                                     required
                                     placeholder="Enter full name"
-                                    className="w-full bg-charcoal border border-gray-700 text-offwhite px-4 py-3 focus:outline-none focus:border-kyoto-gold focus:ring-1 focus:ring-kyoto-gold"
+                                    className="w-full bg-charcoal border border-gray-700 text-offwhite px-4 py-3 focus:outline-none focus:border-kyoto-gold focus:ring-1 focus:ring-kyoto-gold transition-colors"
                                 />
                             </div>
 
@@ -101,7 +115,7 @@ export default function Brochure() {
                                     name="phone_number"
                                     required
                                     placeholder="+91"
-                                    className="w-full bg-charcoal border border-gray-700 text-offwhite px-4 py-3 focus:outline-none focus:border-kyoto-gold focus:ring-1 focus:ring-kyoto-gold"
+                                    className="w-full bg-charcoal border border-gray-700 text-offwhite px-4 py-3 focus:outline-none focus:border-kyoto-gold focus:ring-1 focus:ring-kyoto-gold transition-colors"
                                 />
                             </div>
 
@@ -111,7 +125,7 @@ export default function Brochure() {
                                     name="school"
                                     required
                                     defaultValue=""
-                                    className="w-full bg-charcoal border border-gray-700 text-gray-400 px-4 py-3 focus:outline-none focus:border-kyoto-gold focus:ring-1 focus:ring-kyoto-gold appearance-none"
+                                    className="w-full bg-charcoal border border-gray-700 text-gray-400 px-4 py-3 focus:outline-none focus:border-kyoto-gold focus:ring-1 focus:ring-kyoto-gold appearance-none transition-colors"
                                 >
                                     <option value="" disabled>Select your school</option>
                                     <option value="dps">DPS</option>
@@ -127,7 +141,7 @@ export default function Brochure() {
                                     name="email"
                                     required
                                     placeholder="Enter email address"
-                                    className="w-full bg-charcoal border border-gray-700 text-offwhite px-4 py-3 focus:outline-none focus:border-kyoto-gold focus:ring-1 focus:ring-kyoto-gold"
+                                    className="w-full bg-charcoal border border-gray-700 text-offwhite px-4 py-3 focus:outline-none focus:border-kyoto-gold focus:ring-1 focus:ring-kyoto-gold transition-colors"
                                 />
                             </div>
                         </div>
@@ -135,16 +149,16 @@ export default function Brochure() {
                         <button
                             type="submit"
                             disabled={isSubmitting}
-                            className="w-full bg-transparent border border-kyoto-gold text-kyoto-gold hover:bg-kyoto-gold hover:text-charcoal px-6 py-3 font-semibold transition-colors mt-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="w-full bg-transparent border border-kyoto-gold text-kyoto-gold hover:bg-kyoto-gold hover:text-charcoal px-6 py-3 font-semibold transition-colors mt-2 disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-wider text-sm"
                         >
                             {isSubmitting ? 'Processing...' : 'Download Programme Brochure'}
                         </button>
                     </form>
 
-                    <p className="text-xs text-gray-500 mt-4 text-center">
+                    <p className="text-xs text-gray-500 mt-4 text-center relative z-10">
                         No obligation. For informed decision-making.
                     </p>
-                </div>
+                </motion.div>
 
             </div>
         </section>

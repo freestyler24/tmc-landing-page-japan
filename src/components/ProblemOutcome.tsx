@@ -1,11 +1,21 @@
+"use client";
+
+import { motion } from 'framer-motion';
+
 export default function ProblemOutcome() {
     return (
-        <section className="bg-alt-offwhite ma-spacing-mob ma-spacing-desk border-b border-gray-200">
+        <section className="bg-alt-offwhite ma-spacing-mob ma-spacing-desk border-b border-gray-200 overflow-hidden">
             <div className="container-max max-w-5xl">
 
                 <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                     {/* Problem Side */}
-                    <div className="space-y-6">
+                    <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ duration: 0.6 }}
+                        className="space-y-6"
+                    >
                         <h2 className="text-3xl md:text-4xl font-serif text-charcoal leading-tight">
                             Because Academics Alone Are No Longer Enough.
                         </h2>
@@ -19,10 +29,16 @@ export default function ProblemOutcome() {
                         <p className="text-base md:text-lg text-gray-600">
                             Japan offers a rare opportunity to experience a society where heritage and innovation evolve together.
                         </p>
-                    </div>
+                    </motion.div>
 
                     {/* Outcome Side */}
-                    <div className="bg-white p-8 md:p-12 shadow-md border-l-4 border-primary-red">
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className="bg-white p-8 md:p-12 shadow-md border-l-4 border-primary-red"
+                    >
                         <h3 className="text-2xl font-serif text-charcoal mb-4">
                             What Students Gain
                         </h3>
@@ -30,24 +46,26 @@ export default function ProblemOutcome() {
                             Students do not simply see Japan. They observe systems. They experience discipline. They learn through immersion.
                         </p>
                         <ul className="space-y-4 text-sm text-charcoal font-medium">
-                            <li className="flex items-start gap-3">
-                                <span className="text-primary-red text-lg">■</span>
-                                Confidence in unfamiliar environments
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <span className="text-primary-red text-lg">■</span>
-                                Exposure to structured global systems
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <span className="text-primary-red text-lg">■</span>
-                                Cultural awareness beyond textbooks
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <span className="text-primary-red text-lg">■</span>
-                                Guided independence within supervision
-                            </li>
+                            {[
+                                "Confidence in unfamiliar environments",
+                                "Exposure to structured global systems",
+                                "Cultural awareness beyond textbooks",
+                                "Guided independence within supervision"
+                            ].map((item, i) => (
+                                <motion.li
+                                    key={i}
+                                    initial={{ opacity: 0, x: 20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.4, delay: 0.4 + (i * 0.1) }}
+                                    className="flex items-start gap-3"
+                                >
+                                    <span className="text-primary-red text-lg">■</span>
+                                    {item}
+                                </motion.li>
+                            ))}
                         </ul>
-                    </div>
+                    </motion.div>
                 </div>
 
             </div>

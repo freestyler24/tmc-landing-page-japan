@@ -1,9 +1,24 @@
+"use client";
+
+import { motion } from 'framer-motion';
+
 export default function Investment() {
+    const fadeUp = {
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+    };
+
     return (
-        <section id="investment" className="bg-alt-red ma-spacing-mob ma-spacing-desk relative text-offwhite">
+        <section id="investment" className="bg-alt-red ma-spacing-mob ma-spacing-desk relative text-offwhite overflow-hidden">
             <div className="container-max max-w-5xl">
 
-                <div className="text-center mb-16">
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-50px" }}
+                    variants={fadeUp}
+                    className="text-center mb-16"
+                >
                     <h2 className="text-3xl md:text-5xl font-serif mb-4 md:mb-6">
                         Transparent Programme Investment
                     </h2>
@@ -11,10 +26,18 @@ export default function Investment() {
                     <p className="text-lg text-red-50 max-w-2xl mx-auto opacity-90">
                         The complete cost structure, inclusions, and installment details will be explained during the Parent Orientation session.
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Installment Cards */}
-                <div className="grid md:grid-cols-3 gap-6 mb-12">
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-50px" }}
+                    variants={{
+                        visible: { transition: { staggerChildren: 0.15 } }
+                    }}
+                    className="grid md:grid-cols-3 gap-6 mb-12"
+                >
                     {[
                         {
                             num: 1,
@@ -44,7 +67,11 @@ export default function Investment() {
                             payee: 'TMC Nexus Pvt Ltd'
                         }
                     ].map((inst) => (
-                        <div key={inst.num} className="bg-white text-charcoal rounded-lg shadow-lg overflow-hidden border border-gray-100">
+                        <motion.div
+                            variants={fadeUp}
+                            key={inst.num}
+                            className="bg-white text-charcoal rounded-lg shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow transform hover:-translate-y-1 duration-300"
+                        >
                             {/* Red top accent bar */}
                             <div className="h-1.5 bg-primary-red"></div>
                             <div className="p-6">
@@ -78,11 +105,18 @@ export default function Investment() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
 
-                <div className="bg-white text-charcoal shadow-2xl overflow-hidden">
+                {/* Inclusions */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="bg-white text-charcoal shadow-2xl overflow-hidden"
+                >
                     <div className="p-10 w-full">
                         <h3 className="text-lg font-bold tracking-wider mb-6 text-primary-red uppercase">Indicative Inclusions</h3>
                         <div className="grid sm:grid-cols-2 gap-4">
@@ -94,20 +128,33 @@ export default function Investment() {
                                 'Supervision framework',
                                 'Cultural access'
                             ].map((item, i) => (
-                                <div key={i} className="flex items-start gap-3 text-sm text-charcoal font-medium border-b border-gray-100 pb-3">
+                                <motion.div
+                                    initial={{ opacity: 0, x: -10 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.4, delay: 0.4 + (i * 0.1) }}
+                                    key={i}
+                                    className="flex items-start gap-3 text-sm text-charcoal font-medium border-b border-gray-100 pb-3"
+                                >
                                     <span className="text-primary-red text-lg">■</span>
                                     {item}
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="mt-12 text-center text-red-50 text-sm opacity-80 max-w-3xl mx-auto leading-relaxed">
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.6 }}
+                    className="mt-12 text-center text-red-50 text-sm opacity-80 max-w-3xl mx-auto leading-relaxed"
+                >
                     <p>
                         All financial details will be shared transparently during orientation.
                     </p>
-                </div>
+                </motion.div>
 
             </div>
         </section>
