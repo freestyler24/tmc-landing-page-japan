@@ -79,7 +79,7 @@ export default function Brochure() {
                         Download the Detailed <br className="hidden md:block" />Programme Overview.
                     </h2>
 
-                    <div className="max-w-3xl mx-auto bg-black bg-opacity-40 border border-gray-800 p-6 md:p-8 mb-12 shadow-inner rounded-sm">
+                    <div className="max-w-3xl mx-auto bg-black/40 border border-gray-800 p-6 md:p-8 mb-12 shadow-inner rounded-sm">
                         <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
                             If you would prefer to review the complete itinerary, inclusions, safety framework, and payment structure before attending the orientation, you may request the official brochure.
                         </p>
