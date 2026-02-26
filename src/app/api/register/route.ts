@@ -42,7 +42,6 @@ export async function POST(request: Request) {
                                 "Email": email || "",
                                 "Phone": phone || "",
                                 "Passport Status": passportStatus || "",
-                                "Status": "Pending Initial Block",
                                 "Timestamp": new Date().toISOString()
                             }
                         }
