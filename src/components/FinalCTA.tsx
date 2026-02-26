@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 
 export default function FinalCTA() {
     return (
-        <section className="bg-alt-red py-20 md:py-32 text-center border-t border-red-900 border-opacity-30 relative overflow-hidden">
-            <div className="absolute inset-0 z-0 bg-black opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent to-black"></div>
+        <section className="bg-primary-red text-white py-20 md:py-32 text-center border-t border-red-900 border-opacity-30 relative overflow-hidden">
+            <div className="absolute inset-0 z-0 bg-gradient-to-br from-black/40 to-transparent"></div>
 
             <div className="container-max max-w-5xl relative z-10">
                 <motion.div
@@ -15,7 +15,7 @@ export default function FinalCTA() {
                     transition={{ duration: 0.8 }}
                     className="border border-white border-opacity-20 p-8 md:p-16 backdrop-blur-md bg-white bg-opacity-5 shadow-2xl"
                 >
-                    <h2 className="text-4xl md:text-6xl font-serif text-white mb-8 md:mb-10 text-shadow-sm leading-tight">
+                    <h2 className="text-4xl md:text-6xl font-serif text-white mb-8 md:mb-10 leading-tight">
                         Understand the Structure <br className="hidden md:block" />Before You Decide.
                     </h2>
 

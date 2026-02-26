@@ -62,7 +62,7 @@ export default function Brochure() {
     };
 
     return (
-        <section id="brochure" className="bg-alt-charcoal ma-spacing-mob ma-spacing-desk relative text-center border-t border-gray-800">
+        <section id="brochure" className="bg-charcoal text-offwhite py-20 md:py-32 relative text-center border-t border-gray-800">
             <div className="container-max max-w-3xl">
 
                 <motion.div
@@ -79,14 +79,14 @@ export default function Brochure() {
                         Download the Detailed <br className="hidden md:block" />Programme Overview.
                     </h2>
 
-                    <div className="max-w-3xl mx-auto bg-gray-900 bg-opacity-40 border border-gray-800 p-6 md:p-8 mb-12 shadow-inner">
+                    <div className="max-w-3xl mx-auto bg-black bg-opacity-40 border border-gray-800 p-6 md:p-8 mb-12 shadow-inner rounded-sm">
                         <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
                             If you would prefer to review the complete itinerary, inclusions, safety framework, and payment structure before attending the orientation, you may request the official brochure.
                         </p>
                         <div className="flex items-center justify-center gap-3 text-kyoto-gold text-xs md:text-sm font-semibold uppercase tracking-widest">
-                            <span className="w-8 md:w-16 h-px bg-kyoto-gold opacity-50"></span>
+                            <span className="hidden md:block w-16 h-px bg-kyoto-gold opacity-50"></span>
                             Select your school to receive the correct branded version
-                            <span className="w-8 md:w-16 h-px bg-kyoto-gold opacity-50"></span>
+                            <span className="hidden md:block w-16 h-px bg-kyoto-gold opacity-50"></span>
                         </div>
                     </div>
                 </motion.div>
@@ -96,7 +96,7 @@ export default function Brochure() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="bg-gray-900 border border-gray-800 p-8 max-w-md mx-auto relative overflow-hidden shadow-2xl"
+                    className="bg-black border border-gray-800 p-8 max-w-md mx-auto relative overflow-hidden shadow-2xl rounded-sm"
                 >
                     <div className="w-1 h-full bg-primary-red absolute left-0 top-0"></div>
 
