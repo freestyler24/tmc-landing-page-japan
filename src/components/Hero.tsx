@@ -21,19 +21,21 @@ export default function Hero() {
                     </p>
                     <h1 className="text-5xl md:text-7xl font-serif text-charcoal leading-[1.1] mb-8">
                         09 Days. 04 Cities.<br />
-                        <span className="text-primary-red">One Transformational Journey.</span>
+                        <span className="text-primary-red">One Transformational Educational Journey.</span>
                     </h1>
                     <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                        Your child will not just visit Japan. They will experience how a high-functioning society thinks, moves, and operates through structured exposure.
+                        This is not a holiday. It is a structured international learning experience.<br /><br />
+                        Your child will not just visit Japan. They will observe how a high-functioning society thinks, moves, and operates.
                     </p>
                 </div>
 
                 {/* 3 Benefit Bullets (Results Focused) */}
                 <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-8 mb-16 w-full max-w-3xl">
                     {[
-                        { title: 'Build Independence', desc: 'Structured self-reliance in real-world environments.' },
-                        { title: 'Direct Engagement', desc: 'Mentors guiding students through active scenarios.' },
-                        { title: 'Precision Systems', desc: 'Learning efficiency from the Japanese model.' }
+                        { title: 'Confidence', desc: 'Confidence in unfamiliar environments.' },
+                        { title: 'Global Exposure', desc: 'Exposure to structured global systems.' },
+                        { title: 'Cultural Awareness', desc: 'Cultural awareness beyond textbooks.' },
+                        { title: 'Guided Independence', desc: 'Guided independence within supervision.' }
                     ].map((benefit, i) => (
                         <div key={i} className="flex-1 bg-white p-6 border border-gray-100 shadow-sm text-left relative overflow-hidden group">
                             <div className="w-1 h-full bg-primary-red absolute left-0 top-0 transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top"></div>
@@ -42,6 +44,9 @@ export default function Hero() {
                         </div>
                     ))}
                 </div>
+
+                {/* Countdown label */}
+                <p className="text-sm font-semibold text-charcoal uppercase tracking-wider mb-4">Orientation Registration Closing In:</p>
 
                 {/* Countdown Timer (Static representation for layout) */}
                 <div className="flex justify-center gap-4 mb-12 text-center">
@@ -65,9 +70,8 @@ export default function Hero() {
                         href="#register"
                         className="inline-block bg-primary-red text-white px-8 py-4 rounded-sm text-lg font-semibold hover:bg-black transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                     >
-                        Secure Your Child&apos;s Seat
+                        Register for Parent Orientation
                     </a>
-                    <p className="text-xs text-gray-400 mt-4 uppercase tracking-wider">Application deadline approaches</p>
                 </div>
 
             </div>

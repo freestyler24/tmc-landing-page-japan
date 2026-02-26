@@ -4,24 +4,24 @@ import { useState } from 'react';
 
 const copy = [
     {
-        question: "Is this a tourism trip?",
-        answer: "No. This is an intensive educational immersion. While students visit iconic locations, the focus is on understanding the systems, history, and discipline that make these places function. Every day has specific learning objectives."
+        question: "What does registration mean?",
+        answer: "Registering reserves your seat for the Parent Orientation session. It does not confirm enrolment."
     },
     {
-        question: "What is the student-to-mentor ratio?",
-        answer: "We maintain a strict 1:20 ratio. Mentors are experienced educators trained in facilitating our specific curriculum and ensuring student safety."
+        question: "When is enrolment confirmed?",
+        answer: "Only after attending the orientation and completing the formal enrolment process."
     },
     {
-        question: "How are dietary requirements handled?",
-        answer: "Japan’s culinary landscape is diverse. Our operational team manages all dietary restrictions (vegetarian, allergies, halal-friendly) meticulously, having vetted all partner restaurants in advance."
+        question: "How many students travel?",
+        answer: "Maximum 45 students per batch."
     },
     {
-        question: "What is the payment schedule?",
-        answer: "The programme requires an initial non-refundable deposit of ₹9,999 to secure the seat. The second installment (₹1,20,000) is due by 1 July 2026, and the final installment (₹1,60,000) is due by 1 September 2026."
+        question: "What is the supervision ratio?",
+        answer: "1:20 teacher-to-student supervision."
     },
     {
-        question: "Do parents accompany the students?",
-        answer: "No. This programme is designed to foster self-reliance and independence in students. Our professional mentors provide all necessary care and supervision."
+        question: "Are flights and visa included?",
+        answer: "Yes, return international airfare and visa processing are included."
     }
 ];
 
@@ -34,11 +34,8 @@ export default function FAQ() {
 
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-serif text-charcoal mb-6">
-                        Clarity & Expectations
+                        Frequently Asked Questions
                     </h2>
-                    <p className="text-lg text-gray-600">
-                        Address your queries regarding the structure and standards of the 2026 cohort.
-                    </p>
                 </div>
 
                 <div className="space-y-4 mb-16">

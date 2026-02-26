@@ -90,11 +90,18 @@ export default function Registration() {
 
                 <div className="text-center mb-12">
                     <h2 className="text-4xl md:text-5xl font-serif text-charcoal mb-4">
-                        Secure Your Child’s Seat <br />in the 2026 Cohort.
+                        Register for the Parent Orientation <br />— Japan 2026
                     </h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
-                        Submitting this form indicates your intent to reserve a place in the Japan 2026 programme. Seats are strictly limited to 45 students.
+                        Submitting this form reserves your seat for the orientation session.
                     </p>
+                    <ul className="text-gray-600 max-w-md mx-auto text-left mt-4 space-y-2">
+                        <li className="flex items-start gap-2"><span className="text-primary-red">•</span> Review the complete itinerary</li>
+                        <li className="flex items-start gap-2"><span className="text-primary-red">•</span> Understand the safety framework</li>
+                        <li className="flex items-start gap-2"><span className="text-primary-red">•</span> See the full investment structure</li>
+                        <li className="flex items-start gap-2"><span className="text-primary-red">•</span> Ask your questions directly</li>
+                    </ul>
+                    <p className="text-gray-500 text-sm mt-4 italic">This does not confirm enrolment.</p>
                 </div>
 
                 <div className="w-full max-w-2xl bg-white p-8 md:p-12 shadow-lg border-t-4 border-primary-red">
@@ -316,7 +323,7 @@ export default function Registration() {
                                         disabled={isSubmitting}
                                         className="w-2/3 bg-primary-red text-white py-4 text-lg font-bold hover:bg-black transition-colors shadow-md disabled:bg-opacity-50 disabled:cursor-not-allowed"
                                     >
-                                        {isSubmitting ? 'Submitting...' : 'Submit Form'}
+                                        {isSubmitting ? 'Submitting...' : 'Reserve Orientation Seat'}
                                     </button>
                                 </div>
                             </div>

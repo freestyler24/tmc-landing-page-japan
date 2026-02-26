@@ -7,34 +7,44 @@ export default function ProblemOutcome() {
                     {/* Problem Side */}
                     <div className="space-y-6">
                         <h2 className="text-3xl md:text-4xl font-serif text-charcoal leading-tight">
-                            The Problem with Standard Student Travel
+                            Because Academics Alone Are No Longer Enough.
                         </h2>
                         <div className="w-12 h-1 bg-primary-red"></div>
                         <p className="text-lg text-gray-600">
-                            Most educational tours are thinly veiled vacations. They rush students through tourist traps without providing meaningful cultural context or demanding personal responsibility. The result is a superficial experience that fails to catalyze real growth.
+                            Your child lives in a world that rewards more than grades. It rewards adaptability, cultural awareness, and composure under uncertainty.
+                        </p>
+                        <p className="text-lg text-gray-600">
+                            Yet most exposure today is filtered through screens. Real-world systems thinking is rarely observed firsthand.
+                        </p>
+                        <p className="text-lg text-gray-600">
+                            Japan offers a rare opportunity to experience a society where heritage and innovation evolve together.
                         </p>
                     </div>
 
                     {/* Outcome Side */}
                     <div className="bg-white p-8 md:p-12 shadow-md border-l-4 border-primary-red">
                         <h3 className="text-2xl font-serif text-charcoal mb-4">
-                            The Japan 2026 Standard
+                            What Students Gain
                         </h3>
                         <p className="text-gray-600 mb-6">
-                            We replace passive observation with structured exposure. Japan demands systemic respect, spatial awareness, and extreme punctuality.
+                            Students do not simply see Japan. They observe systems. They experience discipline. They learn through immersion.
                         </p>
                         <ul className="space-y-4 text-sm text-charcoal font-medium">
                             <li className="flex items-start gap-3">
                                 <span className="text-primary-red text-lg">■</span>
-                                Students return more self-reliant.
+                                Confidence in unfamiliar environments
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="text-primary-red text-lg">■</span>
-                                Students respect high-functioning systems.
+                                Exposure to structured global systems
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="text-primary-red text-lg">■</span>
-                                Students adapt to structured complexity.
+                                Cultural awareness beyond textbooks
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <span className="text-primary-red text-lg">■</span>
+                                Guided independence within supervision
                             </li>
                         </ul>
                     </div>

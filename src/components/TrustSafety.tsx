@@ -5,26 +5,26 @@ export default function TrustSafety() {
 
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-serif text-charcoal mb-6">
-                        Institutional Safety Framework
+                        Structured for Safety. Designed for Growth.
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Japan is one of the safest nations on earth. We augment this baseline with strict, institution-grade protocols.
+                        Your child&apos;s well-being is non-negotiable.
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
                     {[
                         {
-                            title: '1:20 Mentor Ratio',
-                            desc: 'Dedicated oversight ensuring personalized attention and continuous supervision throughout all structured activities.'
+                            title: '1:20 Supervision Ratio',
+                            desc: 'Dedicated teacher-to-student supervision ensuring personalized attention throughout all activities.'
                         },
                         {
-                            title: '24/7 Medical Protocol',
-                            desc: 'Immediate access to English-speaking medical facilities directly vetted by our operational team.'
+                            title: 'Trained Tour Directors',
+                            desc: 'Experienced tour directors and English-speaking local guides at every location.'
                         },
                         {
-                            title: 'Real-Time Tracking',
-                            desc: 'Secure parent portal with daily situation reports and movement tracking during transit phases.'
+                            title: '4-Star Accommodation',
+                            desc: 'Twin-sharing accommodation in vetted 4-star properties throughout the journey.'
                         }
                     ].map((item, i) => (
                         <div key={i} className="bg-white p-8 border border-gray-100 shadow-sm text-center">
@@ -35,6 +35,34 @@ export default function TrustSafety() {
                             <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
                         </div>
                     ))}
+                </div>
+
+                {/* Full framework list */}
+                <div className="max-w-3xl mx-auto">
+                    <h3 className="text-xl font-serif text-charcoal mb-6 text-center">Framework Includes:</h3>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                        {[
+                            '1:20 teacher-to-student supervision ratio',
+                            'Trained tour directors',
+                            '4-star twin-sharing accommodation',
+                            'Return international airfare',
+                            'Visa processing',
+                            'English-speaking local guides',
+                            'Private transportation',
+                            'Travel insurance',
+                            'Maximum 45 students per batch'
+                        ].map((item, i) => (
+                            <div key={i} className="flex items-start gap-3 text-sm text-charcoal">
+                                <span className="text-primary-red text-lg mt-[-2px]">■</span>
+                                {item}
+                            </div>
+                        ))}
+                    </div>
+                    <div className="text-center mt-10">
+                        <p className="text-gray-600 font-serif italic text-lg">
+                            Independence within structure. Freedom within supervision.
+                        </p>
+                    </div>
                 </div>
 
             </div>

@@ -1,16 +1,16 @@
 export default function Testimonials() {
     const testimonials = [
         {
-            quote: "The safety framework gave us confidence. The transformation gave us reassurance.",
+            quote: "It wasn't a tour. It was structured exposure. We saw visible growth in maturity.",
+            author: "Parent, Grade 9"
+        },
+        {
+            quote: "The supervision framework gave us complete confidence.",
             author: "Parent, Grade 8"
         },
         {
-            quote: "Japan changed how our child observes systems and responsibility.",
+            quote: "Japan changed how our child observes responsibility and systems.",
             author: "Parent, Grade 10"
-        },
-        {
-            quote: "It wasn't a trip. It was a structural shift in how they view independence.",
-            author: "Parent, Grade 12"
         }
     ];
 
@@ -20,7 +20,7 @@ export default function Testimonials() {
 
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-serif text-offwhite mb-6">
-                        They Returned More Independent. More Aware. More Composed.
+                        They Returned More Independent. More Composed.
                     </h2>
                     <div className="w-16 h-1 bg-primary-red mx-auto"></div>
                 </div>
@@ -33,7 +33,7 @@ export default function Testimonials() {
                                     ★★★★★
                                 </div>
                                 <p className="text-gray-300 font-serif italic text-lg leading-relaxed mb-8">
-                                    "{t.quote}"
+                                    &quot;{t.quote}&quot;
                                 </p>
                             </div>
                             <p className="text-primary-red font-bold text-sm uppercase tracking-wider">

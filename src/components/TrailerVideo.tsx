@@ -6,11 +6,15 @@ export default function TrailerVideo() {
             <div className="container-max flex flex-col items-center text-center">
 
                 <h2 className="text-4xl md:text-5xl font-serif text-offwhite mb-6">
-                    Experience the Journey
+                    See the Experience Before You Decide.
                 </h2>
 
+                <p className="max-w-2xl text-lg text-red-50 mb-4 opacity-90">
+                    Before reading further, take a moment to see what this journey feels like.
+                </p>
                 <p className="max-w-2xl text-lg text-red-50 mb-12 opacity-90">
-                    A glimpse into the structured exposure and cultural precision that awaits your child in Japan.
+                    Notice the precision. The structure. The quiet discipline.<br />
+                    This is not tourism. It is structured exposure.
                 </p>
 
                 {/* Wistia Video Embed */}
@@ -24,7 +28,7 @@ export default function TrailerVideo() {
                         `}
                     </Script>
 
-                    {/* Inject original DOM using dangerouslySetInnerHTML to ensure correct style parsing and custom element instantiation */}
+                    {/* Inject original DOM using dangerouslySetInnerHTML to ensure correct style parse and custom element instantiation */}
                     <div dangerouslySetInnerHTML={{
                         __html: `
                         <style>wistia-player[media-id='zwq5w6rf4r']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/zwq5w6rf4r/swatch'); display: block; filter: blur(5px); padding-top:50.0%; }</style> 
@@ -44,7 +48,7 @@ export default function TrailerVideo() {
                         href="#register"
                         className="inline-block bg-transparent border-2 border-offwhite text-offwhite px-8 py-3 rounded-sm text-lg font-semibold hover:bg-offwhite hover:text-primary-red transition-colors"
                     >
-                        I&apos;m Ready to Secure a Seat
+                        Register for Parent Orientation
                     </a>
                 </div>
 
@@ -52,4 +56,3 @@ export default function TrailerVideo() {
         </section>
     );
 }
-
