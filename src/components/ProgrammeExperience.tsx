@@ -131,6 +131,36 @@ export default function ProgrammeExperience() {
                     ))}
                 </motion.div>
 
+                {/* Orientation CTA Banner */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.6, delay: 0.6 }}
+                    className="mt-16 md:mt-24 bg-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl relative overflow-hidden max-w-5xl mx-auto"
+                >
+                    {/* Decorative accent */}
+                    <div className="absolute top-0 left-0 w-2 h-full bg-primary-red"></div>
+
+                    <div className="flex-1 space-y-3 relative z-10 w-full md:w-auto">
+                        <h3 className="text-2xl md:text-3xl font-serif text-charcoal leading-tight">
+                            Every Location Has a Purpose.
+                        </h3>
+                        <p className="text-gray-600 text-base max-w-2xl">
+                            See how this 9-day journey is academically structured, supervised, and outcome-driven.
+                        </p>
+                    </div>
+                    <div className="w-full md:w-auto flex-shrink-0 relative z-10">
+                        <a
+                            href="#register"
+                            className="block w-full text-center bg-primary-red text-white px-8 py-4 rounded-lg font-semibold hover:bg-black hover:text-white transition-all duration-300 group shadow-lg"
+                        >
+                            <span className="inline-block mr-2 group-hover:translate-x-1 transition-transform">👉</span>
+                            Reserve Your Orientation Seat
+                        </a>
+                    </div>
+                </motion.div>
+
             </div>
         </section>
     );
