@@ -7,6 +7,8 @@ export default function FinalCTA() {
         <section className="bg-primary-red py-20 md:py-32 text-center relative overflow-hidden">
             {/* Subtle dark gradient overlay */}
             <div className="absolute inset-0 z-0" style={{ background: 'linear-gradient(135deg, rgba(0,0,0,0.3) 0%, transparent 50%, rgba(0,0,0,0.2) 100%)' }}></div>
+            {/* Firefly wave texture */}
+            <div className="absolute inset-0 z-0 pointer-events-none" style={{ opacity: 0.08, backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg stroke='%23ffffff' stroke-width='1' fill='none'%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='40'/%3E%3C/g%3E%3C/svg%3E")` }}></div>
 
             <div className="container-max max-w-5xl relative z-10">
                 <motion.div

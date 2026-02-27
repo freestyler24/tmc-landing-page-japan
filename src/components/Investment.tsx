@@ -70,7 +70,7 @@ export default function Investment() {
                         <motion.div
                             variants={fadeUp}
                             key={inst.num}
-                            className="bg-white text-charcoal rounded-lg shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow transform hover:-translate-y-1 duration-300"
+                            className="bg-[#F9F6F0] text-charcoal rounded-sm shadow-lg overflow-hidden border border-[#e6dac3] hover:shadow-xl transition-shadow transform hover:-translate-y-1 duration-300"
                         >
                             {/* Red top accent bar */}
                             <div className="h-1.5 bg-primary-red"></div>
@@ -115,7 +115,7 @@ export default function Investment() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="bg-white text-charcoal shadow-2xl overflow-hidden"
+                    className="bg-[#F9F6F0] text-charcoal shadow-2xl overflow-hidden border border-[#e6dac3]"
                 >
                     <div className="p-10 w-full">
                         <h3 className="text-lg font-bold tracking-wider mb-6 text-primary-red uppercase">Indicative Inclusions</h3>

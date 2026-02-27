@@ -2,9 +2,11 @@
 
 @theme inline {
   --color-primary-red: #C8102E;
-  --color-charcoal: #111111;
-  --color-offwhite: #F5F3EF;
+  --color-charcoal: #1a1a1a;
+  --color-offwhite: #F9F6F0;
   --color-kyoto-gold: #B89B5E;
+  --color-warm-border: #e6dac3;
+  --color-warm-text: #7a6c56;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: var(--font-noto-serif-jp), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -66,7 +68,7 @@
   }
 
   .bg-alt-charcoal {
-    background-color: var(--color-charcoal);
+    background-color: #1a1a1a;
     color: var(--color-offwhite);
   }
 }

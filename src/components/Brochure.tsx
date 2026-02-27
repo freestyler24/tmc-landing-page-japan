@@ -62,7 +62,7 @@ export default function Brochure() {
     };
 
     return (
-        <section id="brochure" className="bg-charcoal text-offwhite py-20 md:py-32 relative text-center border-t border-gray-800">
+        <section id="brochure" className="bg-[#1a1a1a] text-offwhite py-20 md:py-32 relative text-center border-t border-gray-800">
             <div className="container-max max-w-3xl">
 
                 <motion.div

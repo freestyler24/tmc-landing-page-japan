@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <footer className="bg-alt-charcoal py-16 border-t border-gray-900 text-center text-offwhite">
+        <footer className="bg-[#1a1a1a] py-16 border-t border-gray-900 text-center text-offwhite">
             <div className="container-max max-w-4xl">
                 <h3 className="text-2xl font-serif mb-4 tracking-wider">JAPAN 2026</h3>
                 <p className="text-kyoto-gold font-serif italic mb-10 opacity-80">

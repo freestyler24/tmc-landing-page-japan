@@ -20,7 +20,7 @@ const FilmReelIcon = () => (
 
 export default function TrailerVideo() {
     return (
-        <section className="bg-charcoal ma-spacing-mob ma-spacing-desk relative overflow-hidden">
+        <section className="bg-[#1a1a1a] ma-spacing-mob ma-spacing-desk relative overflow-hidden">
             <div className="container-max flex flex-col items-center text-center">
 
                 <motion.div

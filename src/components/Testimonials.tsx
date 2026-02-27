@@ -32,7 +32,7 @@ export default function Testimonials() {
     };
 
     return (
-        <section className="bg-alt-charcoal ma-spacing-mob ma-spacing-desk relative overflow-hidden">
+        <section className="bg-[#1a1a1a] ma-spacing-mob ma-spacing-desk relative overflow-hidden">
             <div className="container-max relative z-10">
 
                 <motion.div

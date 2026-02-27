@@ -85,7 +85,7 @@ export default function ProgrammeExperience() {
     };
 
     return (
-        <section id="programme" className="bg-[#F9F6F0] ma-spacing-mob ma-spacing-desk relative">
+        <section id="programme" className="bg-[#1a1a1a] ma-spacing-mob ma-spacing-desk relative">
             <div className="container-max">
 
                 <motion.div
@@ -95,10 +95,10 @@ export default function ProgrammeExperience() {
                     variants={fadeUp}
                     className="text-center mb-12 md:mb-16"
                 >
-                    <h2 className="text-3xl md:text-5xl font-serif mb-4 md:mb-6 text-charcoal">
+                    <h2 className="text-3xl md:text-5xl font-serif mb-4 md:mb-6 text-[#F9F6F0]">
                         Cultural Highlights
                     </h2>
-                    <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto">
                         Each location is selected not for tourism, but for its specific educational and developmental outcome.
                     </p>
                 </motion.div>
@@ -119,18 +119,18 @@ export default function ProgrammeExperience() {
                         <motion.div
                             variants={fadeUp}
                             key={idx}
-                            className="group bg-[#fcfbfa] border-2 border-[#e6e2da] shadow-lg shadow-black/5 flex flex-col items-center justify-center p-8 w-64 h-72 hover:shadow-xl hover:border-primary-red/50 transition-all duration-300 relative"
+                            className="group bg-[#222222] border border-gray-700 shadow-lg shadow-black/10 flex flex-col items-center justify-center p-8 w-64 h-72 hover:shadow-xl hover:border-primary-red/50 transition-all duration-300 relative"
                         >
                             {/* Inner inset border for that premium printed ticket feel */}
-                            <div className="absolute inset-2 border border-[#f0ebe1] pointer-events-none"></div>
+                            <div className="absolute inset-2 border border-gray-700/30 pointer-events-none"></div>
 
                             <div className="transform group-hover:scale-110 transition-transform duration-500">
                                 {city.icon()}
                             </div>
-                            <h3 className="text-2xl font-serif text-charcoal mt-2 tracking-wide">
+                            <h3 className="text-2xl font-serif text-[#F9F6F0] mt-2 tracking-wide">
                                 {city.name}
                             </h3>
-                            <div className="w-12 h-0.5 bg-gray-300 mt-4 overflow-hidden relative">
+                            <div className="w-12 h-0.5 bg-gray-600 mt-4 overflow-hidden relative">
                                 <div className="absolute top-0 left-0 h-full bg-primary-red w-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
                             </div>
                         </motion.div>

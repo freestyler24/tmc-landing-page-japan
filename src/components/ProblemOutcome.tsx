@@ -4,8 +4,11 @@ import { motion } from 'framer-motion';
 
 export default function ProblemOutcome() {
     return (
-        <section className="bg-alt-offwhite ma-spacing-mob ma-spacing-desk border-b border-gray-200 overflow-hidden">
-            <div className="container-max max-w-5xl">
+        <section className="bg-[#F9F6F0] ma-spacing-mob ma-spacing-desk border-b border-[#e6dac3] overflow-hidden relative">
+            {/* Subtle wave pattern */}
+            <div className="absolute inset-0 pointer-events-none" style={{ opacity: 0.1, backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg stroke='%23c0b090' stroke-width='1' fill='none'%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='40'/%3E%3C/g%3E%3C/svg%3E")` }}></div>
+
+            <div className="container-max max-w-5xl relative z-10">
 
                 <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                     {/* Problem Side */}
@@ -37,7 +40,7 @@ export default function ProblemOutcome() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="bg-white p-8 md:p-12 shadow-md border-l-4 border-primary-red"
+                        className="bg-[#F9F6F0] p-8 md:p-12 shadow-md border-l-4 border-kyoto-gold"
                     >
                         <h3 className="text-2xl font-serif text-charcoal mb-4">
                             What Students Gain

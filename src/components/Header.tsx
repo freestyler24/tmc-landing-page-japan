@@ -17,7 +17,7 @@ export default function Header() {
 
     return (
         <header
-            className={`fixed top-0 w-full z-50 transition-all duration-300 bg-white ${isScrolled ? 'border-b border-gray-200 shadow-sm' : 'border-b border-transparent'
+            className={`fixed top-0 w-full z-50 transition-all duration-300 bg-[#F9F6F0] ${isScrolled ? 'border-b border-[#e6dac3] shadow-sm' : 'border-b border-transparent'
                 }`}
             style={{ height: '80px' }}
         >
@@ -44,7 +44,7 @@ export default function Header() {
                 <div className="hidden md:block">
                     <a
                         href="#register"
-                        className="bg-primary-red text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-black transition-colors"
+                        className="bg-primary-red text-white px-6 py-3 rounded-sm text-sm font-semibold hover:bg-black transition-colors"
                     >
                         Register Now
                     </a>
@@ -73,7 +73,7 @@ export default function Header() {
 
             {/* Mobile Nav Dropdown */}
             {isMenuOpen && (
-                <div className="md:hidden absolute top-[80px] left-0 w-full bg-white border-b border-gray-200 px-4 py-6 shadow-lg flex flex-col gap-4">
+                <div className="md:hidden absolute top-[80px] left-0 w-full bg-[#F9F6F0] border-b border-[#e6dac3] px-4 py-6 shadow-lg flex flex-col gap-4">
                     {['Programme', 'Safety', 'Investment', 'FAQs'].map((item) => (
                         <a
                             key={item}
@@ -86,7 +86,7 @@ export default function Header() {
                     ))}
                     <a
                         href="#register"
-                        className="mt-4 w-full text-center bg-primary-red text-white px-6 py-4 rounded-lg font-semibold"
+                        className="mt-4 w-full text-center bg-primary-red text-white px-6 py-4 rounded-sm font-semibold"
                         onClick={() => setIsMenuOpen(false)}
                     >
                         Register Now
