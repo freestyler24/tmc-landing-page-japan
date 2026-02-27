@@ -55,25 +55,31 @@ export default function Testimonials() {
                     variants={containerVariants}
                     className="grid md:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto mb-10 md:mb-16"
                 >
-                    {testimonials.map((t, i) => (
-                        <motion.div
-                            variants={itemVariants}
-                            key={i}
-                            className="bg-gray-900 border border-gray-800 p-6 md:p-8 flex flex-col justify-between hover:border-gray-700 transition-colors cursor-default"
-                        >
-                            <div>
-                                <div className="flex text-kyoto-gold mb-6 text-sm">
-                                    ★★★★★
+                    {testimonials.map((t, i) => {
+                        const rotations = ['md:-rotate-2', 'md:rotate-1', 'md:-rotate-1'];
+                        return (
+                            <motion.div
+                                variants={itemVariants}
+                                key={i}
+                                className={`relative bg-[#F9F6F0] p-6 md:p-8 flex flex-col justify-between shadow-lg shadow-black/20 hover:shadow-xl transition-all cursor-default ${rotations[i % 3]}`}
+                            >
+                                {/* Tape effect */}
+                                <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-6 bg-white/60 shadow-sm border border-black/5 -rotate-2 z-10"></div>
+
+                                <div>
+                                    <div className="flex text-primary-red mb-6 text-sm">
+                                        ★★★★★
+                                    </div>
+                                    <p className="text-gray-800 font-serif italic text-lg leading-relaxed mb-8">
+                                        &quot;{t.quote}&quot;
+                                    </p>
                                 </div>
-                                <p className="text-gray-300 font-serif italic text-lg leading-relaxed mb-8">
-                                    &quot;{t.quote}&quot;
+                                <p className="text-charcoal font-bold text-sm uppercase tracking-wider border-t border-gray-300 pt-4">
+                                    — {t.author}
                                 </p>
-                            </div>
-                            <p className="text-primary-red font-bold text-sm uppercase tracking-wider">
-                                — {t.author}
-                            </p>
-                        </motion.div>
-                    ))}
+                            </motion.div>
+                        );
+                    })}
                 </motion.div>
 
                 {/* Orientation CTA Banner */}
