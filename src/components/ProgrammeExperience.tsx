@@ -110,12 +110,14 @@ export default function ProgrammeExperience() {
         offset: ["start end", "end start"]
     });
 
-    const y1 = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
-    const y2 = useTransform(scrollYProgress, [0, 1], ["0%", "5%"]);
-    const y3 = useTransform(scrollYProgress, [0, 1], ["0%", "-15%"]);
-    const y4 = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
+    // Subtle pixel-based parallax to stay clean on both mobile and desktop
+    const y1 = useTransform(scrollYProgress, [0, 1], ["0px", "-30px"]);
+    const y2 = useTransform(scrollYProgress, [0, 1], ["0px", "20px"]);
+    const y3 = useTransform(scrollYProgress, [0, 1], ["0px", "-40px"]);
+    const y4 = useTransform(scrollYProgress, [0, 1], ["0px", "30px"]);
+    const y5 = useTransform(scrollYProgress, [0, 1], ["0px", "-15px"]);
 
-    const transforms = [y1, y2, y3, y4];
+    const transforms = [y1, y2, y3, y4, y5];
 
     return (
         <section id="programme" ref={containerRef} className="bg-[#1a1a1a] ma-spacing-mob ma-spacing-desk relative">
@@ -136,7 +138,7 @@ export default function ProgrammeExperience() {
                     </p>
                 </motion.div>
 
-                {/* City Cards Grid - stylized as printed cards */}
+                {/* City Cards Grid - stylized as premium flip cards */}
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -146,58 +148,70 @@ export default function ProgrammeExperience() {
                             transition: { staggerChildren: 0.15 }
                         }
                     }}
-                    className="flex flex-wrap justify-center gap-6 md:gap-8 mb-16 md:mb-20 max-w-5xl mx-auto"
+                    className="flex flex-wrap justify-center gap-6 sm:gap-8 lg:gap-10 mb-16 md:mb-20 max-w-[1200px] mx-auto px-4"
                 >
                     {cities.map((city, idx) => (
                         <motion.div
-                            style={{ y: transforms[idx], perspective: '1000px' }}
+                            style={{ y: transforms[idx], perspective: '1200px' }}
                             variants={fadeUp}
                             key={idx}
-                            className="group relative w-[280px] h-[360px] cursor-pointer bg-transparent"
+                            tabIndex={0}
+                            className="group relative w-full sm:w-[320px] lg:w-[300px] h-[400px] sm:h-[440px] cursor-pointer bg-transparent outline-none"
                         >
                             {/* Inner Flip Container */}
                             <div
-                                className="w-full h-full relative transition-transform duration-[800ms] ease-in-out transform-style-3d group-hover:[transform:rotateY(180deg)]"
+                                className="w-full h-full relative transition-transform duration-700 ease-[cubic-bezier(0.4,0.2,0.2,1)] transform-style-3d group-hover:[transform:rotateY(180deg)] group-focus:[transform:rotateY(180deg)]"
                                 style={{ transformStyle: 'preserve-3d' }}
                             >
                                 {/* Front Face */}
                                 <div
-                                    className="absolute inset-0 bg-[#222222] border border-gray-700 shadow-lg shadow-black/10 flex flex-col items-center justify-center p-8 pointer-events-none"
+                                    className="absolute inset-0 bg-[#222222] border border-gray-700/50 shadow-xl flex flex-col items-center justify-center p-8 rounded-sm"
                                     style={{ backfaceVisibility: 'hidden' }}
                                 >
-                                    <div className="absolute inset-2 border border-gray-700/30"></div>
-                                    <div className="transform group-hover:scale-110 transition-transform duration-500">
+                                    <div className="absolute inset-2 border border-gray-700/30 rounded-sm pointer-events-none"></div>
+                                    <div className="transform transition-transform duration-500 group-hover:scale-110 group-focus:scale-110 mb-6">
                                         {city.icon()}
                                     </div>
-                                    <h3 className="text-2xl font-serif text-[#F9F6F0] mt-4 tracking-wide">
+                                    <h3 className="text-3xl font-serif text-[#F9F6F0] mb-2 tracking-wide text-center">
                                         {city.name}
                                     </h3>
-                                    <div className="w-12 h-0.5 bg-gray-600 mt-6 overflow-hidden relative">
-                                        <div className="absolute top-0 left-0 h-full bg-primary-red w-full"></div>
+
+                                    <div className="w-12 h-px bg-gray-600 my-4 relative overflow-hidden">
+                                        <div className="absolute inset-0 bg-primary-red transform -translate-x-full group-hover:translate-x-0 group-focus:translate-x-0 transition-transform duration-500"></div>
                                     </div>
+
+                                    {/* Mobile tap hint */}
+                                    <span className="md:hidden text-gray-500 text-[10px] uppercase tracking-widest mt-auto opacity-70 flex items-center gap-1">
+                                        Tap to flip <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 2v6h-6" /><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /></svg>
+                                    </span>
                                 </div>
 
                                 {/* Back Face */}
                                 <div
-                                    className="absolute inset-0 bg-[#222222] border border-primary-red/50 shadow-xl flex flex-col items-start justify-center p-6 text-left pointer-events-none"
+                                    className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#252525] border border-primary-red/40 shadow-2xl flex flex-col p-6 sm:p-8 rounded-sm text-left"
                                     style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
                                 >
-                                    <div className="absolute inset-1.5 border border-primary-red/20"></div>
-                                    <div className="relative z-10 flex flex-col h-full w-full">
-                                        <h4 className="text-primary-red font-serif text-[17px] mb-4 leading-tight">
-                                            {city.name.toUpperCase()} — {city.theme}
-                                        </h4>
+                                    <div className="absolute inset-1.5 border border-primary-red/10 rounded-sm pointer-events-none"></div>
 
-                                        <div className="space-y-3 text-gray-400 text-[13px] leading-relaxed mb-4 flex-grow overflow-hidden">
+                                    <div className="relative z-10 flex flex-col h-full w-full">
+                                        <div className="mb-5 pb-4 border-b border-gray-800">
+                                            <h4 className="text-primary-red font-serif text-[20px] sm:text-[22px] leading-tight mb-1">
+                                                {city.name}
+                                            </h4>
+                                            <span className="text-gray-400 text-[11px] sm:text-[12px] uppercase tracking-[0.2em]">{city.theme}</span>
+                                        </div>
+
+                                        <div className="space-y-4 text-gray-300 text-[13px] sm:text-[14px] leading-relaxed flex-grow">
                                             {city.texts.map((text, i) => (
-                                                <p key={i}>{text}</p>
+                                                <p key={i} className="pl-3 border-l border-gray-700/60 shadow-sm">{text}</p>
                                             ))}
                                         </div>
 
-                                        <div className="mt-auto pt-4 border-t border-gray-800 w-full shrink-0">
-                                            <span className="text-[10px] text-gray-500 uppercase tracking-widest block mb-1">Derived Benefit</span>
-                                            <p className="text-[#e2d5c0] text-[13px] font-serif italic leading-snug">
-                                                {city.benefit}
+                                        <div className="mt-auto pt-4 relative">
+                                            <div className="absolute -top-3 left-0 w-8 h-px bg-primary-red/50"></div>
+                                            <span className="text-[10px] text-gray-500 uppercase tracking-widest block mb-1.5">Derived Benefit</span>
+                                            <p className="text-[#e2d5c0] text-[13px] sm:text-[14px] font-serif italic leading-snug">
+                                                "{city.benefit}"
                                             </p>
                                         </div>
                                     </div>
