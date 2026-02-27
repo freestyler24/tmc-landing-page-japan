@@ -13,7 +13,7 @@ export default function TrustSafety() {
     const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
 
     return (
-        <section id="safety" ref={containerRef} className="bg-[#F9F6F0] ma-spacing-mob ma-spacing-desk border-b border-[#e6dac3] relative overflow-hidden">
+        <section id="safety" ref={containerRef} className="bg-[#F5F3EF] ma-spacing-mob ma-spacing-desk border-b border-[#e6dac3] relative overflow-hidden">
             {/* Subtle wave pattern with parallax */}
             <motion.div
                 className="absolute inset-0 pointer-events-none origin-top"
@@ -47,7 +47,7 @@ export default function TrustSafety() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="max-w-4xl mx-auto bg-[#F9F6F0] border border-[#e6dac3] shadow-sm p-6 md:p-10 hover:shadow-md transition-shadow"
+                    className="max-w-4xl mx-auto bg-[#F5F3EF] border border-[#e6dac3] shadow-sm p-6 md:p-10 hover:shadow-md transition-shadow"
                 >
                     <h3 className="text-lg font-bold tracking-wider mb-6 text-primary-red uppercase text-center">Safety & Supervision Framework</h3>
                     <motion.div

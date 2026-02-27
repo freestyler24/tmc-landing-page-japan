@@ -32,7 +32,7 @@ export default function Testimonials() {
     };
 
     return (
-        <section className="bg-[#1a1a1a] ma-spacing-mob ma-spacing-desk relative overflow-hidden">
+        <section className="bg-[#111111] ma-spacing-mob ma-spacing-desk relative overflow-hidden">
             <div className="container-max relative z-10">
 
                 <motion.div
@@ -61,7 +61,7 @@ export default function Testimonials() {
                             <motion.div
                                 variants={itemVariants}
                                 key={i}
-                                className={`relative bg-[#F9F6F0] p-6 md:p-8 flex flex-col justify-between shadow-lg shadow-black/20 hover:shadow-xl transition-all cursor-default ${rotations[i % 3]}`}
+                                className={`relative bg-[#F5F3EF] p-6 md:p-8 flex flex-col justify-between shadow-lg shadow-black/20 hover:shadow-xl transition-all cursor-default ${rotations[i % 3]}`}
                             >
                                 {/* Tape effect */}
                                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-6 bg-white/60 shadow-sm border border-black/5 -rotate-2 z-10"></div>

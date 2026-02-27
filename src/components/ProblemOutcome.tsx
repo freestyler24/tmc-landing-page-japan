@@ -14,7 +14,7 @@ export default function ProblemOutcome() {
     const yText = useTransform(scrollYProgress, [0, 1], ["0%", "-40%"]);
 
     return (
-        <section ref={containerRef} className="bg-[#F9F6F0] ma-spacing-mob ma-spacing-desk border-b border-[#e6dac3] overflow-hidden relative">
+        <section ref={containerRef} className="bg-[#F5F3EF] ma-spacing-mob ma-spacing-desk border-b border-[#e6dac3] overflow-hidden relative">
             {/* Subtle wave pattern with parallax */}
             <motion.div
                 className="absolute inset-0 pointer-events-none origin-top"
@@ -67,7 +67,7 @@ export default function ProblemOutcome() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="bg-[#F9F6F0] p-8 md:p-12 shadow-md border-l-4 border-kyoto-gold"
+                        className="bg-[#F5F3EF] p-8 md:p-12 shadow-md border-l-4 border-kyoto-gold"
                     >
                         <h3 className="text-2xl font-serif text-charcoal mb-4">
                             What Students Gain

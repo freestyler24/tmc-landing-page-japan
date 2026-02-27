@@ -119,7 +119,7 @@ export default function ProgrammeExperience() {
     const transforms = [y1, y2, y3, y4, y5];
 
     return (
-        <section id="programme" ref={containerRef} className="bg-[#1a1a1a] ma-spacing-mob ma-spacing-desk relative">
+        <section id="programme" ref={containerRef} className="bg-[#111111] ma-spacing-mob ma-spacing-desk relative">
             <div className="container-max">
 
                 <motion.div
@@ -129,7 +129,7 @@ export default function ProgrammeExperience() {
                     variants={fadeUp}
                     className="text-center mb-12 md:mb-16"
                 >
-                    <h2 className="text-3xl md:text-5xl font-serif mb-4 md:mb-6 text-[#F9F6F0]">
+                    <h2 className="text-3xl md:text-5xl font-serif mb-4 md:mb-6 text-[#F5F3EF]">
                         Cultural Highlights
                     </h2>
                     <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto">
@@ -159,11 +159,11 @@ export default function ProgrammeExperience() {
                             >
                                 {/* ── FRONT ── */}
                                 <div
-                                    className="absolute inset-0 flex flex-col items-center justify-center p-8 bg-[#222222] border border-gray-700/60 shadow-xl rounded-sm [backface-visibility:hidden]"
+                                    className="absolute inset-0 flex flex-col items-center justify-center p-8 bg-[#181818] border border-gray-700/60 shadow-xl rounded-sm [backface-visibility:hidden]"
                                 >
                                     <div className="absolute inset-2 border border-gray-700/25 rounded-sm pointer-events-none" />
                                     {city.icon()}
-                                    <h3 className="text-2xl font-serif text-[#F9F6F0] mt-2 tracking-wide text-center">
+                                    <h3 className="text-2xl font-serif text-[#F5F3EF] mt-2 tracking-wide text-center">
                                         {city.name}
                                     </h3>
                                     <div className="relative w-10 h-px bg-gray-600 mt-5 overflow-hidden">
@@ -197,7 +197,7 @@ export default function ProgrammeExperience() {
                                     {/* Derived benefit */}
                                     <div className="mt-3 pt-3 border-t border-gray-700/60">
                                         <span className="text-[9px] text-gray-500 uppercase tracking-widest block mb-1">Derived Benefit</span>
-                                        <p className="text-[#e2d5c0] text-[12px] font-serif italic leading-snug">&ldquo;{city.benefit}&rdquo;</p>
+                                        <p className="text-[#B89B5E] text-[12px] font-serif italic leading-snug">&ldquo;{city.benefit}&rdquo;</p>
                                     </div>
                                 </div>
                             </div>

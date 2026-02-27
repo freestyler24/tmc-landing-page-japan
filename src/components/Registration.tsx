@@ -86,7 +86,7 @@ export default function Registration() {
     };
 
     return (
-        <section id="register" className="bg-[#F9F6F0] ma-spacing-mob ma-spacing-desk relative border-t border-[#e6dac3]">
+        <section id="register" className="bg-[#F5F3EF] ma-spacing-mob ma-spacing-desk relative border-t border-[#e6dac3]">
             {/* Subtle wave pattern */}
             <div className="absolute inset-0 pointer-events-none" style={{ opacity: 0.08, backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg stroke='%23c0b090' stroke-width='1' fill='none'%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='40'/%3E%3C/g%3E%3C/svg%3E")` }}></div>
             <div className="container-max max-w-4xl flex flex-col items-center relative z-10">

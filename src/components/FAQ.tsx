@@ -54,7 +54,7 @@ export default function FAQ() {
     };
 
     return (
-        <section id="faqs" className="bg-[#1a1a1a] py-20 md:py-32 relative overflow-hidden border-t border-b border-gray-900">
+        <section id="faqs" className="bg-[#111111] py-20 md:py-32 relative overflow-hidden border-t border-b border-gray-900">
             <div className="container-max max-w-4xl relative z-10 px-4">
 
                 {/* Heading */}
@@ -68,7 +68,7 @@ export default function FAQ() {
                     <span className="text-primary-red text-[11px] md:text-[13px] uppercase tracking-[0.3em] font-semibold mb-4 block">
                         Clarifications
                     </span>
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#F9F6F0] mb-6">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#F5F3EF] mb-6">
                         Frequently Asked Questions
                     </h2>
                     <div className="w-12 h-px bg-primary-red mx-auto mb-6"></div>
@@ -97,7 +97,7 @@ export default function FAQ() {
                             setSearchQuery(e.target.value);
                             setOpenIndex(null);
                         }}
-                        className="block w-full pl-14 pr-4 py-4 rounded-sm border border-gray-800 bg-[#222222] text-[#F9F6F0] placeholder-gray-500 focus:outline-none focus:border-primary-red/50 focus:ring-1 focus:ring-primary-red/50 transition-all shadow-sm"
+                        className="block w-full pl-14 pr-4 py-4 rounded-sm border border-gray-800 bg-[#181818] text-[#F5F3EF] placeholder-gray-500 focus:outline-none focus:border-primary-red/50 focus:ring-1 focus:ring-primary-red/50 transition-all shadow-sm"
                     />
                 </motion.div>
 
@@ -119,8 +119,8 @@ export default function FAQ() {
                                     setOpenIndex(null);
                                 }}
                                 className={`flex items-center gap-2 px-6 py-3 rounded-sm text-[13px] uppercase tracking-[0.1em] font-semibold transition-all shadow-sm ${isActive
-                                    ? 'bg-primary-red text-[#F9F6F0] border border-primary-red/0'
-                                    : 'bg-[#222222] text-gray-400 border border-gray-800 hover:bg-[#2a2a2a] hover:text-[#F9F6F0]'
+                                    ? 'bg-primary-red text-[#F5F3EF] border border-primary-red/0'
+                                    : 'bg-[#181818] text-gray-400 border border-gray-800 hover:bg-[#2a2a2a] hover:text-[#F5F3EF]'
                                     }`}
                             >
                                 <span className={`text-base ${isActive ? 'opacity-100' : 'opacity-70 grayscale'}`}>{cat.icon}</span>
@@ -156,13 +156,13 @@ export default function FAQ() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.2 }}
                                 key={faq.question}
-                                className="border border-gray-800 bg-[#222222] overflow-hidden transition-all hover:border-gray-700 rounded-sm"
+                                className="border border-gray-800 bg-[#181818] overflow-hidden transition-all hover:border-gray-700 rounded-sm"
                             >
                                 <button
                                     onClick={() => setOpenIndex(isOpen ? null : globalIdx)}
                                     className="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none group"
                                 >
-                                    <span className={`font-serif text-lg md:text-xl pr-8 transition-colors ${isOpen ? 'text-primary-red' : 'text-[#F9F6F0] group-hover:text-gray-300'}`}>
+                                    <span className={`font-serif text-lg md:text-xl pr-8 transition-colors ${isOpen ? 'text-primary-red' : 'text-[#F5F3EF] group-hover:text-gray-300'}`}>
                                         {faq.question}
                                     </span>
                                     <span

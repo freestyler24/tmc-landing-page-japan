@@ -14,7 +14,7 @@ export default function TrailerVideo() {
     const yVideo = useTransform(scrollYProgress, [0, 1], ["20px", "-20px"]);
 
     return (
-        <section ref={containerRef} className="bg-[#1a1a1a] py-20 md:py-32 relative border-t border-b border-gray-900 overflow-hidden">
+        <section ref={containerRef} className="bg-[#111111] py-20 md:py-32 relative border-t border-b border-gray-900 overflow-hidden">
             {/* Atmospheric Background Watermark */}
             <motion.div
                 animate={{ rotate: 360 }}
@@ -48,7 +48,7 @@ export default function TrailerVideo() {
                     <span className="text-primary-red text-[11px] md:text-[13px] uppercase tracking-[0.3em] font-semibold mb-4 block">
                         Interactive Preview
                     </span>
-                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif text-[#F9F6F0] mb-6 leading-tight">
+                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif text-[#F5F3EF] mb-6 leading-tight">
                         See the Experience <br className="hidden md:block" />Before You Decide.
                     </h2>
                     <p className="text-base md:text-lg text-gray-400 mb-6 leading-relaxed">
@@ -56,7 +56,7 @@ export default function TrailerVideo() {
                     </p>
                     <div className="flex items-center justify-center gap-4 py-4">
                         <div className="h-px w-12 bg-gray-800"></div>
-                        <p className="text-base md:text-lg text-[#e2d5c0] font-serif italic">
+                        <p className="text-base md:text-lg text-[#B89B5E] font-serif italic">
                             "Notice the precision. The structure. The quiet discipline. <br className="hidden md:block" />This is not tourism. It is structured exposure."
                         </p>
                         <div className="h-px w-12 bg-gray-800"></div>
@@ -73,7 +73,7 @@ export default function TrailerVideo() {
                     className="w-full max-w-5xl mb-16 relative group"
                 >
                     {/* Dark premium frame matching the flip cards */}
-                    <div className="relative bg-[#222222] p-2 md:p-3 shadow-2xl shadow-black/50 border border-gray-800 rounded-sm">
+                    <div className="relative bg-[#181818] p-2 md:p-3 shadow-2xl shadow-black/50 border border-gray-800 rounded-sm">
                         {/* Inner accent border */}
                         <div className="absolute inset-1.5 border border-primary-red/20 rounded-sm pointer-events-none z-20"></div>
 
@@ -105,7 +105,7 @@ export default function TrailerVideo() {
                 >
                     <a
                         href="#register"
-                        className="inline-block bg-primary-red text-[#F9F6F0] px-10 py-4 rounded-sm text-[13px] md:text-[14px] font-semibold uppercase tracking-[0.15em] hover:bg-[#8b1c1c] transition-colors shadow-lg"
+                        className="inline-block bg-primary-red text-[#F5F3EF] px-10 py-4 rounded-sm text-[13px] md:text-[14px] font-semibold uppercase tracking-[0.15em] hover:bg-[#8b1c1c] transition-colors shadow-lg"
                     >
                         Register for Parent Orientation
                     </a>

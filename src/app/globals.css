@@ -2,8 +2,8 @@
 
 @theme inline {
   --color-primary-red: #C8102E;
-  --color-charcoal: #1a1a1a;
-  --color-offwhite: #F9F6F0;
+  --color-charcoal: #111111;
+  --color-offwhite: #F5F3EF;
   --color-kyoto-gold: #B89B5E;
   --color-warm-border: #e6dac3;
   --color-warm-text: #7a6c56;
@@ -68,7 +68,7 @@
   }
 
   .bg-alt-charcoal {
-    background-color: #1a1a1a;
+    background-color: #111111;
     color: var(--color-offwhite);
   }
 }

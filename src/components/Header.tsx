@@ -17,7 +17,7 @@ export default function Header() {
 
     return (
         <header
-            className={`fixed top-0 w-full z-50 transition-all duration-300 bg-[#F9F6F0] ${isScrolled ? 'border-b border-[#e6dac3] shadow-sm' : 'border-b border-transparent'
+            className={`fixed top-0 w-full z-50 transition-all duration-300 bg-[#F5F3EF] ${isScrolled ? 'border-b border-[#e6dac3] shadow-sm' : 'border-b border-transparent'
                 }`}
             style={{ height: '80px' }}
         >
@@ -73,7 +73,7 @@ export default function Header() {
 
             {/* Mobile Nav Dropdown */}
             {isMenuOpen && (
-                <div className="md:hidden absolute top-[80px] left-0 w-full bg-[#F9F6F0] border-b border-[#e6dac3] px-4 py-6 shadow-lg flex flex-col gap-4">
+                <div className="md:hidden absolute top-[80px] left-0 w-full bg-[#F5F3EF] border-b border-[#e6dac3] px-4 py-6 shadow-lg flex flex-col gap-4">
                     {['Programme', 'Safety', 'Investment', 'FAQs'].map((item) => (
                         <a
                             key={item}

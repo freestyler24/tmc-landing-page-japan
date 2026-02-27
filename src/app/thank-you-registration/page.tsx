@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ThankYouRegistration() {
     return (
-        <main className="min-h-screen bg-[#1a1a1a] text-gray-300 py-16 md:py-24 px-4 font-sans selection:bg-primary-red/30">
+        <main className="min-h-screen bg-[#111111] text-gray-300 py-16 md:py-24 px-4 font-sans selection:bg-primary-red/30">
             <div className="max-w-3xl mx-auto space-y-16">
 
                 {/* Header Section */}
@@ -10,7 +10,7 @@ export default function ThankYouRegistration() {
                     <span className="text-primary-red text-[11px] md:text-[13px] uppercase tracking-[0.3em] font-semibold">
                         Confirmation
                     </span>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#F9F6F0] leading-tight">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#F5F3EF] leading-tight">
                         Intent Received.
                     </h1>
                     <div className="w-16 h-px bg-primary-red mx-auto my-6"></div>
@@ -26,9 +26,9 @@ export default function ThankYouRegistration() {
                 {/* What Happens Next & Important (Grid) */}
                 <section className="grid md:grid-cols-2 gap-12 md:gap-8">
                     {/* What Happens Next? */}
-                    <div className="bg-[#222222] p-8 md:p-10 border border-gray-800 rounded-sm shadow-xl relative group">
+                    <div className="bg-[#181818] p-8 md:p-10 border border-gray-800 rounded-sm shadow-xl relative group">
                         <div className="absolute inset-1 border border-primary-red/10 rounded-sm pointer-events-none"></div>
-                        <h2 className="text-2xl font-serif text-[#F9F6F0] mb-4">What Happens Next?</h2>
+                        <h2 className="text-2xl font-serif text-[#F5F3EF] mb-4">What Happens Next?</h2>
                         <p className="text-gray-400 leading-relaxed text-[15px]">
                             Our team will contact you shortly with the session details and access information.
                             Please keep your phone and email accessible.
@@ -36,11 +36,11 @@ export default function ThankYouRegistration() {
                     </div>
 
                     {/* Important */}
-                    <div className="bg-[#222222] p-8 md:p-10 border border-gray-800 rounded-sm shadow-xl relative group">
+                    <div className="bg-[#181818] p-8 md:p-10 border border-gray-800 rounded-sm shadow-xl relative group">
                         <div className="absolute inset-1 border border-primary-red/10 rounded-sm pointer-events-none"></div>
-                        <h2 className="text-2xl font-serif text-[#F9F6F0] mb-4">Important</h2>
+                        <h2 className="text-2xl font-serif text-[#F5F3EF] mb-4">Important</h2>
                         <p className="text-gray-400 leading-relaxed text-[15px]">
-                            This registration confirms attendance for the <span className="text-[#e2d5c0] italic font-serif">Parent Orientation only.</span>
+                            This registration confirms attendance for the <span className="text-[#B89B5E] italic font-serif">Parent Orientation only.</span>
                             <br /><br />
                             Enrolment decisions are made after the session.
                         </p>
@@ -52,7 +52,7 @@ export default function ThankYouRegistration() {
                 {/* Previous Tours Section */}
                 <section className="space-y-12">
                     <div className="text-center space-y-4">
-                        <h2 className="text-3xl font-serif text-[#F9F6F0]">Previous Tours</h2>
+                        <h2 className="text-3xl font-serif text-[#F5F3EF]">Previous Tours</h2>
                         <p className="text-gray-400 max-w-xl mx-auto leading-relaxed">
                             While you wait, explore moments from our earlier journeys.
                             These videos offer a glimpse into the structure, supervision, and student experience.
@@ -63,7 +63,7 @@ export default function ThankYouRegistration() {
                     <div className="grid lg:grid-cols-1 gap-12 max-w-2xl mx-auto">
 
                         {/* Video 1 */}
-                        <div className="bg-[#222222] p-2 border border-gray-800 rounded-sm shadow-2xl relative">
+                        <div className="bg-[#181818] p-2 border border-gray-800 rounded-sm shadow-2xl relative">
                             <div className="absolute inset-1.5 border border-primary-red/20 pointer-events-none z-10"></div>
                             <div className="aspect-video relative overflow-hidden bg-black z-0">
                                 <iframe
@@ -79,7 +79,7 @@ export default function ThankYouRegistration() {
                         </div>
 
                         {/* Video 2 */}
-                        <div className="bg-[#222222] p-2 border border-gray-800 rounded-sm shadow-2xl relative">
+                        <div className="bg-[#181818] p-2 border border-gray-800 rounded-sm shadow-2xl relative">
                             <div className="absolute inset-1.5 border border-primary-red/20 pointer-events-none z-10"></div>
                             <div className="aspect-video relative overflow-hidden bg-black z-0">
                                 <iframe
@@ -95,7 +95,7 @@ export default function ThankYouRegistration() {
                         </div>
 
                         {/* Video 3 */}
-                        <div className="bg-[#222222] p-2 border border-gray-800 rounded-sm shadow-2xl relative">
+                        <div className="bg-[#181818] p-2 border border-gray-800 rounded-sm shadow-2xl relative">
                             <div className="absolute inset-1.5 border border-primary-red/20 pointer-events-none z-10"></div>
                             <div className="aspect-video relative overflow-hidden bg-black z-0">
                                 <iframe
@@ -118,7 +118,7 @@ export default function ThankYouRegistration() {
                 {/* Footer / Questions Section */}
                 <section className="text-center space-y-10">
                     <div className="space-y-3">
-                        <h3 className="text-xl font-serif text-[#F9F6F0] mb-2">Questions?</h3>
+                        <h3 className="text-xl font-serif text-[#F5F3EF] mb-2">Questions?</h3>
                         <p className="text-primary-red hover:text-white transition-colors cursor-pointer">mail@themodernclassroom.in</p>
                         <p className="text-gray-400">+91-9900786677 | 9886753632</p>
                     </div>
@@ -129,8 +129,8 @@ export default function ThankYouRegistration() {
                             alt="The Modern Classroom"
                             className="h-10 md:h-12 w-auto mx-auto mb-6 opacity-90"
                         />
-                        <h2 className="text-2xl font-serif text-[#F9F6F0] mb-2">The Modern Classroom</h2>
-                        <span className="text-[11px] md:text-[13px] text-[#e2d5c0] tracking-[0.2em] font-serif italic">
+                        <h2 className="text-2xl font-serif text-[#F5F3EF] mb-2">The Modern Classroom</h2>
+                        <span className="text-[11px] md:text-[13px] text-[#B89B5E] tracking-[0.2em] font-serif italic">
                             Structured. Supervised. Transformational.
                         </span>
                     </div>
@@ -138,7 +138,7 @@ export default function ThankYouRegistration() {
                     <div className="pt-8">
                         <a
                             href="/"
-                            className="inline-block bg-primary-red text-[#F9F6F0] px-8 py-4 rounded-sm text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.15em] hover:bg-[#8b1c1c] transition-colors shadow-lg"
+                            className="inline-block bg-primary-red text-[#F5F3EF] px-8 py-4 rounded-sm text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.15em] hover:bg-[#8b1c1c] transition-colors shadow-lg"
                         >
                             Return to Homepage
                         </a>

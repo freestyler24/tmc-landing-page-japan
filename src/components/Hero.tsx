@@ -30,7 +30,7 @@ export default function Hero() {
     const opacityFade = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
     return (
-        <section ref={containerRef} className="bg-[#F9F6F0] relative overflow-hidden pt-[100px] pb-14 md:pt-[160px] md:pb-[120px]">
+        <section ref={containerRef} className="bg-[#F5F3EF] relative overflow-hidden pt-[100px] pb-14 md:pt-[160px] md:pb-[120px]">
 
             {/* Ambient Background Glows */}
             <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-kyoto-gold/5 rounded-full blur-3xl pointer-events-none"></div>
@@ -51,7 +51,7 @@ export default function Hero() {
                 style={{ y: yText, opacity: opacityFade }}
                 className="absolute left-8 md:left-16 top-1/4 pointer-events-none hidden lg:block"
             >
-                <p className="text-[#e2d5c0] font-serif text-6xl writing-vertical-rl tracking-widest opacity-40">
+                <p className="text-[#B89B5E] font-serif text-6xl writing-vertical-rl tracking-widest opacity-40">
                     成長
                 </p>
             </motion.div>
@@ -59,7 +59,7 @@ export default function Hero() {
                 style={{ y: useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]), opacity: opacityFade }}
                 className="absolute right-8 md:right-16 top-1/3 pointer-events-none hidden lg:block"
             >
-                <p className="text-[#e2d5c0] font-serif text-6xl writing-vertical-rl tracking-widest opacity-40">
+                <p className="text-[#B89B5E] font-serif text-6xl writing-vertical-rl tracking-widest opacity-40">
                     規律
                 </p>
             </motion.div>
