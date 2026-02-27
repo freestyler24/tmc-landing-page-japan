@@ -54,8 +54,8 @@ export default function FAQ() {
     };
 
     return (
-        <section id="faqs" className="bg-alt-offwhite ma-spacing-mob ma-spacing-desk relative overflow-hidden">
-            <div className="container-max max-w-4xl relative z-10">
+        <section id="faqs" className="bg-[#1a1a1a] py-20 md:py-32 relative overflow-hidden border-t border-b border-gray-900">
+            <div className="container-max max-w-4xl relative z-10 px-4">
 
                 {/* Heading */}
                 <motion.div
@@ -63,12 +63,16 @@ export default function FAQ() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: '-50px' }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-10"
+                    className="text-center mb-12"
                 >
-                    <h2 className="text-4xl md:text-5xl font-serif text-charcoal mb-4">
+                    <span className="text-primary-red text-[11px] md:text-[13px] uppercase tracking-[0.3em] font-semibold mb-4 block">
+                        Clarifications
+                    </span>
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#F9F6F0] mb-6">
                         Frequently Asked Questions
                     </h2>
-                    <p className="text-gray-600 text-lg md:text-xl">
+                    <div className="w-12 h-px bg-primary-red mx-auto mb-6"></div>
+                    <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
                         Everything you need to know about the Japan 2026 tour
                     </p>
                 </motion.div>
@@ -78,10 +82,12 @@ export default function FAQ() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="max-w-xl mx-auto mb-8 relative"
+                    className="max-w-xl mx-auto mb-10 relative group"
                 >
-                    <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                        <span className="text-gray-400 text-lg">🔍</span>
+                    <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+                        <svg className="w-5 h-5 text-gray-500 group-focus-within:text-primary-red transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
                     </div>
                     <input
                         type="text"
@@ -91,7 +97,7 @@ export default function FAQ() {
                             setSearchQuery(e.target.value);
                             setOpenIndex(null);
                         }}
-                        className="block w-full pl-12 pr-4 py-4 rounded-lg border border-gray-200 bg-white text-charcoal focus:outline-none focus:ring-2 focus:ring-primary-red transition-shadow shadow-sm"
+                        className="block w-full pl-14 pr-4 py-4 rounded-sm border border-gray-800 bg-[#222222] text-[#F9F6F0] placeholder-gray-500 focus:outline-none focus:border-primary-red/50 focus:ring-1 focus:ring-primary-red/50 transition-all shadow-sm"
                     />
                 </motion.div>
 
@@ -112,17 +118,17 @@ export default function FAQ() {
                                     setActiveCategory(cat.id);
                                     setOpenIndex(null);
                                 }}
-                                className={`flex items-center gap-2 px-5 py-3 rounded-lg font-medium transition-all ${isActive
-                                        ? 'bg-primary-red text-white shadow-md'
-                                        : 'bg-white text-gray-600 border border-gray-200 hover:bg-gray-50'
+                                className={`flex items-center gap-2 px-6 py-3 rounded-sm text-[13px] uppercase tracking-[0.1em] font-semibold transition-all shadow-sm ${isActive
+                                    ? 'bg-primary-red text-[#F9F6F0] border border-primary-red/0'
+                                    : 'bg-[#222222] text-gray-400 border border-gray-800 hover:bg-[#2a2a2a] hover:text-[#F9F6F0]'
                                     }`}
                             >
-                                <span className="opacity-80">{cat.icon}</span>
+                                <span className={`text-base ${isActive ? 'opacity-100' : 'opacity-70 grayscale'}`}>{cat.icon}</span>
                                 <span>{cat.name}</span>
                                 <span
-                                    className={`text-xs py-0.5 px-2 rounded-full ${isActive
-                                            ? 'bg-white/20 text-white'
-                                            : 'bg-gray-100 text-gray-500'
+                                    className={`ml-1 text-[10px] py-0.5 px-2 rounded-sm ${isActive
+                                        ? 'bg-white/20 text-white'
+                                        : 'bg-gray-800 text-gray-500'
                                         }`}
                                 >
                                     {count}
@@ -150,20 +156,21 @@ export default function FAQ() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.2 }}
                                 key={faq.question}
-                                className="border border-gray-200 bg-white overflow-hidden transition-shadow hover:shadow-md rounded-lg"
+                                className="border border-gray-800 bg-[#222222] overflow-hidden transition-all hover:border-gray-700 rounded-sm"
                             >
                                 <button
                                     onClick={() => setOpenIndex(isOpen ? null : globalIdx)}
-                                    className="w-full flex justify-between items-start p-6 text-left focus:outline-none"
+                                    className="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none group"
                                 >
-                                    <span className="font-serif text-charcoal text-lg md:text-xl pr-8 font-medium">
+                                    <span className={`font-serif text-lg md:text-xl pr-8 transition-colors ${isOpen ? 'text-primary-red' : 'text-[#F9F6F0] group-hover:text-gray-300'}`}>
                                         {faq.question}
                                     </span>
                                     <span
-                                        className="text-gray-400 transition-transform duration-300 mt-1 inline-block"
-                                        style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
+                                        className={`transition-transform duration-300 flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full border ${isOpen ? 'rotate-180 border-primary-red/30 bg-primary-red/10 text-primary-red' : 'border-gray-700 text-gray-500 group-hover:border-gray-600'}`}
                                     >
-                                        ▼
+                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
                                     </span>
                                 </button>
 
@@ -175,9 +182,9 @@ export default function FAQ() {
                                             exit={{ height: 0, opacity: 0 }}
                                             transition={{ duration: 0.3 }}
                                         >
-                                            <div className="px-6 pb-6 pt-2 border-t border-gray-100">
+                                            <div className="px-6 pb-6 pt-2 border-t border-gray-800/50">
                                                 <div
-                                                    className="text-gray-600 leading-relaxed text-sm md:text-base space-y-2"
+                                                    className="text-gray-400 leading-relaxed text-[15px] space-y-4"
                                                     dangerouslySetInnerHTML={{ __html: formatAnswer(faq.answer) }}
                                                 />
                                             </div>
