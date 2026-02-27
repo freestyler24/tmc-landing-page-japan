@@ -14,8 +14,28 @@ export default function TrailerVideo() {
     const yVideo = useTransform(scrollYProgress, [0, 1], ["20px", "-20px"]);
 
     return (
-        <section ref={containerRef} className="bg-[#1a1a1a] py-16 md:py-24 relative border-t border-b border-gray-900">
-            <div className="container-max flex flex-col items-center text-center">
+        <section ref={containerRef} className="bg-[#1a1a1a] py-20 md:py-32 relative border-t border-b border-gray-900 overflow-hidden">
+            {/* Atmospheric Background Watermark */}
+            <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                className="absolute -right-20 top-20 pointer-events-none opacity-[0.03] z-0"
+            >
+                <svg className="w-96 h-96 text-white" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                    <circle cx="12" cy="12" r="3" />
+                    <circle cx="12" cy="5.5" r="1.5" />
+                    <circle cx="12" cy="18.5" r="1.5" />
+                    <circle cx="5.5" cy="12" r="1.5" />
+                    <circle cx="18.5" cy="12" r="1.5" />
+                    <circle cx="7.4" cy="7.4" r="1.5" />
+                    <circle cx="16.6" cy="16.6" r="1.5" />
+                    <circle cx="7.4" cy="16.6" r="1.5" />
+                    <circle cx="16.6" cy="7.4" r="1.5" />
+                </svg>
+            </motion.div>
+
+            <div className="container-max flex flex-col items-center text-center relative z-10 px-4">
 
                 {/* Section header */}
                 <motion.div
@@ -23,54 +43,42 @@ export default function TrailerVideo() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6 }}
-                    className="mb-10 md:mb-14 w-full"
+                    className="mb-12 md:mb-16 w-full max-w-3xl"
                 >
-                    <h2 className="text-3xl md:text-5xl font-serif text-[#F9F6F0] mb-4 md:mb-6">
-                        See the Experience Before You Decide.
+                    <span className="text-primary-red text-[11px] md:text-[13px] uppercase tracking-[0.3em] font-semibold mb-4 block">
+                        Interactive Preview
+                    </span>
+                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif text-[#F9F6F0] mb-6 leading-tight">
+                        See the Experience <br className="hidden md:block" />Before You Decide.
                     </h2>
-                    <p className="max-w-2xl mx-auto text-base md:text-lg text-gray-400 mb-3">
+                    <p className="text-base md:text-lg text-gray-400 mb-6 leading-relaxed">
                         Before reading further, take a moment to see what this journey feels like.
                     </p>
-                    <p className="max-w-2xl mx-auto text-base md:text-lg text-gray-400">
-                        Notice the precision. The structure. The quiet discipline.<br />
-                        This is not tourism. It is structured exposure.
-                    </p>
+                    <div className="flex items-center justify-center gap-4 py-4">
+                        <div className="h-px w-12 bg-gray-800"></div>
+                        <p className="text-base md:text-lg text-[#e2d5c0] font-serif italic">
+                            "Notice the precision. The structure. The quiet discipline. <br className="hidden md:block" />This is not tourism. It is structured exposure."
+                        </p>
+                        <div className="h-px w-12 bg-gray-800"></div>
+                    </div>
                 </motion.div>
 
                 {/* Video frame container */}
                 <motion.div
                     style={{ y: yVideo }}
-                    initial={{ opacity: 0, scale: 0.96 }}
+                    initial={{ opacity: 0, scale: 0.98 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="w-full max-w-4xl mb-12"
+                    className="w-full max-w-5xl mb-16 relative group"
                 >
-                    {/* Golden frame — film reel sits INSIDE this relative container */}
-                    <div className="relative bg-[#e2d5c0] p-3 shadow-2xl rounded-sm">
-
-                        {/* Film Reel — anchored inside the top-right corner of the golden frame */}
-                        <motion.div
-                            animate={{ rotate: [0, 360] }}
-                            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                            className="absolute top-3 right-3 z-10 pointer-events-none opacity-60"
-                        >
-                            <svg className="w-12 h-12 md:w-16 md:h-16 text-[#6b5a3e]" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
-                                <circle cx="12" cy="12" r="3" />
-                                <circle cx="12" cy="5.5" r="1.5" />
-                                <circle cx="12" cy="18.5" r="1.5" />
-                                <circle cx="5.5" cy="12" r="1.5" />
-                                <circle cx="18.5" cy="12" r="1.5" />
-                                <circle cx="7.4" cy="7.4" r="1.5" />
-                                <circle cx="16.6" cy="16.6" r="1.5" />
-                                <circle cx="7.4" cy="16.6" r="1.5" />
-                                <circle cx="16.6" cy="7.4" r="1.5" />
-                            </svg>
-                        </motion.div>
+                    {/* Dark premium frame matching the flip cards */}
+                    <div className="relative bg-[#222222] p-2 md:p-3 shadow-2xl shadow-black/50 border border-gray-800 rounded-sm">
+                        {/* Inner accent border */}
+                        <div className="absolute inset-1.5 border border-primary-red/20 rounded-sm pointer-events-none z-20"></div>
 
                         {/* Wistia embed */}
-                        <div className="bg-black relative overflow-hidden border border-black/20">
+                        <div className="bg-black relative overflow-hidden rounded-sm z-10">
                             <Script src="https://fast.wistia.com/player.js" strategy="afterInteractive" />
                             <Script src="https://fast.wistia.com/embed/zwq5w6rf4r.js" strategy="afterInteractive" type="module" />
                             <Script id="wistia-captions-disable" strategy="afterInteractive">
@@ -97,7 +105,7 @@ export default function TrailerVideo() {
                 >
                     <a
                         href="#register"
-                        className="inline-block bg-primary-red text-white px-8 md:px-12 py-3 md:py-4 rounded-sm text-sm md:text-lg font-semibold hover:bg-white hover:text-primary-red transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                        className="inline-block bg-primary-red text-[#F9F6F0] px-10 py-4 rounded-sm text-[13px] md:text-[14px] font-semibold uppercase tracking-[0.15em] hover:bg-[#8b1c1c] transition-colors shadow-lg"
                     >
                         Register for Parent Orientation
                     </a>
