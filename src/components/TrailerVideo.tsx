@@ -5,7 +5,7 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const FilmReelIcon = () => (
-    <svg className="w-24 h-24 md:w-32 md:h-32 text-[#d8c8b8] opacity-90 drop-shadow-2xl" viewBox="0 0 24 24" fill="currentColor">
+    <svg className="w-20 h-20 md:w-24 md:h-24 text-[#d8c8b8] opacity-90 drop-shadow-xl" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
         <circle cx="12" cy="12" r="3" />
         <circle cx="12" cy="5.5" r="1.5" />
@@ -26,43 +26,53 @@ export default function TrailerVideo() {
         offset: ["start end", "end start"]
     });
 
-    const yVideo = useTransform(scrollYProgress, [0, 1], ["10%", "-10%"]);
+    const yVideo = useTransform(scrollYProgress, [0, 1], ["20px", "-20px"]);
 
     return (
-        <section ref={containerRef} className="bg-[#1a1a1a] pb-16 pt-8 md:pb-24 md:pt-12 overflow-hidden relative border-t border-gray-900 border-b border-gray-900">
+        <section ref={containerRef} className="bg-[#1a1a1a] py-16 md:py-24 overflow-visible relative border-t border-b border-gray-900">
             <div className="container-max flex flex-col items-center text-center">
 
+                {/* Section header */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6 }}
+                    className="mb-10 md:mb-14"
                 >
                     <h2 className="text-3xl md:text-5xl font-serif text-[#F9F6F0] mb-4 md:mb-6">
                         See the Experience Before You Decide.
                     </h2>
-
-                    <p className="max-w-2xl text-base md:text-lg text-gray-400 mb-3 md:mb-4">
+                    <p className="max-w-2xl text-base md:text-lg text-gray-400 mb-3">
                         Before reading further, take a moment to see what this journey feels like.
                     </p>
-                    <p className="max-w-2xl text-base md:text-lg text-gray-400 mb-10 md:mb-14">
+                    <p className="max-w-2xl text-base md:text-lg text-gray-400">
                         Notice the precision. The structure. The quiet discipline.<br />
                         This is not tourism. It is structured exposure.
                     </p>
                 </motion.div>
 
-                {/* Video container with golden frame and film reel decor */}
+                {/* Video + Film Reel wrapper — overflow-visible so icon peeks out */}
                 <motion.div
                     style={{ y: yVideo }}
-                    initial={{ opacity: 0, scale: 0.95 }}
+                    initial={{ opacity: 0, scale: 0.96 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="w-full max-w-4xl relative z-10 mb-12 group cursor-pointer"
+                    className="w-full max-w-4xl relative z-10 mb-12"
                 >
-                    {/* Golden Background Frame */}
+                    {/* Film Reel — anchored to top-right of the outer wrapper */}
+                    <motion.div
+                        animate={{ y: [0, -12, 0], rotate: [12, 9, 12] }}
+                        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                        className="absolute -top-10 -right-10 z-20 pointer-events-none"
+                    >
+                        <FilmReelIcon />
+                    </motion.div>
+
+                    {/* Golden frame */}
                     <div className="bg-[#e2d5c0] p-3 shadow-2xl rounded-sm">
-                        {/* Wistia Embed inside the frame */}
+                        {/* Wistia embed */}
                         <div className="bg-black relative overflow-hidden border border-black/20">
                             <Script src="https://fast.wistia.com/player.js" strategy="afterInteractive" />
                             <Script src="https://fast.wistia.com/embed/zwq5w6rf4r.js" strategy="afterInteractive" type="module" />
@@ -72,7 +82,6 @@ export default function TrailerVideo() {
                                 _wq.push({id: "zwq5w6rf4r", options: {plugin: {captions: {onByDefault: false } } } });
                                 `}
                             </Script>
-
                             <div dangerouslySetInnerHTML={{
                                 __html: `
                             <style>wistia-player[media-id='zwq5w6rf4r']:not(:defined) {background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/zwq5w6rf4r/swatch'); display: block; filter: blur(5px); padding-top:50.0%; }</style>
@@ -80,18 +89,6 @@ export default function TrailerVideo() {
                             ` }} />
                         </div>
                     </div>
-
-                    {/* Film Reel Decorative Element (Breathing Animation) */}
-                    <motion.div
-                        animate={{
-                            y: [0, -15, 0],
-                            rotate: [12, 10, 12]
-                        }}
-                        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                        className="absolute -top-6 -right-6 md:-top-10 md:-right-10 z-20 pointer-events-none drop-shadow-2xl"
-                    >
-                        <FilmReelIcon />
-                    </motion.div>
                 </motion.div>
 
                 {/* CTA below video */}
@@ -113,3 +110,4 @@ export default function TrailerVideo() {
         </section>
     );
 }
+
