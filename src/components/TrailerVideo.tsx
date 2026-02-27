@@ -57,17 +57,17 @@ export default function TrailerVideo() {
                             <Script src="https://fast.wistia.com/player.js" strategy="afterInteractive" />
                             <Script src="https://fast.wistia.com/embed/zwq5w6rf4r.js" strategy="afterInteractive" type="module" />
                             <Script id="wistia-captions-disable" strategy="afterInteractive">
-                                {\`
+                                {`
                                 window._wq = window._wq || [];
                                 _wq.push({id: "zwq5w6rf4r", options: {plugin: {captions: {onByDefault: false } } } });
-                                \`}
+                                `}
                             </Script>
 
                             <div dangerouslySetInnerHTML={{
-                                __html: \`
+                                __html: `
                             <style>wistia-player[media-id='zwq5w6rf4r']:not(:defined) {background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/zwq5w6rf4r/swatch'); display: block; filter: blur(5px); padding-top:50.0%; }</style>
                             <wistia-player media-id="zwq5w6rf4r" aspect="2.0"></wistia-player>
-                            \` }} />
+                            ` }} />
                         </div>
                     </div>
 
