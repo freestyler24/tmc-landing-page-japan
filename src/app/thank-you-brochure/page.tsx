@@ -110,7 +110,7 @@ function ThankYouContent() {
                 {/* Previous Tours Section */}
                 <section className="space-y-12">
                     <div className="text-center space-y-4">
-                        <h2 className="text-3xl font-serif text-[#F9F6F0]">Previous Japan Journeys</h2>
+                        <h2 className="text-3xl font-serif text-[#F9F6F0]">Previous Tours</h2>
                         <p className="text-gray-400 max-w-xl mx-auto leading-relaxed">
                             A glimpse into earlier programmes.
                             <br />
