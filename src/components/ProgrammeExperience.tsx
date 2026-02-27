@@ -6,10 +6,14 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 const cities = [
     {
         name: 'Tokyo',
-        theme: 'Structured Complexity',
-        desc: "Students navigate one of the world's most efficient cities while learning how large-scale systems operate seamlessly.",
+        theme: 'Urban Precision',
+        texts: [
+            "Your child navigates one of the world's most complex cities with growing independence.",
+            "From Asakusa Sensoji Temple to Shibuya Crossing, from school exchanges to TeamLab's digital universe — Tokyo teaches adaptability in real time."
+        ],
+        benefit: "Exposure to structured complexity builds composure.",
         icon: () => (
-            <svg className="w-20 h-20 text-primary-red mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg className="w-16 h-16 text-primary-red mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 2v20" />
                 <path d="M7 22h10" />
                 <path d="M9 10h6" />
@@ -20,11 +24,15 @@ const cities = [
         )
     },
     {
-        name: 'Mt. Fuji', // shortened for aesthetic
-        theme: 'Observation & Perspective',
-        desc: "Standing at Mt. Fuji's 5th Station and exploring Hakone teaches reflection, patience, and quiet strength.",
+        name: 'Mt. Fuji',
+        theme: 'Observing Power',
+        texts: [
+            "Standing at Mt. Fuji's 5th Station, students experience quiet strength.",
+            "The Hakone Ropeway and Lake Ashi cruise teach something subtle: Profound experiences come from observing, not rushing."
+        ],
+        benefit: "Depth over distraction.",
         icon: () => (
-            <svg className="w-20 h-20 text-primary-red mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg className="w-16 h-16 text-primary-red mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M2 20h20L12 4 2 20z" />
                 <path d="M7.5 13L12 8l4.5 5" fill="currentColor" />
             </svg>
@@ -33,9 +41,13 @@ const cities = [
     {
         name: 'Kyoto',
         theme: 'Cultural Continuity',
-        desc: "From temple visits to traditional experiences, students witness how tradition and modernity coexist without conflict.",
+        texts: [
+            "After boarding the Shinkansen at 320 km/h, students arrive in Japan's ancient capital.",
+            "Dressed in kimono, walking temple grounds, they witness how tradition evolves without erasing its roots."
+        ],
+        benefit: "Respect for legacy while embracing innovation.",
         icon: () => (
-            <svg className="w-20 h-20 text-primary-red mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg className="w-16 h-16 text-primary-red mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M3 20h18" />
                 <path d="M6 20v-8" />
                 <path d="M18 20v-8" />
@@ -47,10 +59,13 @@ const cities = [
     },
     {
         name: 'Nara',
-        theme: 'Discipline & Respect',
-        desc: "Institutions where respect is embedded into daily life.",
+        theme: 'Living Reverence',
+        texts: [
+            "At Todaiji Temple and among Nara's sacred deer, students encounter harmony and discipline."
+        ],
+        benefit: "Understanding that respect can be institutionalized.",
         icon: () => (
-            <svg className="w-20 h-20 text-primary-red mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg className="w-16 h-16 text-primary-red mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M4 22h16" />
                 <path d="M7 22V6h10v16" />
                 <path d="M8 12h8" />
@@ -63,10 +78,14 @@ const cities = [
     },
     {
         name: 'Osaka',
-        theme: 'Guided Independence',
-        desc: "Supervised exploration builds confidence within defined boundaries.",
+        theme: 'Structured Independence',
+        texts: [
+            "From Umeda Sky Observatory to Universal Studios Japan, students explore freely within defined boundaries.",
+            "With supervised budgeting systems in place, independence becomes tangible."
+        ],
+        benefit: "Confidence under guidance.",
         icon: () => (
-            <svg className="w-20 h-20 text-primary-red mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg className="w-16 h-16 text-primary-red mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M3 21h18" />
                 <path d="M6 21V9" />
                 <path d="M18 21V9" />
@@ -131,22 +150,58 @@ export default function ProgrammeExperience() {
                 >
                     {cities.map((city, idx) => (
                         <motion.div
-                            style={{ y: transforms[idx] }}
+                            style={{ y: transforms[idx], perspective: '1000px' }}
                             variants={fadeUp}
                             key={idx}
-                            className="group bg-[#222222] border border-gray-700 shadow-lg shadow-black/10 flex flex-col items-center justify-center p-8 w-64 h-72 hover:shadow-xl hover:border-primary-red/50 transition-all duration-300 relative"
+                            className="group relative w-[280px] h-[360px] cursor-pointer bg-transparent"
                         >
-                            {/* Inner inset border for that premium printed ticket feel */}
-                            <div className="absolute inset-2 border border-gray-700/30 pointer-events-none"></div>
+                            {/* Inner Flip Container */}
+                            <div
+                                className="w-full h-full relative transition-transform duration-[800ms] ease-in-out transform-style-3d group-hover:[transform:rotateY(180deg)]"
+                                style={{ transformStyle: 'preserve-3d' }}
+                            >
+                                {/* Front Face */}
+                                <div
+                                    className="absolute inset-0 bg-[#222222] border border-gray-700 shadow-lg shadow-black/10 flex flex-col items-center justify-center p-8 pointer-events-none"
+                                    style={{ backfaceVisibility: 'hidden' }}
+                                >
+                                    <div className="absolute inset-2 border border-gray-700/30"></div>
+                                    <div className="transform group-hover:scale-110 transition-transform duration-500">
+                                        {city.icon()}
+                                    </div>
+                                    <h3 className="text-2xl font-serif text-[#F9F6F0] mt-4 tracking-wide">
+                                        {city.name}
+                                    </h3>
+                                    <div className="w-12 h-0.5 bg-gray-600 mt-6 overflow-hidden relative">
+                                        <div className="absolute top-0 left-0 h-full bg-primary-red w-full"></div>
+                                    </div>
+                                </div>
 
-                            <div className="transform group-hover:scale-110 transition-transform duration-500">
-                                {city.icon()}
-                            </div>
-                            <h3 className="text-2xl font-serif text-[#F9F6F0] mt-2 tracking-wide">
-                                {city.name}
-                            </h3>
-                            <div className="w-12 h-0.5 bg-gray-600 mt-4 overflow-hidden relative">
-                                <div className="absolute top-0 left-0 h-full bg-primary-red w-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+                                {/* Back Face */}
+                                <div
+                                    className="absolute inset-0 bg-[#222222] border border-primary-red/50 shadow-xl flex flex-col items-start justify-center p-6 text-left pointer-events-none"
+                                    style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+                                >
+                                    <div className="absolute inset-1.5 border border-primary-red/20"></div>
+                                    <div className="relative z-10 flex flex-col h-full w-full">
+                                        <h4 className="text-primary-red font-serif text-[17px] mb-4 leading-tight">
+                                            {city.name.toUpperCase()} — {city.theme}
+                                        </h4>
+
+                                        <div className="space-y-3 text-gray-400 text-[13px] leading-relaxed mb-4 flex-grow overflow-hidden">
+                                            {city.texts.map((text, i) => (
+                                                <p key={i}>{text}</p>
+                                            ))}
+                                        </div>
+
+                                        <div className="mt-auto pt-4 border-t border-gray-800 w-full shrink-0">
+                                            <span className="text-[10px] text-gray-500 uppercase tracking-widest block mb-1">Derived Benefit</span>
+                                            <p className="text-[#e2d5c0] text-[13px] font-serif italic leading-snug">
+                                                {city.benefit}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </motion.div>
                     ))}
