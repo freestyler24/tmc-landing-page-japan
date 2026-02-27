@@ -156,6 +156,35 @@ export default function Investment() {
                     </p>
                 </motion.div>
 
+                {/* Orientation CTA Banner */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className="mt-16 bg-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl relative overflow-hidden"
+                >
+                    {/* Decorative accent */}
+                    <div className="absolute top-0 left-0 w-2 h-full bg-charcoal"></div>
+
+                    <div className="flex-1 space-y-3 relative z-10 w-full md:w-auto">
+                        <h3 className="text-2xl md:text-3xl font-serif text-charcoal leading-tight">
+                            Transparency First. Commitment Later.
+                        </h3>
+                        <p className="text-gray-600 text-base max-w-2xl">
+                            Attend the Parent Orientation to review the complete cost structure and ask your questions directly.
+                        </p>
+                    </div>
+                    <div className="w-full md:w-auto flex-shrink-0 relative z-10">
+                        <a
+                            href="#register"
+                            className="block w-full text-center bg-charcoal text-white px-8 py-4 rounded-lg font-semibold hover:bg-black hover:text-white transition-all duration-300 group shadow-lg"
+                        >
+                            Reserve Your Orientation Seat
+                        </a>
+                    </div>
+                </motion.div>
+
             </div>
         </section>
     );
