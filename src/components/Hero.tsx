@@ -22,10 +22,18 @@ export default function Hero() {
     return (
         <section
             className="bg-[#F9F6F0] relative overflow-hidden pt-[100px] pb-14 md:pt-[160px] md:pb-[120px]"
-            style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg stroke='%23e6dac3' stroke-width='1.5' fill='none'%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='40'/%3E%3Ccircle cx='0' cy='80' r='10'/%3E%3Ccircle cx='0' cy='80' r='20'/%3E%3Ccircle cx='0' cy='80' r='30'/%3E%3Ccircle cx='0' cy='80' r='40'/%3E%3Ccircle cx='80' cy='80' r='10'/%3E%3Ccircle cx='80' cy='80' r='20'/%3E%3Ccircle cx='80' cy='80' r='30'/%3E%3Ccircle cx='80' cy='80' r='40'/%3E%3Ccircle cx='80' cy='0' r='10'/%3E%3Ccircle cx='80' cy='0' r='20'/%3E%3Ccircle cx='80' cy='0' r='30'/%3E%3Ccircle cx='80' cy='0' r='40'/%3E%3Ccircle cx='0' cy='0' r='10'/%3E%3Ccircle cx='0' cy='0' r='20'/%3E%3Ccircle cx='0' cy='0' r='30'/%3E%3Ccircle cx='0' cy='0' r='40'/%3E%3C/g%3E%3C/svg%3E")`
-            }}
         >
+            {/* Background Pattern with reduced opacity */}
+            <div
+                className="absolute inset-0 opacity-[0.35] md:opacity-50 pointer-events-none"
+                style={{
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg stroke='%23d8c8b8' stroke-width='1.5' fill='none'%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='40'/%3E%3Ccircle cx='0' cy='80' r='10'/%3E%3Ccircle cx='0' cy='80' r='20'/%3E%3Ccircle cx='0' cy='80' r='30'/%3E%3Ccircle cx='0' cy='80' r='40'/%3E%3Ccircle cx='80' cy='80' r='10'/%3E%3Ccircle cx='80' cy='80' r='20'/%3E%3Ccircle cx='80' cy='80' r='30'/%3E%3Ccircle cx='80' cy='80' r='40'/%3E%3Ccircle cx='80' cy='0' r='10'/%3E%3Ccircle cx='80' cy='0' r='20'/%3E%3Ccircle cx='80' cy='0' r='30'/%3E%3Ccircle cx='80' cy='0' r='40'/%3E%3Ccircle cx='0' cy='0' r='10'/%3E%3Ccircle cx='0' cy='0' r='20'/%3E%3Ccircle cx='0' cy='0' r='30'/%3E%3Ccircle cx='0' cy='0' r='40'/%3E%3C/g%3E%3C/svg%3E")`
+                }}
+            ></div>
+
+            {/* Soft radial gradient mask to ensure text is fully legible */}
+            <div className="absolute inset-0 bg-radial-gradient from-[#F9F6F0]/90 via-[#F9F6F0]/60 to-transparent pointer-events-none"></div>
+
             <div className="container-max relative z-10 flex flex-col items-center text-center">
 
                 {/* Core Messaging */}
@@ -33,12 +41,12 @@ export default function Hero() {
                     initial="hidden"
                     animate="visible"
                     variants={staggerContainer}
-                    className="max-w-4xl mx-auto mb-10 md:mb-12"
+                    className="max-w-[100vw] px-2 sm:px-4 md:px-0 md:max-w-4xl mx-auto mb-10 md:mb-12"
                 >
-                    <motion.h1 variants={fadeUp} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-charcoal leading-[1.1] mb-6 md:mb-8 font-bold tracking-tight">
-                        09 DAYS. 04 CITIES.<br />
-                        ONE TRANSFORMATIONAL<br />
-                        EDUCATIONAL JOURNEY.
+                    <motion.h1 variants={fadeUp} className="text-[2.2rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl font-serif text-charcoal mb-6 md:mb-8 font-bold tracking-tight hyphens-auto break-words sm:break-normal">
+                        09 DAYS. 04 CITIES.<br className="hidden sm:block" />
+                        <span className="sm:hidden"> </span>ONE TRANSFORMATIONAL<br className="hidden sm:block" />
+                        <span className="sm:hidden"> </span>EDUCATIONAL JOURNEY.
                     </motion.h1>
                     <motion.p variants={fadeUp} className="text-base md:text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed">
                         This is not a holiday. It is a structured international learning experience.
@@ -48,12 +56,12 @@ export default function Hero() {
                     </motion.p>
                 </motion.div>
 
-                {/* 4 Benefit Cards — 2x2 on mobile/tablet, 4-col on desktop */}
+                {/* 4 Benefit Cards — 1-col mobile, 2x2 tablet, 4-col desktop */}
                 <motion.div
                     initial="hidden"
                     animate="visible"
                     variants={staggerContainer}
-                    className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-12 md:mb-16 w-full max-w-4xl"
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-12 md:mb-16 w-full max-w-4xl px-4 md:px-0"
                 >
                     {[
                         { title: 'Confidence', desc: 'Confidence in unfamiliar environments.' },
@@ -74,7 +82,7 @@ export default function Hero() {
                     initial="hidden"
                     animate="visible"
                     variants={staggerContainer}
-                    className="flex justify-center gap-6 md:gap-10 mb-12 md:mb-16 text-center"
+                    className="flex justify-center gap-4 sm:gap-6 md:gap-10 mb-12 md:mb-16 text-center"
                 >
                     {[
                         { label: 'Days', value: '234' },
@@ -89,10 +97,10 @@ export default function Hero() {
                             key={i}
                             className="flex flex-col items-center"
                         >
-                            <div className="border-[6px] border-[#9e8f79] text-[#7a6c56] bg-[#F9F6F0]/80 backdrop-blur-sm font-serif font-bold text-3xl md:text-4xl w-20 h-20 md:w-28 md:h-28 flex items-center justify-center rounded-full shadow-lg border-opacity-90">
+                            <div className="border-[4px] md:border-[6px] border-[#a89b83] text-[#7a6c56] bg-[#F9F6F0]/90 backdrop-blur-md font-serif font-bold text-2xl sm:text-3xl md:text-4xl w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 flex items-center justify-center rounded-full shadow-lg border-opacity-90">
                                 {time.value}
                             </div>
-                            <span className="text-xs md:text-sm font-bold tracking-widest text-[#7a6c56] mt-3 uppercase">{time.label}</span>
+                            <span className="text-[10px] sm:text-xs md:text-sm font-bold tracking-widest text-[#7a6c56] mt-2 sm:mt-3 uppercase">{time.label}</span>
                         </motion.div>
                     ))}
                 </motion.div>
@@ -117,11 +125,11 @@ export default function Hero() {
                     initial="hidden"
                     animate="visible"
                     variants={fadeUp}
-                    className="flex flex-wrap items-center justify-center gap-6 md:gap-12 opacity-80 mix-blend-multiply border-y border-gray-300 py-6 px-12"
+                    className="flex flex-wrap items-center justify-center gap-6 md:gap-12 opacity-[0.85] mix-blend-multiply border-y border-gray-300 py-6 px-6 sm:px-12 w-full max-w-5xl mx-auto"
                 >
-                    <Image src="/images/TMC logo.png" alt="TMC Logo" width={80} height={40} className="object-contain h-8 md:h-10 w-auto" />
-                    <Image src="/images/DPS School Logo.png" alt="DPS Logo" width={80} height={40} className="object-contain h-8 md:h-10 w-auto" />
-                    <Image src="/images/SOI Logo.jpg" alt="SOI Logo" width={80} height={40} className="object-contain h-8 md:h-10 w-auto mix-blend-multiply" />
+                    <Image src="/images/TMC logo.png" alt="TMC Logo" width={160} height={80} className="object-contain h-10 sm:h-12 md:h-16 w-auto" />
+                    <Image src="/images/DPS School Logo.png" alt="DPS Logo" width={160} height={80} className="object-contain h-10 sm:h-12 md:h-16 w-auto" />
+                    <Image src="/images/SOI Logo.jpg" alt="SOI Logo" width={160} height={80} className="object-contain h-10 sm:h-12 md:h-16 w-auto mix-blend-multiply" />
                 </motion.div>
 
             </div>
