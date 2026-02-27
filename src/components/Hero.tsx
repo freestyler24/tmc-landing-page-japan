@@ -1,7 +1,8 @@
 "use client";
 
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export default function Hero() {
     const fadeUp = {
@@ -18,18 +19,70 @@ export default function Hero() {
             }
         }
     };
+    const containerRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start start", "end start"]
+    });
+
+    const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+    const yText = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
+    const opacityFade = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
     return (
-        <section className="bg-[#F9F6F0] relative overflow-hidden pt-[100px] pb-14 md:pt-[160px] md:pb-[120px]">
+        <section ref={containerRef} className="bg-[#F9F6F0] relative overflow-hidden pt-[100px] pb-14 md:pt-[160px] md:pb-[120px]">
 
-            {/* Background Pattern — very subtle, purely decorative */}
-            <div
-                className="absolute inset-0 pointer-events-none"
+            {/* Ambient Background Glows */}
+            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-kyoto-gold/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-primary-red/5 rounded-full blur-3xl pointer-events-none"></div>
+
+            {/* Background Pattern with Parallax */}
+            <motion.div
+                className="absolute inset-0 pointer-events-none origin-top"
                 style={{
+                    y: yBg,
                     opacity: 0.12,
                     backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg stroke='%23c0b090' stroke-width='1' fill='none'%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='40'/%3E%3Ccircle cx='0' cy='80' r='10'/%3E%3Ccircle cx='0' cy='80' r='20'/%3E%3Ccircle cx='0' cy='80' r='30'/%3E%3Ccircle cx='0' cy='80' r='40'/%3E%3Ccircle cx='80' cy='80' r='10'/%3E%3Ccircle cx='80' cy='80' r='20'/%3E%3Ccircle cx='80' cy='80' r='30'/%3E%3Ccircle cx='80' cy='80' r='40'/%3E%3Ccircle cx='80' cy='0' r='10'/%3E%3Ccircle cx='80' cy='0' r='20'/%3E%3Ccircle cx='80' cy='0' r='30'/%3E%3Ccircle cx='80' cy='0' r='40'/%3E%3Ccircle cx='0' cy='0' r='10'/%3E%3Ccircle cx='0' cy='0' r='20'/%3E%3Ccircle cx='0' cy='0' r='30'/%3E%3Ccircle cx='0' cy='0' r='40'/%3E%3C/g%3E%3C/svg%3E")`
                 }}
-            ></div>
+            />
+
+            {/* Vertical Japanese Typography (Watermarks) */}
+            <motion.div
+                style={{ y: yText, opacity: opacityFade }}
+                className="absolute left-8 md:left-16 top-1/4 pointer-events-none hidden lg:block"
+            >
+                <p className="text-[#e2d5c0] font-serif text-6xl writing-vertical-rl tracking-widest opacity-40">
+                    成長
+                </p>
+            </motion.div>
+            <motion.div
+                style={{ y: useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]), opacity: opacityFade }}
+                className="absolute right-8 md:right-16 top-1/3 pointer-events-none hidden lg:block"
+            >
+                <p className="text-[#e2d5c0] font-serif text-6xl writing-vertical-rl tracking-widest opacity-40">
+                    規律
+                </p>
+            </motion.div>
+
+            {/* Floating Ambient Particles (Sakura abstraction) */}
+            <motion.div
+                animate={{
+                    y: [0, -20, 0],
+                    x: [0, 10, 0],
+                    rotate: [0, 45, 0]
+                }}
+                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute top-1/4 right-[20%] w-3 h-3 rounded-tr-xl rounded-bl-xl bg-primary-red/20 blur-[1px]"
+            />
+            <motion.div
+                animate={{
+                    y: [0, 30, 0],
+                    x: [0, -15, 0],
+                    rotate: [0, -45, 0]
+                }}
+                transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+                className="absolute bottom-1/3 left-[15%] w-4 h-4 rounded-tl-xl rounded-br-xl bg-kyoto-gold/30 blur-[1px]"
+            />
 
             <div className="container-max relative z-10 flex flex-col items-center text-center">
 

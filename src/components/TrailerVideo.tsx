@@ -1,7 +1,8 @@
 'use client';
 
 import Script from 'next/script';
-import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const FilmReelIcon = () => (
     <svg className="w-24 h-24 md:w-32 md:h-32 text-[#d8c8b8] opacity-90 drop-shadow-2xl" viewBox="0 0 24 24" fill="currentColor">
@@ -19,8 +20,16 @@ const FilmReelIcon = () => (
 );
 
 export default function TrailerVideo() {
+    const containerRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start end", "end start"]
+    });
+
+    const yVideo = useTransform(scrollYProgress, [0, 1], ["10%", "-10%"]);
+
     return (
-        <section className="bg-[#1a1a1a] ma-spacing-mob ma-spacing-desk relative overflow-hidden">
+        <section ref={containerRef} className="bg-[#1a1a1a] pb-16 pt-8 md:pb-24 md:pt-12 overflow-hidden relative border-t border-gray-900 border-b border-gray-900">
             <div className="container-max flex flex-col items-center text-center">
 
                 <motion.div
@@ -44,9 +53,10 @@ export default function TrailerVideo() {
 
                 {/* Video container with golden frame and film reel decor */}
                 <motion.div
+                    style={{ y: yVideo }}
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true, margin: "-50px" }}
+                    viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="w-full max-w-4xl relative z-10 mb-12 group cursor-pointer"
                 >
@@ -71,10 +81,17 @@ export default function TrailerVideo() {
                         </div>
                     </div>
 
-                    {/* Film Reel Decorative Element */}
-                    <div className="absolute -bottom-8 -right-8 md:-bottom-12 md:-right-12 z-20 pointer-events-none transform rotate-12 drop-shadow-2xl">
+                    {/* Film Reel Decorative Element (Breathing Animation) */}
+                    <motion.div
+                        animate={{
+                            y: [0, -15, 0],
+                            rotate: [12, 10, 12]
+                        }}
+                        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                        className="absolute -top-6 -right-6 md:-top-10 md:-right-10 z-20 pointer-events-none drop-shadow-2xl"
+                    >
                         <FilmReelIcon />
-                    </div>
+                    </motion.div>
                 </motion.div>
 
                 {/* CTA below video */}

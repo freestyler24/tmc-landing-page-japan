@@ -1,6 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const cities = [
     {
@@ -84,8 +85,21 @@ export default function ProgrammeExperience() {
         visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
     };
 
+    const containerRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start end", "end start"]
+    });
+
+    const y1 = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
+    const y2 = useTransform(scrollYProgress, [0, 1], ["0%", "5%"]);
+    const y3 = useTransform(scrollYProgress, [0, 1], ["0%", "-15%"]);
+    const y4 = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
+
+    const transforms = [y1, y2, y3, y4];
+
     return (
-        <section id="programme" className="bg-[#1a1a1a] ma-spacing-mob ma-spacing-desk relative">
+        <section id="programme" ref={containerRef} className="bg-[#1a1a1a] ma-spacing-mob ma-spacing-desk relative">
             <div className="container-max">
 
                 <motion.div
@@ -113,10 +127,11 @@ export default function ProgrammeExperience() {
                             transition: { staggerChildren: 0.15 }
                         }
                     }}
-                    className="flex flex-wrap justify-center gap-6 md:gap-10 mb-16 md:mb-20 max-w-6xl mx-auto"
+                    className="flex flex-wrap justify-center gap-6 md:gap-8 mb-16 md:mb-20 max-w-5xl mx-auto"
                 >
                     {cities.map((city, idx) => (
                         <motion.div
+                            style={{ y: transforms[idx] }}
                             variants={fadeUp}
                             key={idx}
                             className="group bg-[#222222] border border-gray-700 shadow-lg shadow-black/10 flex flex-col items-center justify-center p-8 w-64 h-72 hover:shadow-xl hover:border-primary-red/50 transition-all duration-300 relative"

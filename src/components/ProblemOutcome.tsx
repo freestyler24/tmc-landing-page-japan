@@ -1,12 +1,39 @@
 "use client";
 
-import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export default function ProblemOutcome() {
+    const containerRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start end", "end start"]
+    });
+
+    const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+    const yText = useTransform(scrollYProgress, [0, 1], ["0%", "-40%"]);
+
     return (
-        <section className="bg-[#F9F6F0] ma-spacing-mob ma-spacing-desk border-b border-[#e6dac3] overflow-hidden relative">
-            {/* Subtle wave pattern */}
-            <div className="absolute inset-0 pointer-events-none" style={{ opacity: 0.1, backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg stroke='%23c0b090' stroke-width='1' fill='none'%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='40'/%3E%3C/g%3E%3C/svg%3E")` }}></div>
+        <section ref={containerRef} className="bg-[#F9F6F0] ma-spacing-mob ma-spacing-desk border-b border-[#e6dac3] overflow-hidden relative">
+            {/* Subtle wave pattern with parallax */}
+            <motion.div
+                className="absolute inset-0 pointer-events-none origin-top"
+                style={{
+                    y: yBg,
+                    opacity: 0.1,
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg stroke='%23c0b090' stroke-width='1' fill='none'%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='40'/%3E%3C/g%3E%3C/svg%3E")`
+                }}
+            />
+
+            {/* Vertical Japanese Typography Watermark */}
+            <motion.div
+                style={{ y: yText }}
+                className="absolute right-4 md:right-12 top-1/2 pointer-events-none hidden lg:block"
+            >
+                <p className="text-[#e6dac3] font-serif text-8xl writing-vertical-rl tracking-widest opacity-20 transform -translate-y-1/2">
+                    洞察
+                </p>
+            </motion.div>
 
             <div className="container-max max-w-5xl relative z-10">
 
