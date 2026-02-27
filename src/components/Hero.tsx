@@ -43,9 +43,30 @@ export default function Hero() {
                     <motion.p variants={fadeUp} className="text-base md:text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed">
                         This is not a holiday. It is a structured international learning experience.
                     </motion.p>
-                    <motion.p variants={fadeUp} className="text-sm md:text-base text-gray-500 max-w-2xl mx-auto mt-4">
+                    <motion.p variants={fadeUp} className="text-sm md:text-base text-gray-500 max-w-2xl mx-auto mt-4 mb-10">
                         Your child will not just visit Japan. They will observe how a high-functioning society thinks, moves, and operates.
                     </motion.p>
+                </motion.div>
+
+                {/* 4 Benefit Cards — 2x2 on mobile/tablet, 4-col on desktop */}
+                <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    variants={staggerContainer}
+                    className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-12 md:mb-16 w-full max-w-4xl"
+                >
+                    {[
+                        { title: 'Confidence', desc: 'Confidence in unfamiliar environments.' },
+                        { title: 'Global Exposure', desc: 'Exposure to structured global systems.' },
+                        { title: 'Cultural Awareness', desc: 'Cultural awareness beyond textbooks.' },
+                        { title: 'Guided Independence', desc: 'Guided independence within supervision.' }
+                    ].map((benefit, i) => (
+                        <motion.div variants={fadeUp} key={i} className="bg-white/80 backdrop-blur-sm p-4 md:p-6 border border-[#e6dac3] shadow-sm text-left relative overflow-hidden group hover:shadow-md transition-shadow">
+                            <div className="w-1 h-full bg-[#9e8f79] absolute left-0 top-0 transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top"></div>
+                            <h3 className="text-[#7a6c56] font-serif font-bold text-sm md:text-lg mb-1 md:mb-2">{benefit.title}</h3>
+                            <p className="text-gray-600 text-xs md:text-sm">{benefit.desc}</p>
+                        </motion.div>
+                    ))}
                 </motion.div>
 
                 {/* Countdown Timer */}
