@@ -49,7 +49,7 @@ export default function Brochure() {
 
             if (res.ok) {
                 // Redirect user and trigger download via the query string
-                router.push('/thank-you-brochure?download=true');
+                router.push(`/thank-you-brochure?download=true&school=${encodeURIComponent(school)}`);
             } else {
                 alert("Something went wrong. Please try again.");
                 setIsSubmitting(false);
