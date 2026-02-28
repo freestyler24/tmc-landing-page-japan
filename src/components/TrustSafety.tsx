@@ -119,7 +119,7 @@ export default function TrustSafety() {
                     <div className="w-full md:w-auto flex-shrink-0 relative z-10">
                         <a
                             href="#register"
-                            className="block w-full text-center bg-primary-red text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-red transition-all duration-300 group"
+                            className="block w-full text-center bg-primary-red text-white px-8 py-4 rounded-sm font-semibold hover:bg-black transition-all duration-300 group"
                         >
                             Learn More at the Orientation
                         </a>

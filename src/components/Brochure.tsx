@@ -62,7 +62,7 @@ export default function Brochure() {
     };
 
     return (
-        <section id="brochure" className="bg-[#111111] text-offwhite py-20 md:py-32 relative text-center border-t border-gray-800">
+        <section id="brochure" className="bg-[#F5F3EF] text-charcoal ma-spacing-mob ma-spacing-desk relative text-center border-t border-[#e6dac3]">
             <div className="container-max max-w-3xl">
 
                 <motion.div
@@ -71,22 +71,22 @@ export default function Brochure() {
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6 }}
                 >
-                    <div className="inline-block border border-kyoto-gold text-kyoto-gold px-4 py-1 rounded-full text-xs font-bold tracking-widest mb-6">
+                    <div className="inline-block border border-primary-red text-primary-red px-4 py-1 rounded-full text-xs font-bold tracking-widest mb-6">
                         STILL EXPLORING?
                     </div>
 
-                    <h2 className="text-3xl md:text-5xl font-serif text-offwhite mb-8">
+                    <h2 className="text-3xl md:text-5xl font-serif text-charcoal mb-8">
                         Download the Detailed <br className="hidden md:block" />Programme Overview.
                     </h2>
 
-                    <div className="max-w-3xl mx-auto bg-black/40 border border-gray-800 p-6 md:p-8 mb-12 shadow-inner rounded-sm">
-                        <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
+                    <div className="max-w-3xl mx-auto bg-white border border-[#e6dac3] p-6 md:p-8 mb-12 shadow-sm rounded-sm">
+                        <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
                             If you would prefer to review the complete itinerary, inclusions, safety framework, and payment structure before attending the orientation, you may request the official brochure.
                         </p>
-                        <div className="flex items-center justify-center gap-3 text-kyoto-gold text-xs md:text-sm font-semibold uppercase tracking-widest">
-                            <span className="hidden md:block w-16 h-px bg-kyoto-gold opacity-50"></span>
+                        <div className="flex items-center justify-center gap-3 text-primary-red text-xs md:text-sm font-semibold uppercase tracking-widest">
+                            <span className="hidden md:block w-16 h-px bg-primary-red opacity-50"></span>
                             Select your school to receive the correct branded version
-                            <span className="hidden md:block w-16 h-px bg-kyoto-gold opacity-50"></span>
+                            <span className="hidden md:block w-16 h-px bg-primary-red opacity-50"></span>
                         </div>
                     </div>
                 </motion.div>
@@ -96,7 +96,7 @@ export default function Brochure() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="bg-black border border-gray-800 p-8 max-w-md mx-auto relative overflow-hidden shadow-2xl rounded-sm"
+                    className="bg-white border border-[#B89B5E] p-8 max-w-md mx-auto relative overflow-hidden shadow-2xl rounded-sm"
                 >
                     <div className="w-1 h-full bg-primary-red absolute left-0 top-0"></div>
 
@@ -109,7 +109,7 @@ export default function Brochure() {
                                     name="parent_name"
                                     required
                                     placeholder="Enter full name"
-                                    className="w-full bg-charcoal border border-gray-700 text-offwhite px-4 py-3 focus:outline-none focus:border-kyoto-gold focus:ring-1 focus:ring-kyoto-gold transition-colors"
+                                    className="w-full bg-white border border-gray-200 text-charcoal px-4 py-3 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red transition-colors"
                                 />
                             </div>
 
@@ -120,7 +120,7 @@ export default function Brochure() {
                                     name="phone_number"
                                     required
                                     placeholder="+91"
-                                    className="w-full bg-charcoal border border-gray-700 text-offwhite px-4 py-3 focus:outline-none focus:border-kyoto-gold focus:ring-1 focus:ring-kyoto-gold transition-colors"
+                                    className="w-full bg-white border border-gray-200 text-charcoal px-4 py-3 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red transition-colors"
                                 />
                             </div>
 
@@ -130,7 +130,7 @@ export default function Brochure() {
                                     name="school"
                                     required
                                     defaultValue=""
-                                    className="w-full bg-charcoal border border-gray-700 text-gray-400 px-4 py-3 focus:outline-none focus:border-kyoto-gold focus:ring-1 focus:ring-kyoto-gold appearance-none transition-colors"
+                                    className="w-full bg-white border border-gray-200 text-charcoal px-4 py-3 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red appearance-none transition-colors"
                                 >
                                     <option value="" disabled>Select your school</option>
                                     <option value="dps">DPS</option>
@@ -146,18 +146,20 @@ export default function Brochure() {
                                     name="email"
                                     required
                                     placeholder="Enter email address"
-                                    className="w-full bg-charcoal border border-gray-700 text-offwhite px-4 py-3 focus:outline-none focus:border-kyoto-gold focus:ring-1 focus:ring-kyoto-gold transition-colors"
+                                    className="w-full bg-white border border-gray-200 text-charcoal px-4 py-3 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red transition-colors"
                                 />
                             </div>
                         </div>
 
-                        <button
+                        <motion.button
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
                             type="submit"
                             disabled={isSubmitting}
-                            className="w-full bg-transparent border border-kyoto-gold text-kyoto-gold hover:bg-kyoto-gold hover:text-charcoal px-6 py-3 font-semibold transition-colors mt-2 disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-wider text-sm"
+                            className="w-full bg-primary-red text-white hover:bg-black px-6 py-4 font-semibold transition-colors mt-2 disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-wider text-sm shadow-md"
                         >
                             {isSubmitting ? 'Processing...' : 'Download Programme Brochure'}
-                        </button>
+                        </motion.button>
                     </form>
 
                     <p className="text-xs text-gray-500 mt-4 text-center relative z-10">

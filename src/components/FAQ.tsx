@@ -54,7 +54,25 @@ export default function FAQ() {
     };
 
     return (
-        <section id="faqs" className="bg-[#111111] py-20 md:py-32 relative overflow-hidden border-t border-b border-gray-900">
+        <section id="faqs" className="bg-[#181818] ma-spacing-mob ma-spacing-desk relative overflow-hidden border-t border-[#2a2a2a] border-b border-gray-900">
+            {/* Ambient Background Glows */}
+            <div className="absolute top-0 left-[-10%] w-[40%] h-[40%] bg-primary-red/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-kyoto-gold/5 rounded-full blur-3xl pointer-events-none"></div>
+
+            {/* Seigaiha Wave Pattern */}
+            <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg stroke='%23ffffff' stroke-width='1' fill='none'%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='40'/%3E%3Ccircle cx='0' cy='80' r='10'/%3E%3Ccircle cx='0' cy='80' r='20'/%3E%3Ccircle cx='0' cy='80' r='30'/%3E%3Ccircle cx='0' cy='80' r='40'/%3E%3Ccircle cx='80' cy='80' r='10'/%3E%3Ccircle cx='80' cy='80' r='20'/%3E%3Ccircle cx='80' cy='80' r='30'/%3E%3Ccircle cx='80' cy='80' r='40'/%3E%3Ccircle cx='80' cy='0' r='10'/%3E%3Ccircle cx='80' cy='0' r='20'/%3E%3Ccircle cx='80' cy='0' r='30'/%3E%3Ccircle cx='80' cy='0' r='40'/%3E%3Ccircle cx='0' cy='0' r='10'/%3E%3Ccircle cx='0' cy='0' r='20'/%3E%3Ccircle cx='0' cy='0' r='30'/%3E%3Ccircle cx='0' cy='0' r='40'/%3E%3C/g%3E%3C/svg%3E")` }}></div>
+
+            {/* Vertical Typography (Watermarks) */}
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 0.04 }} viewport={{ once: true }} className="absolute left-8 md:left-16 top-1/4 pointer-events-none hidden lg:block">
+                <p className="text-white font-serif text-6xl writing-vertical-rl tracking-widest">
+                    質問
+                </p>
+            </motion.div>
+
+            {/* Sakura Particles */}
+            <motion.div animate={{ y: [0, 20, 0], x: [0, 15, 0], rotate: [0, -25, 0] }} transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }} className="absolute top-[15%] right-[20%] w-3 h-3 rounded-bl-xl rounded-tr-xl bg-primary-red/20 blur-[1px] pointer-events-none" />
+            <motion.div animate={{ y: [0, -30, 0], x: [0, -10, 0], rotate: [0, 45, 0] }} transition={{ duration: 13, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="absolute bottom-[25%] left-[10%] w-4 h-4 rounded-tl-xl rounded-br-xl bg-kyoto-gold/20 blur-[1px] pointer-events-none" />
+
             <div className="container-max max-w-4xl relative z-10 px-4">
 
                 {/* Heading */}
@@ -106,7 +124,7 @@ export default function FAQ() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="flex flex-wrap justify-center gap-3 mb-12"
+                    className="flex md:flex-wrap overflow-x-auto gap-3 mb-12 pb-2 md:justify-center px-4 md:px-0 -mx-4 md:mx-0 [&::-webkit-scrollbar]:hidden [scrollbar-width:none] [-ms-overflow-style:none]"
                 >
                     {categories.map((cat) => {
                         const isActive = activeCategory === cat.id;

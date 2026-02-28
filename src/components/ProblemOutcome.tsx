@@ -49,7 +49,7 @@ export default function ProblemOutcome() {
                         <h2 className="text-3xl md:text-4xl font-serif text-charcoal leading-tight">
                             Because Academics Alone Are No Longer Enough.
                         </h2>
-                        <div className="w-12 h-1 bg-primary-red"></div>
+                        <div className="w-12 h-px bg-primary-red"></div>
                         <p className="text-base md:text-lg text-gray-600">
                             Your child lives in a world that rewards more than grades. It rewards adaptability, cultural awareness, and composure under uncertainty.
                         </p>
@@ -120,7 +120,7 @@ export default function ProblemOutcome() {
                     <div className="w-full md:w-auto flex-shrink-0 relative z-10">
                         <a
                             href="#register"
-                            className="block w-full text-center bg-primary-red text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-red transition-all duration-300 group"
+                            className="block w-full text-center bg-primary-red text-white px-8 py-4 rounded-sm font-semibold hover:bg-black transition-all duration-300 group"
                         >
                             Attend the Orientation Session
                         </a>

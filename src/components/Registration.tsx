@@ -86,9 +86,17 @@ export default function Registration() {
     };
 
     return (
-        <section id="register" className="bg-[#F5F3EF] ma-spacing-mob ma-spacing-desk relative border-t border-[#e6dac3]">
-            {/* Subtle wave pattern */}
-            <div className="absolute inset-0 pointer-events-none" style={{ opacity: 0.08, backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg stroke='%23c0b090' stroke-width='1' fill='none'%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='40'/%3E%3C/g%3E%3C/svg%3E")` }}></div>
+        <section id="register" className="bg-[#FAF9F6] ma-spacing-mob ma-spacing-desk relative border-t border-b border-[#e6dac3] overflow-hidden">
+            {/* Lively Geometric Pattern */}
+            <div className="absolute inset-0 pointer-events-none opacity-[0.04]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M20 0L40 20L20 40L0 20L20 0Z' fill='none' stroke='%23B89B5E' stroke-width='1'/%3E%3C/svg%3E")`, backgroundSize: '40px 40px' }}></div>
+
+            {/* Large Kanji watermark */}
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 0.03 }} viewport={{ once: true }} className="absolute -left-10 top-1/4 pointer-events-none hidden lg:block">
+                <p className="text-charcoal font-serif text-9xl tracking-widest writing-vertical-rl">
+                    登録
+                </p>
+            </motion.div>
+
             <div className="container-max max-w-4xl flex flex-col items-center relative z-10">
 
                 <motion.div
@@ -105,24 +113,7 @@ export default function Registration() {
                         Submitting this form reserves your seat for the orientation session where we will cover:
                     </p>
 
-                    <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-8 text-left">
-                        {[
-                            { title: 'Complete Itinerary', desc: 'Review the detailed day-by-day schedule.' },
-                            { title: 'Safety Framework', desc: 'Understand our strict 1:20 supervision protocols.' },
-                            { title: 'Investment Structure', desc: 'See the full transparent financial breakdown.' },
-                            { title: 'Live Q&A', desc: 'Get all your specific questions answered directly.' }
-                        ].map((item, i) => (
-                            <div key={i} className="bg-white p-5 border border-gray-100 shadow-sm relative overflow-hidden group hover:border-gray-200 hover:shadow-md transition-all">
-                                <div className="absolute top-0 left-0 w-1 h-full bg-primary-red opacity-50 group-hover:opacity-100 transition-opacity"></div>
-                                <h4 className="font-bold text-charcoal text-sm uppercase tracking-wider mb-1">{item.title}</h4>
-                                <p className="text-xs text-gray-500">{item.desc}</p>
-                            </div>
-                        ))}
-                    </div>
 
-                    <div className="inline-block bg-gray-100 text-gray-600 px-4 py-2 rounded-sm text-xs font-semibold uppercase tracking-wider mb-4">
-                        Note: This does not confirm enrolment
-                    </div>
                 </motion.div>
 
                 <motion.div
@@ -130,14 +121,14 @@ export default function Registration() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="w-full max-w-2xl bg-white p-8 md:p-12 shadow-lg border-t-4 border-primary-red border border-[#e6dac3]"
+                    className="w-full max-w-2xl bg-white p-8 md:p-12 shadow-2xl border border-[#B89B5E] relative mx-4 md:mx-auto"
                 >
 
                     <div className="flex justify-between mb-8">
                         {[1, 2, 3].map((num) => (
                             <motion.div
                                 key={num}
-                                animate={{ backgroundColor: step >= num ? '#E31837' : '#E5E7EB' }}
+                                animate={{ backgroundColor: step >= num ? '#C8102E' : '#E5E7EB' }}
                                 transition={{ duration: 0.3 }}
                                 className={`flex-1 h-2 mx-1 rounded`}
                             />
@@ -177,7 +168,7 @@ export default function Registration() {
                                     transition={{ duration: 0.3 }}
                                     className="space-y-4"
                                 >
-                                    <h3 className="text-xl font-bold text-charcoal mb-4">Step 1: Student Information</h3>
+                                    <h3 className="text-xl font-bold font-serif text-charcoal mb-4">Step 1: Student Information</h3>
                                     <div>
                                         <label className="block text-sm font-bold text-charcoal mb-2">Student Full Name *</label>
                                         <input
@@ -223,13 +214,15 @@ export default function Registration() {
                                         </select>
                                     </div>
                                     <div className="pt-4">
-                                        <button
+                                        <motion.button
+                                            whileHover={{ scale: 1.02 }}
+                                            whileTap={{ scale: 0.98 }}
                                             type="button"
                                             onClick={nextStep}
-                                            className="w-full bg-charcoal text-white py-4 text-lg font-bold hover:bg-black transition-colors shadow-md transform hover:-translate-y-0.5"
+                                            className="w-full bg-charcoal text-white py-4 text-lg font-bold hover:bg-black transition-colors shadow-md"
                                         >
                                             Next &rarr;
-                                        </button>
+                                        </motion.button>
                                     </div>
                                 </motion.div>
                             )}
@@ -244,7 +237,7 @@ export default function Registration() {
                                     transition={{ duration: 0.3 }}
                                     className="space-y-4"
                                 >
-                                    <h3 className="text-xl font-bold text-charcoal mb-4">Step 2: Parent Information</h3>
+                                    <h3 className="text-xl font-bold font-serif text-charcoal mb-4">Step 2: Parent Information</h3>
                                     <div>
                                         <label className="block text-sm font-bold text-charcoal mb-2">Parent Name *</label>
                                         <input
@@ -282,20 +275,24 @@ export default function Registration() {
                                         />
                                     </div>
                                     <div className="flex gap-4 pt-4">
-                                        <button
+                                        <motion.button
+                                            whileHover={{ scale: 1.02 }}
+                                            whileTap={{ scale: 0.98 }}
                                             type="button"
                                             onClick={prevStep}
-                                            className="w-1/3 bg-gray-200 text-charcoal py-4 text-lg font-bold hover:bg-gray-300 transition-colors shadow-md transform hover:-translate-y-0.5"
+                                            className="w-1/3 bg-gray-200 text-charcoal py-4 text-lg font-bold hover:bg-gray-300 transition-colors shadow-md"
                                         >
                                             &larr; Back
-                                        </button>
-                                        <button
+                                        </motion.button>
+                                        <motion.button
+                                            whileHover={{ scale: 1.02 }}
+                                            whileTap={{ scale: 0.98 }}
                                             type="button"
                                             onClick={nextStep}
-                                            className="w-2/3 bg-charcoal text-white py-4 text-lg font-bold hover:bg-black transition-colors shadow-md transform hover:-translate-y-0.5"
+                                            className="w-2/3 bg-charcoal text-white py-4 text-lg font-bold hover:bg-black transition-colors shadow-md"
                                         >
                                             Next &rarr;
-                                        </button>
+                                        </motion.button>
                                     </div>
                                 </motion.div>
                             )}
@@ -310,7 +307,7 @@ export default function Registration() {
                                     transition={{ duration: 0.3 }}
                                     className="space-y-4"
                                 >
-                                    <h3 className="text-xl font-bold text-charcoal mb-4">Step 3: Passport Information</h3>
+                                    <h3 className="text-xl font-bold font-serif text-charcoal mb-4">Step 3: Passport Information</h3>
 
                                     <div>
                                         <label className="block text-sm font-bold text-charcoal mb-4">
@@ -364,20 +361,24 @@ export default function Registration() {
                                     </div>
 
                                     <div className="flex gap-4 pt-4">
-                                        <button
+                                        <motion.button
+                                            whileHover={{ scale: 1.02 }}
+                                            whileTap={{ scale: 0.98 }}
                                             type="button"
                                             onClick={prevStep}
-                                            className="w-1/3 bg-gray-200 text-charcoal py-4 text-lg font-bold hover:bg-gray-300 transition-colors shadow-md transform hover:-translate-y-0.5"
+                                            className="w-1/3 bg-gray-200 text-charcoal py-4 text-lg font-bold hover:bg-gray-300 transition-colors shadow-md"
                                         >
                                             &larr; Back
-                                        </button>
-                                        <button
+                                        </motion.button>
+                                        <motion.button
+                                            whileHover={{ scale: 1.02 }}
+                                            whileTap={{ scale: 0.98 }}
                                             type="submit"
                                             disabled={isSubmitting}
-                                            className="w-2/3 bg-primary-red text-white py-4 text-lg font-bold hover:bg-black transition-colors shadow-md disabled:bg-opacity-50 disabled:cursor-not-allowed transform hover:-translate-y-0.5"
+                                            className="w-2/3 bg-primary-red text-white py-4 text-lg font-bold hover:bg-black transition-colors shadow-md disabled:bg-opacity-50 disabled:cursor-not-allowed"
                                         >
                                             {isSubmitting ? 'Submitting...' : 'Reserve Orientation Seat'}
-                                        </button>
+                                        </motion.button>
                                     </div>
                                 </motion.div>
                             )}
@@ -388,6 +389,30 @@ export default function Registration() {
                         </p>
 
                     </form>
+                </motion.div>
+
+                {/* Repositioned Grid Below Form */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className="w-full max-w-2xl mt-10"
+                >
+                    <div className="grid sm:grid-cols-2 gap-4 text-left">
+                        {[
+                            { title: 'Complete Itinerary', desc: 'Review the detailed day-by-day schedule.' },
+                            { title: 'Safety Framework', desc: 'Understand our strict 1:20 supervision protocols.' },
+                            { title: 'Investment Structure', desc: 'See the full transparent financial breakdown.' },
+                            { title: 'Live Q&A', desc: 'Get all your specific questions answered directly.' }
+                        ].map((item, i) => (
+                            <div key={i} className="bg-white p-5 border border-gray-100 shadow-sm relative overflow-hidden group hover:border-[#B89B5E]/50 hover:shadow-md transition-all">
+                                <div className="absolute top-0 left-0 w-1 h-full bg-[#B89B5E] opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                                <h4 className="font-bold font-serif text-charcoal text-[15px] uppercase tracking-wider mb-1">{item.title}</h4>
+                                <p className="text-xs text-gray-500 font-sans">{item.desc}</p>
+                            </div>
+                        ))}
+                    </div>
                 </motion.div>
 
             </div>

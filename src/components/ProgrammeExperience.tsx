@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const cities = [
@@ -13,7 +13,7 @@ const cities = [
         ],
         benefit: "Exposure to structured complexity builds composure.",
         icon: () => (
-            <svg className="w-16 h-16 text-primary-red mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg className="w-16 h-16 text-[#B89B5E] mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 2v20" />
                 <path d="M7 22h10" />
                 <path d="M9 10h6" />
@@ -32,7 +32,7 @@ const cities = [
         ],
         benefit: "Depth over distraction.",
         icon: () => (
-            <svg className="w-16 h-16 text-primary-red mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg className="w-16 h-16 text-[#B89B5E] mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M2 20h20L12 4 2 20z" />
                 <path d="M7.5 13L12 8l4.5 5" fill="currentColor" />
             </svg>
@@ -47,7 +47,7 @@ const cities = [
         ],
         benefit: "Respect for legacy while embracing innovation.",
         icon: () => (
-            <svg className="w-16 h-16 text-primary-red mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg className="w-16 h-16 text-[#B89B5E] mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M3 20h18" />
                 <path d="M6 20v-8" />
                 <path d="M18 20v-8" />
@@ -65,7 +65,7 @@ const cities = [
         ],
         benefit: "Understanding that respect can be institutionalized.",
         icon: () => (
-            <svg className="w-16 h-16 text-primary-red mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg className="w-16 h-16 text-[#B89B5E] mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M4 22h16" />
                 <path d="M7 22V6h10v16" />
                 <path d="M8 12h8" />
@@ -85,7 +85,7 @@ const cities = [
         ],
         benefit: "Confidence under guidance.",
         icon: () => (
-            <svg className="w-16 h-16 text-primary-red mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg className="w-16 h-16 text-[#B89B5E] mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M3 21h18" />
                 <path d="M6 21V9" />
                 <path d="M18 21V9" />
@@ -111,16 +111,44 @@ export default function ProgrammeExperience() {
     });
 
     // Pixel-based to avoid layout shifts
-    const y1 = useTransform(scrollYProgress, [0, 1], ["0px", "-24px"]);
-    const y2 = useTransform(scrollYProgress, [0, 1], ["0px", "16px"]);
-    const y3 = useTransform(scrollYProgress, [0, 1], ["0px", "-32px"]);
-    const y4 = useTransform(scrollYProgress, [0, 1], ["0px", "20px"]);
-    const y5 = useTransform(scrollYProgress, [0, 1], ["0px", "-16px"]);
+    // Only apply parallax on md+ screens to prevent overlap on mobile stacked layout
+    const [isMd, setIsMd] = useState(false);
+    useEffect(() => {
+        const check = () => setIsMd(window.innerWidth >= 768);
+        check();
+        window.addEventListener('resize', check);
+        return () => window.removeEventListener('resize', check);
+    }, []);
+
+    const y1 = useTransform(scrollYProgress, [0, 1], isMd ? ["0px", "-15px"] : ["0px", "0px"]);
+    const y2 = useTransform(scrollYProgress, [0, 1], isMd ? ["0px", "-30px"] : ["0px", "0px"]);
+    const y3 = useTransform(scrollYProgress, [0, 1], isMd ? ["0px", "-20px"] : ["0px", "0px"]);
+    const y4 = useTransform(scrollYProgress, [0, 1], isMd ? ["0px", "-40px"] : ["0px", "0px"]);
+    const y5 = useTransform(scrollYProgress, [0, 1], isMd ? ["0px", "-25px"] : ["0px", "0px"]);
     const transforms = [y1, y2, y3, y4, y5];
 
     return (
-        <section id="programme" ref={containerRef} className="bg-[#111111] ma-spacing-mob ma-spacing-desk relative">
-            <div className="container-max">
+        <section id="programme" ref={containerRef} className="bg-[#111111] ma-spacing-mob ma-spacing-desk relative overflow-hidden">
+
+            {/* Ambient Background Glows & Particles */}
+            <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-primary-red/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-[40%] h-[40%] bg-kyoto-gold/5 rounded-full blur-3xl pointer-events-none"></div>
+
+            {/* Seigaiha Wave Pattern */}
+            <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg stroke='%23ffffff' stroke-width='1' fill='none'%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='40'/%3E%3Ccircle cx='0' cy='80' r='10'/%3E%3Ccircle cx='0' cy='80' r='20'/%3E%3Ccircle cx='0' cy='80' r='30'/%3E%3Ccircle cx='0' cy='80' r='40'/%3E%3Ccircle cx='80' cy='80' r='10'/%3E%3Ccircle cx='80' cy='80' r='20'/%3E%3Ccircle cx='80' cy='80' r='30'/%3E%3Ccircle cx='80' cy='80' r='40'/%3E%3Ccircle cx='80' cy='0' r='10'/%3E%3Ccircle cx='80' cy='0' r='20'/%3E%3Ccircle cx='80' cy='0' r='30'/%3E%3Ccircle cx='80' cy='0' r='40'/%3E%3Ccircle cx='0' cy='0' r='10'/%3E%3Ccircle cx='0' cy='0' r='20'/%3E%3Ccircle cx='0' cy='0' r='30'/%3E%3Ccircle cx='0' cy='0' r='40'/%3E%3C/g%3E%3C/svg%3E")` }}></div>
+
+            {/* Vertical Typography (Watermarks) */}
+            <motion.div style={{ y: useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]) }} className="absolute left-4 md:left-12 top-[10%] pointer-events-none hidden md:block opacity-[0.04]">
+                <p className="text-white font-serif text-6xl xl:text-8xl writing-vertical-rl tracking-widest">
+                    文化
+                </p>
+            </motion.div>
+
+            {/* Sakura Particles */}
+            <motion.div animate={{ y: [0, 40, 0], x: [0, 15, 0], rotate: [0, 30, 0] }} transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }} className="absolute top-[30%] left-[20%] w-3 h-3 rounded-tr-xl rounded-bl-xl bg-primary-red/20 blur-[1px] pointer-events-none" />
+            <motion.div animate={{ y: [0, -30, 0], x: [0, -20, 0], rotate: [0, -45, 0] }} transition={{ duration: 14, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="absolute bottom-[20%] right-[15%] w-4 h-4 rounded-tl-xl rounded-br-xl bg-kyoto-gold/20 blur-[1px] pointer-events-none" />
+
+            <div className="container-max relative z-10">
 
                 <motion.div
                     initial="hidden"
@@ -143,7 +171,7 @@ export default function ProgrammeExperience() {
                     whileInView="visible"
                     viewport={{ once: true, margin: "-50px" }}
                     variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
-                    className="flex flex-wrap justify-center gap-5 mb-16 md:mb-20 max-w-5xl mx-auto"
+                    className="flex flex-wrap justify-center gap-x-5 gap-y-12 md:gap-y-6 mb-16 md:mb-20 max-w-5xl mx-auto"
                 >
                     {cities.map((city, idx) => (
                         <motion.div
@@ -211,7 +239,7 @@ export default function ProgrammeExperience() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="bg-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl relative overflow-hidden max-w-5xl mx-auto"
+                    className="bg-white border border-[#B89B5E]/40 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl relative overflow-hidden max-w-5xl mx-auto"
                 >
                     <div className="absolute top-0 left-0 w-2 h-full bg-primary-red"></div>
 
@@ -224,12 +252,14 @@ export default function ProgrammeExperience() {
                         </p>
                     </div>
                     <div className="w-full md:w-auto flex-shrink-0 relative z-10">
-                        <a
+                        <motion.a
                             href="#register"
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
                             className="block w-full text-center bg-primary-red text-white px-8 py-4 rounded-lg font-semibold hover:bg-black hover:text-white transition-all duration-300 group shadow-lg"
                         >
                             Reserve Your Orientation Seat
-                        </a>
+                        </motion.a>
                     </div>
                 </motion.div>
 

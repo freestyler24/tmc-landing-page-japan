@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Footer() {
     return (
         <footer className="bg-[#111111] text-[#F5F3EF] py-16 md:py-24 border-t border-[#2a2a2a] relative overflow-hidden">
@@ -7,11 +9,15 @@ export default function Footer() {
             <div className="container-max max-w-4xl relative z-10 flex flex-col items-center">
 
                 {/* Branding Statement */}
-                <div className="text-center mb-14 md:mb-20">
-                    <h3 className="text-3xl md:text-4xl font-serif tracking-[0.15em] mb-4 text-[#F5F3EF]">JAPAN 2026</h3>
-                    <p className="text-[#B89B5E] font-serif italic text-lg md:text-xl tracking-wide">
+                <div className="text-center mb-14 md:mb-20 flex flex-col items-center">
+                    <h3 className="text-3xl md:text-4xl font-serif tracking-[0.15em] mb-4 text-[#F5F3EF] flex items-center justify-center gap-3">
+                        <span className="text-primary-red text-4xl md:text-5xl font-serif">日本</span>
+                        JAPAN 2026
+                    </h3>
+                    <p className="text-[#B89B5E] font-serif italic text-lg md:text-xl tracking-wide mb-8">
                         Where Precision Fuels Possibility
                     </p>
+                    <Image src="/images/TMC logo.png" alt="The Modern Classroom" width={150} height={60} className="object-contain opacity-80 hover:opacity-100 transition-opacity" />
                 </div>
 
                 {/* Contact Information */}

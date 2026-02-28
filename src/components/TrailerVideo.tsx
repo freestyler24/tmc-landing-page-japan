@@ -14,7 +14,7 @@ export default function TrailerVideo() {
     const yVideo = useTransform(scrollYProgress, [0, 1], ["20px", "-20px"]);
 
     return (
-        <section ref={containerRef} className="bg-[#111111] py-20 md:py-32 relative border-t border-b border-gray-900 overflow-hidden">
+        <section ref={containerRef} className="bg-[#111111] ma-spacing-mob ma-spacing-desk relative border-t border-b border-gray-900 overflow-hidden">
             {/* Atmospheric Background Watermark */}
             <motion.div
                 animate={{ rotate: 360 }}
@@ -103,12 +103,15 @@ export default function TrailerVideo() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.6 }}
                 >
-                    <a
+                    <motion.a
                         href="#register"
-                        className="inline-block bg-primary-red text-[#F5F3EF] px-10 py-4 rounded-sm text-[13px] md:text-[14px] font-semibold uppercase tracking-[0.15em] hover:bg-[#8b1c1c] transition-colors shadow-lg"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="relative inline-flex items-center justify-center bg-primary-red text-[#F5F3EF] px-10 py-4 rounded-sm text-[13px] md:text-[14px] font-semibold uppercase tracking-[0.15em] hover:bg-black transition-colors shadow-lg overflow-hidden group"
                     >
-                        Register for Parent Orientation
-                    </a>
+                        <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-full group-hover:h-56 opacity-10"></span>
+                        <span className="relative">Register for Parent Orientation</span>
+                    </motion.a>
                 </motion.div>
 
             </div>
