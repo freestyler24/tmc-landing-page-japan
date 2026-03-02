@@ -1,19 +1,24 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-primary-red: #C8102E;
-  --color-charcoal: #111111;
-  --color-offwhite: #F5F3EF;
-  --color-kyoto-gold: #B89B5E;
-  --color-warm-border: #e6dac3;
-  --color-warm-text: #7a6c56;
+  --color-primary-red: #D21F2B;
+  --color-deep-indigo: #1B2230;
+  --color-rice-white: #F6F1E8;
+  --color-sakura: #F2C9CF;
+  --color-sakura-light: #F9E5E8;
+  --color-fuji-blue: #6A86A8;
+  --color-kyoto-gold: #BFA05A;
+  --color-text-primary: #2C3443;
+  --color-text-secondary: #8A9099;
+  --color-border-soft: #E3DED4;
+  --color-white: #ffffff;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: var(--font-noto-serif-jp), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 
   /* Re-map standard brand colors to our palette for easier use */
-  --color-background: var(--color-offwhite);
-  --color-foreground: var(--color-charcoal);
+  --color-background: var(--color-rice-white);
+  --color-foreground: var(--color-text-primary);
 }
 
 @layer base {
@@ -56,20 +61,45 @@
     font-size: 14px;
   }
 
-  /* Utility classes for background alternation */
-  .bg-alt-offwhite {
-    background-color: var(--color-offwhite);
-    color: var(--color-charcoal);
+  /* background utilities */
+  .bg-rice-white {
+    background-color: var(--color-rice-white);
   }
 
-  .bg-alt-red {
+  .bg-white {
+    background-color: var(--color-white);
+  }
+
+  .bg-sakura-light {
+    background-color: var(--color-sakura-light);
+  }
+
+  .bg-deep-indigo {
+    background-color: var(--color-deep-indigo);
+  }
+
+  .bg-primary-red {
     background-color: var(--color-primary-red);
-    color: var(--color-offwhite);
   }
 
-  .bg-alt-charcoal {
-    background-color: #111111;
-    color: var(--color-offwhite);
+  /* text utilities */
+  .text-primary {
+    color: var(--color-text-primary);
+  }
+
+  .text-white {
+    color: var(--color-white);
+  }
+
+  /* border utility */
+  .border-soft {
+    border-color: var(--color-border-soft);
+  }
+
+  /* button */
+  .btn-primary {
+    background-color: var(--color-primary-red);
+    color: var(--color-white);
   }
 }
 

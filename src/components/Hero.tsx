@@ -59,7 +59,7 @@ export default function Hero() {
     const opacityFade = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
     return (
-        <section ref={containerRef} className="bg-[#111111] relative overflow-hidden pt-[110px] pb-14 md:pt-[170px] md:pb-[120px]">
+        <section ref={containerRef} className="bg-rice-white relative overflow-hidden pt-[110px] pb-14 md:pt-[170px] md:pb-[120px]">
 
             {/* Ambient Background Glows */}
             <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-kyoto-gold/5 rounded-full blur-3xl pointer-events-none"></div>
@@ -80,7 +80,7 @@ export default function Hero() {
                 style={{ y: yText, opacity: opacityFade }}
                 className="absolute left-8 md:left-16 top-1/4 pointer-events-none hidden lg:block"
             >
-                <p className="text-[#B89B5E] font-serif text-6xl writing-vertical-rl tracking-widest opacity-40">
+                <p className="text-kyoto-gold font-serif text-6xl writing-vertical-rl tracking-widest opacity-40">
                     成長
                 </p>
             </motion.div>
@@ -88,7 +88,7 @@ export default function Hero() {
                 style={{ y: useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]), opacity: opacityFade }}
                 className="absolute right-8 md:right-16 top-1/3 pointer-events-none hidden lg:block"
             >
-                <p className="text-[#B89B5E] font-serif text-6xl writing-vertical-rl tracking-widest opacity-40">
+                <p className="text-kyoto-gold font-serif text-6xl writing-vertical-rl tracking-widest opacity-40">
                     規律
                 </p>
             </motion.div>
@@ -129,24 +129,24 @@ export default function Hero() {
                 >
                     {/* The Magnetic Hook */}
                     <motion.div variants={fadeUp} className="text-center mb-10 md:mb-14 relative">
-                        <p className="text-[#C8102E] font-sans font-bold tracking-[0.25em] text-[10px] md:text-xs mb-6 uppercase">
+                        <p className="text-primary-red font-sans font-bold tracking-[0.25em] text-[10px] md:text-xs mb-6 uppercase">
                             October 2026 &nbsp;|&nbsp; Grades 6–12 &nbsp;|&nbsp; Limited to 45 Students
                         </p>
-                        <h1 className="font-serif leading-[1.05] drop-shadow-2xl">
-                            <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mb-2 md:mb-4 text-[#F5F3EF]">09 Days. 04 Cities.</span>
-                            <span className="block text-4xl sm:text-6xl md:text-[76px] lg:text-[90px] text-[#B89B5E] italic font-light drop-shadow-md text-shadow-lg leading-tight md:leading-[1.1]">Where Exposure Becomes Perspective.</span>
+                        <h1 className="font-serif leading-[1.05] drop-shadow-sm">
+                            <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mb-2 md:mb-4 text-text-primary">09 Days. 04 Cities.</span>
+                            <span className="block text-4xl sm:text-6xl md:text-[76px] lg:text-[90px] text-kyoto-gold italic font-light drop-shadow-sm leading-tight md:leading-[1.1]">Where Exposure Becomes Perspective.</span>
                         </h1>
                     </motion.div>
 
                     {/* The Core Message - Frosted Glass Panel */}
                     <motion.div variants={fadeUp} className="relative max-w-3xl mx-auto mb-12 md:mb-16">
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#B89B5E]/20 to-transparent blur-md"></div>
-                        <div className="relative bg-[#111111]/40 backdrop-blur-xl border border-[#B89B5E]/30 p-6 md:p-10 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.5)] text-center">
-                            <h2 className="text-[#F5F3EF] font-sans text-lg md:text-2xl lg:text-3xl font-light leading-relaxed mb-4">
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-kyoto-gold/10 to-transparent blur-md"></div>
+                        <div className="relative bg-white/60 backdrop-blur-xl border border-kyoto-gold/30 p-6 md:p-10 rounded-2xl shadow-lg text-center">
+                            <h2 className="text-text-primary font-sans text-lg md:text-2xl lg:text-3xl font-light leading-relaxed mb-4">
                                 This is not tourism.<br />
-                                <span className="font-semibold text-white">It is guided international exposure.</span>
+                                <span className="font-semibold text-primary-red">It is guided international exposure.</span>
                             </h2>
-                            <p className="text-[#F5F3EF]/70 font-sans text-sm md:text-base max-w-xl mx-auto">
+                            <p className="text-text-secondary font-sans text-sm md:text-base max-w-xl mx-auto">
                                 Students observe how disciplined societies think, organise, and operate.
                             </p>
                         </div>
@@ -163,19 +163,19 @@ export default function Hero() {
                             <motion.div
                                 key={i}
                                 whileHover={{ scale: 1.05, y: -5 }}
-                                className="group relative bg-[#111111]/60 backdrop-blur-md border border-white/5 p-5 md:p-6 rounded-xl hover:border-[#B89B5E]/50 transition-all duration-300 text-center cursor-default shadow-lg overflow-hidden"
+                                className="group relative bg-white/80 backdrop-blur-md border border-border-soft p-5 md:p-6 rounded-xl hover:border-kyoto-gold/50 transition-all duration-300 text-center cursor-default shadow-md overflow-hidden"
                             >
-                                <div className="absolute inset-0 bg-gradient-to-b from-[#B89B5E]/0 to-[#B89B5E]/0 group-hover:to-[#B89B5E]/10 transition-colors duration-500"></div>
-                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-[#C8102E] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-b-full shadow-[0_0_10px_#C8102E]"></div>
-                                <h3 className="text-[#F5F3EF] font-serif font-bold text-base md:text-xl mb-2 relative z-10">{item.title}</h3>
-                                <p className="text-[#F5F3EF]/60 font-sans text-[11px] md:text-xs leading-relaxed relative z-10">{item.desc}</p>
+                                <div className="absolute inset-0 bg-gradient-to-b from-kyoto-gold/0 to-kyoto-gold/0 group-hover:to-kyoto-gold/10 transition-colors duration-500"></div>
+                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-primary-red opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-b-full shadow-sm"></div>
+                                <h3 className="text-text-primary font-serif font-bold text-base md:text-xl mb-2 relative z-10">{item.title}</h3>
+                                <p className="text-text-secondary font-sans text-[11px] md:text-xs leading-relaxed relative z-10">{item.desc}</p>
                             </motion.div>
                         ))}
                     </motion.div>
 
                     {/* The Action Center - Countdown & CTA */}
-                    <motion.div variants={fadeUp} className="flex flex-col items-center bg-gradient-to-t from-[#111111] to-transparent pt-8 pb-4">
-                        <p className="text-[#B89B5E] font-sans font-semibold text-[10px] md:text-xs uppercase tracking-[0.2em] mb-6 drop-shadow-md">
+                    <motion.div variants={fadeUp} className="flex flex-col items-center pt-8 pb-4">
+                        <p className="text-kyoto-gold font-sans font-semibold text-[10px] md:text-xs uppercase tracking-[0.2em] mb-6 drop-shadow-sm">
                             Parent Orientation Registration Closes In
                         </p>
 
@@ -188,13 +188,13 @@ export default function Hero() {
                                 { label: 'SECONDS', value: timeLeft.seconds }
                             ].map((time, i) => (
                                 <div key={i} className="flex flex-col items-center">
-                                    <div className="bg-[#111111]/80 backdrop-blur-sm border border-white/10 w-16 h-16 md:w-24 md:h-24 flex items-center justify-center rounded-xl shadow-2xl mb-3 relative overflow-hidden group">
-                                        <div className="absolute inset-0 bg-gradient-to-t from-[#C8102E]/10 to-transparent"></div>
-                                        <span className="text-[#F5F3EF] font-serif text-3xl md:text-5xl font-light tabular-nums relative z-10">
+                                    <div className="bg-white/80 backdrop-blur-sm border border-border-soft w-16 h-16 md:w-24 md:h-24 flex items-center justify-center rounded-xl shadow-lg mb-3 relative overflow-hidden group">
+                                        <div className="absolute inset-0 bg-gradient-to-t from-primary-red/5 to-transparent"></div>
+                                        <span className="text-text-primary font-serif text-3xl md:text-5xl font-light tabular-nums relative z-10">
                                             {time.value}
                                         </span>
                                     </div>
-                                    <span className="text-[9px] md:text-[11px] font-sans font-bold tracking-[0.2em] text-[#F5F3EF]/50">{time.label}</span>
+                                    <span className="text-[9px] md:text-[11px] font-sans font-bold tracking-[0.2em] text-text-secondary">{time.label}</span>
                                 </div>
                             ))}
                         </div>
@@ -204,7 +204,7 @@ export default function Hero() {
                             href="#register"
                             whileHover={{ scale: 1.03 }}
                             whileTap={{ scale: 0.97 }}
-                            className="relative inline-flex items-center justify-center bg-[#C8102E] text-[#F5F3EF] px-10 md:px-14 py-4 md:py-5 rounded-sm overflow-hidden group shadow-[0_0_30px_rgba(200,16,46,0.4)] hover:shadow-[0_0_50px_rgba(200,16,46,0.6)] transition-shadow"
+                            className="relative inline-flex items-center justify-center bg-primary-red hover:bg-deep-indigo text-white px-10 md:px-14 py-4 md:py-5 rounded-sm overflow-hidden group shadow-md hover:shadow-lg transition-all"
                         >
                             <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-full group-hover:h-56 opacity-10"></span>
                             <span className="relative font-sans text-xs md:text-sm font-bold tracking-[0.15em] uppercase">
@@ -219,13 +219,13 @@ export default function Hero() {
                     initial="hidden"
                     animate="visible"
                     variants={fadeUp}
-                    className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-14 mt-16 md:mt-24 pt-8 md:pt-12 border-t border-gray-800 w-full max-w-4xl"
+                    className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-14 mt-16 md:mt-24 pt-8 md:pt-12 border-t border-border-soft w-full max-w-4xl"
                 >
-                    <Image src="/images/TMC logo.png" alt="TMC Logo" width={300} height={150} className="object-contain h-14 sm:h-16 md:h-20 lg:h-24 w-auto opacity-80 hover:opacity-100 transition-opacity" />
-                    <div className="hidden sm:block w-px h-10 md:h-16 bg-gray-700"></div>
-                    <Image src="/images/updated_dps_logo.png" alt="DPS Logo" width={300} height={150} className="object-contain h-14 sm:h-16 md:h-20 lg:h-24 w-auto opacity-80 hover:opacity-100 transition-opacity" />
-                    <div className="hidden sm:block w-px h-10 md:h-16 bg-gray-700"></div>
-                    <Image src="/images/SOI Logo.jpg" alt="SOI Logo" width={300} height={150} className="object-contain h-14 sm:h-16 md:h-20 lg:h-24 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                    <Image src="/images/TMC logo.png" alt="TMC Logo" width={300} height={150} className="object-contain h-14 sm:h-16 md:h-20 lg:h-24 w-auto opacity-80 hover:opacity-100 transition-opacity mix-blend-multiply" />
+                    <div className="hidden sm:block w-px h-10 md:h-16 bg-border-soft"></div>
+                    <Image src="/images/updated_dps_logo.png" alt="DPS Logo" width={300} height={150} className="object-contain h-14 sm:h-16 md:h-20 lg:h-24 w-auto opacity-80 hover:opacity-100 transition-opacity mix-blend-multiply" />
+                    <div className="hidden sm:block w-px h-10 md:h-16 bg-border-soft"></div>
+                    <Image src="/images/SOI Logo.jpg" alt="SOI Logo" width={300} height={150} className="object-contain h-14 sm:h-16 md:h-20 lg:h-24 w-auto opacity-80 hover:opacity-100 transition-opacity mix-blend-multiply" />
                 </motion.div>
 
             </div>

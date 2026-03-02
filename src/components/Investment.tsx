@@ -9,7 +9,7 @@ export default function Investment() {
     };
 
     return (
-        <section id="investment" className="bg-[#111111] ma-spacing-mob ma-spacing-desk relative text-[#F5F3EF] overflow-hidden">
+        <section id="investment" className="bg-white ma-spacing-mob ma-spacing-desk relative text-text-primary overflow-hidden">
             {/* Ambient Background Glows */}
             <div className="absolute top-0 right-0 w-[40%] h-[40%] bg-primary-red/5 rounded-full blur-3xl pointer-events-none"></div>
             <div className="absolute bottom-0 left-[-10%] w-[50%] h-[50%] bg-kyoto-gold/5 rounded-full blur-3xl pointer-events-none"></div>
@@ -18,8 +18,8 @@ export default function Investment() {
             <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg stroke='%23ffffff' stroke-width='1' fill='none'%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='40'/%3E%3Ccircle cx='0' cy='80' r='10'/%3E%3Ccircle cx='0' cy='80' r='20'/%3E%3Ccircle cx='0' cy='80' r='30'/%3E%3Ccircle cx='0' cy='80' r='40'/%3E%3Ccircle cx='80' cy='80' r='10'/%3E%3Ccircle cx='80' cy='80' r='20'/%3E%3Ccircle cx='80' cy='80' r='30'/%3E%3Ccircle cx='80' cy='80' r='40'/%3E%3Ccircle cx='80' cy='0' r='10'/%3E%3Ccircle cx='80' cy='0' r='20'/%3E%3Ccircle cx='80' cy='0' r='30'/%3E%3Ccircle cx='80' cy='0' r='40'/%3E%3Ccircle cx='0' cy='0' r='10'/%3E%3Ccircle cx='0' cy='0' r='20'/%3E%3Ccircle cx='0' cy='0' r='30'/%3E%3Ccircle cx='0' cy='0' r='40'/%3E%3C/g%3E%3C/svg%3E")` }}></div>
 
             {/* Vertical Typography (Watermarks) */}
-            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 0.04 }} viewport={{ once: true }} className="absolute right-8 md:right-16 top-1/4 pointer-events-none hidden lg:block">
-                <p className="text-white font-serif text-6xl writing-vertical-rl tracking-widest">
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 0.1 }} viewport={{ once: true }} className="absolute right-8 md:right-16 top-1/4 pointer-events-none hidden lg:block">
+                <p className="text-kyoto-gold font-serif text-6xl writing-vertical-rl tracking-widest">
                     投資
                 </p>
             </motion.div>
@@ -40,8 +40,8 @@ export default function Investment() {
                     <h2 className="text-3xl md:text-5xl font-serif mb-4 md:mb-6">
                         Transparent Programme Investment
                     </h2>
-                    <div className="w-12 h-px bg-offwhite mx-auto mb-6 opacity-80"></div>
-                    <p className="text-lg text-[#F5F3EF]/90 max-w-2xl mx-auto">
+                    <div className="w-12 h-px bg-primary-red mx-auto mb-6 opacity-80"></div>
+                    <p className="text-lg text-text-secondary max-w-2xl mx-auto">
                         The complete cost structure, inclusions, and installment details will be explained during the Parent Orientation session.
                     </p>
                 </motion.div>
@@ -88,7 +88,7 @@ export default function Investment() {
                         <motion.div
                             variants={fadeUp}
                             key={inst.num}
-                            className="bg-[#181818] text-[#F5F3EF] rounded-sm shadow-[0_4px_20px_rgba(0,0,0,0.5)] overflow-hidden border border-gray-800 hover:shadow-[0_8px_30px_rgba(0,0,0,0.7)] hover:border-[#B89B5E]/30 transition-all transform hover:-translate-y-1 duration-300"
+                            className="bg-rice-white text-text-primary rounded-sm shadow-md overflow-hidden border border-border-soft hover:shadow-lg hover:border-kyoto-gold/50 transition-all transform hover:-translate-y-1 duration-300"
                         >
                             {/* Red top accent bar */}
                             <div className="h-1.5 bg-primary-red"></div>
@@ -99,26 +99,26 @@ export default function Investment() {
                                         {inst.num}
                                     </span>
                                     <div>
-                                        <h4 className="font-serif font-bold text-lg leading-tight text-[#F5F3EF]">{inst.title}</h4>
-                                        <p className="text-gray-400 text-xs">{inst.subtitle}</p>
+                                        <h4 className="font-serif font-bold text-lg leading-tight text-text-primary">{inst.title}</h4>
+                                        <p className="text-text-secondary text-xs">{inst.subtitle}</p>
                                     </div>
                                 </div>
 
                                 {/* Amount */}
                                 <p className="text-primary-red text-3xl font-bold mb-1">{inst.amount}</p>
                                 {inst.note && (
-                                    <p className="text-gray-400 text-xs mb-4">{inst.note}</p>
+                                    <p className="text-text-secondary text-xs mb-4">{inst.note}</p>
                                 )}
                                 {!inst.note && <div className="mb-4"></div>}
 
                                 {/* Meta */}
-                                <div className="space-y-2 text-sm text-gray-400">
+                                <div className="space-y-2 text-sm text-text-secondary">
                                     <div className="flex items-center gap-2">
-                                        <span className="text-gray-400">📅</span>
+                                        <span className="text-text-secondary">📅</span>
                                         {inst.date}
                                     </div>
                                     <div className="flex items-center gap-2">
-                                        <span className="text-gray-400">🏢</span>
+                                        <span className="text-text-secondary">🏢</span>
                                         {inst.payee}
                                     </div>
                                 </div>
@@ -133,7 +133,7 @@ export default function Investment() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="bg-[#181818] text-[#F5F3EF] shadow-2xl overflow-hidden border border-gray-800"
+                    className="bg-rice-white text-text-primary shadow-lg overflow-hidden border border-border-soft"
                 >
                     <div className="p-10 w-full">
                         <h3 className="text-lg font-bold tracking-wider mb-6 text-primary-red uppercase">Indicative Inclusions</h3>
@@ -152,7 +152,7 @@ export default function Investment() {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.4, delay: 0.4 + (i * 0.1) }}
                                     key={i}
-                                    className="flex items-start gap-3 text-sm text-gray-300 font-medium border-b border-gray-800 pb-3"
+                                    className="flex items-start gap-3 text-sm text-text-primary font-medium border-b border-border-soft pb-3"
                                 >
                                     <span className="text-primary-red text-lg">■</span>
                                     {item}
@@ -167,7 +167,7 @@ export default function Investment() {
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                    className="mt-12 text-center text-[#F5F3EF]/80 text-sm max-w-3xl mx-auto leading-relaxed"
+                    className="mt-12 text-center text-text-secondary text-sm max-w-3xl mx-auto leading-relaxed"
                 >
                     <p>
                         All financial details will be shared transparently during orientation.
@@ -180,16 +180,16 @@ export default function Investment() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    className="mt-16 bg-[#181818] border border-[#B89B5E]/40 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl relative overflow-hidden"
+                    className="mt-16 bg-white border border-kyoto-gold/40 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-md relative overflow-hidden"
                 >
                     {/* Decorative accent */}
                     <div className="absolute top-0 left-0 w-2 h-full bg-primary-red"></div>
 
                     <div className="flex-1 space-y-3 relative z-10 w-full md:w-auto">
-                        <h3 className="text-2xl md:text-3xl font-serif text-[#F5F3EF] leading-tight">
+                        <h3 className="text-2xl md:text-3xl font-serif text-text-primary leading-tight">
                             Transparency First. Commitment Later.
                         </h3>
-                        <p className="text-gray-600 text-base max-w-2xl">
+                        <p className="text-text-secondary text-base max-w-2xl">
                             Attend the Parent Orientation to review the complete cost structure and ask your questions directly.
                         </p>
                     </div>
@@ -198,7 +198,7 @@ export default function Investment() {
                             href="#register"
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
-                            className="block w-full text-center bg-primary-red text-white px-8 py-4 rounded-sm font-semibold hover:bg-black hover:text-white transition-all duration-300 group shadow-lg"
+                            className="block w-full text-center bg-primary-red text-white px-8 py-4 rounded-sm font-semibold hover:bg-deep-indigo hover:text-white transition-all duration-300 group shadow-md"
                         >
                             Reserve Your Orientation Seat
                         </motion.a>

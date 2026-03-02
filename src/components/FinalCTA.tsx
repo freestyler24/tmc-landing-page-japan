@@ -58,7 +58,7 @@ export default function FinalCTA() {
                             href="#register"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="inline-block bg-white text-primary-red px-8 md:px-12 py-4 md:py-5 rounded-sm font-bold text-sm md:text-lg hover:bg-black hover:text-white transition-all uppercase tracking-widest shadow-xl"
+                            className="inline-block bg-white text-primary-red px-8 md:px-12 py-4 md:py-5 rounded-sm font-bold text-sm md:text-lg hover:bg-deep-indigo hover:text-white transition-all uppercase tracking-widest shadow-xl"
                         >
                             Register for the Parent Orientation
                         </motion.a>

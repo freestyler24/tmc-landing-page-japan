@@ -18,13 +18,13 @@ export default function Header() {
 
     return (
         <header
-            className={`fixed top-0 w-full z-50 transition-all duration-300 bg-[#F5F3EF] backdrop-blur-md supports-[backdrop-filter]:bg-[#F5F3EF]/70 ${isScrolled ? 'border-b border-[#e6dac3] shadow-sm' : 'border-b border-transparent'
+            className={`fixed top-0 w-full z-50 transition-all duration-300 bg-rice-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-rice-white/60 ${isScrolled ? 'border-b border-border-soft shadow-sm' : 'border-b border-transparent'
                 }`}
             style={{ height: '100px' }}
         >
             <div className="container-max h-full flex items-center justify-between">
                 {/* Logo */}
-                <Link href="/" className="text-xl md:text-2xl font-bold font-serif tracking-tight text-charcoal flex items-center gap-2">
+                <Link href="/" className="text-xl md:text-2xl font-bold font-serif tracking-tight text-text-primary flex items-center gap-2">
                     <span className="text-primary-red text-2xl md:text-3xl font-serif">日本</span>
                     JAPAN 2026
                 </Link>
@@ -48,7 +48,7 @@ export default function Header() {
                         href="#register"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="inline-block bg-primary-red text-white px-6 py-3 rounded-sm text-sm font-semibold hover:bg-black transition-colors"
+                        className="inline-block bg-primary-red text-white px-6 py-3 rounded-sm text-sm font-semibold hover:bg-deep-indigo transition-colors"
                     >
                         Register Now
                     </motion.a>
@@ -59,12 +59,12 @@ export default function Header() {
                     <motion.a
                         href="#register"
                         whileTap={{ scale: 0.95 }}
-                        className="inline-block bg-primary-red text-white px-4 py-2 rounded-sm text-xs font-semibold hover:bg-charcoal transition-colors whitespace-nowrap"
+                        className="inline-block bg-primary-red text-white px-4 py-2 rounded-sm text-xs font-semibold hover:bg-deep-indigo transition-colors whitespace-nowrap"
                     >
                         Register Now
                     </motion.a>
                     <button
-                        className="p-2 text-charcoal"
+                        className="p-2 text-text-primary"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         aria-label="Toggle menu"
                     >
@@ -86,12 +86,12 @@ export default function Header() {
 
             {/* Mobile Nav Dropdown */}
             {isMenuOpen && (
-                <div className="md:hidden absolute top-[100px] left-0 w-full bg-[#F5F3EF] backdrop-blur-md supports-[backdrop-filter]:bg-[#F5F3EF]/90 border-b border-[#e6dac3] px-4 py-6 shadow-lg flex flex-col gap-4">
+                <div className="md:hidden absolute top-[100px] left-0 w-full bg-rice-white backdrop-blur-md supports-[backdrop-filter]:bg-rice-white/90 border-b border-border-soft px-4 py-6 shadow-lg flex flex-col gap-4">
                     {['Programme', 'Safety', 'Investment', 'FAQs'].map((item) => (
                         <a
                             key={item}
                             href={`#${item.toLowerCase()}`}
-                            className="text-lg font-medium text-charcoal py-2 border-b border-gray-100"
+                            className="text-lg font-medium text-text-primary py-2 border-b border-gray-100"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             {item}

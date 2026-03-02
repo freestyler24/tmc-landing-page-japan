@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Footer() {
     return (
-        <footer className="bg-[#111111] text-[#F5F3EF] py-16 md:py-24 border-t border-[#2a2a2a] relative overflow-hidden">
+        <footer className="bg-deep-indigo text-white py-16 md:py-24 border-t border-white/10 relative overflow-hidden">
             {/* Subtle background texture */}
             <div className="absolute inset-0 pointer-events-none" style={{ opacity: 0.05, backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0c0 15 15 30 30 30-15 0-30 15-30 30C30 45 15 30 0 30 15 30 30 15 30 0z' fill='%23ffffff' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E")` }}></div>
 
@@ -10,11 +10,11 @@ export default function Footer() {
 
                 {/* Branding Statement */}
                 <div className="text-center mb-14 md:mb-20 flex flex-col items-center">
-                    <h3 className="text-3xl md:text-4xl font-serif tracking-[0.15em] mb-4 text-[#F5F3EF] flex items-center justify-center gap-3">
+                    <h3 className="text-3xl md:text-4xl font-serif tracking-[0.15em] mb-4 text-white flex items-center justify-center gap-3">
                         <span className="text-primary-red text-4xl md:text-5xl font-serif">日本</span>
                         JAPAN 2026
                     </h3>
-                    <p className="text-[#B89B5E] font-serif italic text-lg md:text-xl tracking-wide mb-8">
+                    <p className="text-kyoto-gold font-serif italic text-lg md:text-xl tracking-wide mb-8">
                         Where Precision Fuels Possibility
                     </p>
                     <Image src="/images/TMC logo.png" alt="The Modern Classroom" width={150} height={60} className="object-contain opacity-80 hover:opacity-100 transition-opacity" />
@@ -23,28 +23,28 @@ export default function Footer() {
                 {/* Contact Information */}
                 <div className="w-full flex flex-col md:flex-row justify-center items-center gap-12 md:gap-x-24 text-center mb-16 md:mb-20">
                     <div className="flex flex-col items-center">
-                        <span className="text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em] mb-3">Email Inquiries</span>
-                        <a href="mailto:mail@themodernclassroom.in" className="text-gray-300 hover:text-white hover:underline transition-all duration-300 text-sm md:text-base">
+                        <span className="text-[10px] text-white/50 font-bold uppercase tracking-[0.2em] mb-3">Email Inquiries</span>
+                        <a href="mailto:mail@themodernclassroom.in" className="text-white/80 hover:text-white hover:underline transition-all duration-300 text-sm md:text-base">
                             mail@themodernclassroom.in
                         </a>
                     </div>
 
                     {/* Divider for Desktop */}
-                    <div className="hidden md:block w-px h-16 bg-[#333333]"></div>
+                    <div className="hidden md:block w-px h-16 bg-white/20"></div>
                     {/* Divider for Mobile */}
-                    <div className="block md:hidden w-16 h-px bg-[#333333]"></div>
+                    <div className="block md:hidden w-16 h-px bg-white/20"></div>
 
                     <div className="flex flex-col items-center">
-                        <span className="text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em] mb-3">Direct Contact</span>
-                        <div className="text-gray-300 space-y-1 text-sm md:text-base">
-                            <p>+91-9900786677 <span className="opacity-30 mx-2">|</span> 9886753632</p>
-                            <p>080 4371 2595</p>
+                        <span className="text-[10px] text-white/50 font-bold uppercase tracking-[0.2em] mb-3">Direct Contact</span>
+                        <div className="text-white/80 space-y-1 text-sm md:text-base">
+                            <p><a href="tel:+919900786677" className="hover:text-white hover:underline">+91-9900786677</a> <span className="opacity-30 mx-2">|</span> <a href="tel:+919886753632" className="hover:text-white hover:underline">9886753632</a></p>
+                            <p><a href="tel:+9108043712595" className="hover:text-white hover:underline">080 4371 2595</a></p>
                         </div>
                     </div>
                 </div>
 
                 {/* Closing Tagline / Copyright */}
-                <div className="w-full border-t border-[#2a2a2a] pt-8 flex flex-col md:flex-row justify-center items-center gap-4 text-[10px] md:text-xs text-gray-500 uppercase tracking-widest text-center">
+                <div className="w-full border-t border-white/10 pt-8 flex flex-col md:flex-row justify-center items-center gap-4 text-[10px] md:text-xs text-white/50 uppercase tracking-widest text-center">
                     <span>&copy; 2026 The Modern Classroom</span>
                     <span className="hidden md:inline opacity-30">•</span>
                     <span>1:20 Supervision Framework</span>

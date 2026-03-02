@@ -128,7 +128,7 @@ export default function ProgrammeExperience() {
     const transforms = [y1, y2, y3, y4, y5];
 
     return (
-        <section id="programme" ref={containerRef} className="bg-[#111111] ma-spacing-mob ma-spacing-desk relative overflow-hidden">
+        <section id="programme" ref={containerRef} className="bg-rice-white ma-spacing-mob ma-spacing-desk relative overflow-hidden">
 
             {/* Ambient Background Glows & Particles */}
             <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-primary-red/5 rounded-full blur-3xl pointer-events-none"></div>
@@ -138,8 +138,8 @@ export default function ProgrammeExperience() {
             <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg stroke='%23ffffff' stroke-width='1' fill='none'%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='40'/%3E%3Ccircle cx='0' cy='80' r='10'/%3E%3Ccircle cx='0' cy='80' r='20'/%3E%3Ccircle cx='0' cy='80' r='30'/%3E%3Ccircle cx='0' cy='80' r='40'/%3E%3Ccircle cx='80' cy='80' r='10'/%3E%3Ccircle cx='80' cy='80' r='20'/%3E%3Ccircle cx='80' cy='80' r='30'/%3E%3Ccircle cx='80' cy='80' r='40'/%3E%3Ccircle cx='80' cy='0' r='10'/%3E%3Ccircle cx='80' cy='0' r='20'/%3E%3Ccircle cx='80' cy='0' r='30'/%3E%3Ccircle cx='80' cy='0' r='40'/%3E%3Ccircle cx='0' cy='0' r='10'/%3E%3Ccircle cx='0' cy='0' r='20'/%3E%3Ccircle cx='0' cy='0' r='30'/%3E%3Ccircle cx='0' cy='0' r='40'/%3E%3C/g%3E%3C/svg%3E")` }}></div>
 
             {/* Vertical Typography (Watermarks) */}
-            <motion.div style={{ y: useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]) }} className="absolute left-4 md:left-12 top-[10%] pointer-events-none hidden md:block opacity-[0.04]">
-                <p className="text-white font-serif text-6xl xl:text-8xl writing-vertical-rl tracking-widest">
+            <motion.div style={{ y: useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]) }} className="absolute left-4 md:left-12 top-[10%] pointer-events-none hidden md:block opacity-20">
+                <p className="text-kyoto-gold font-serif text-6xl xl:text-8xl writing-vertical-rl tracking-widest">
                     文化
                 </p>
             </motion.div>
@@ -157,10 +157,10 @@ export default function ProgrammeExperience() {
                     variants={fadeUp}
                     className="text-center mb-12 md:mb-16"
                 >
-                    <h2 className="text-3xl md:text-5xl font-serif mb-4 md:mb-6 text-[#F5F3EF]">
+                    <h2 className="text-3xl md:text-5xl font-serif mb-4 md:mb-6 text-text-primary">
                         Cultural Highlights
                     </h2>
-                    <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto">
+                    <p className="text-base md:text-lg text-text-secondary max-w-2xl mx-auto">
                         Each location is selected not for tourism, but for its specific educational and developmental outcome.
                     </p>
                 </motion.div>
@@ -187,14 +187,14 @@ export default function ProgrammeExperience() {
                             >
                                 {/* ── FRONT ── */}
                                 <div
-                                    className="absolute inset-0 flex flex-col items-center justify-center p-8 bg-[#181818] border border-gray-700/60 shadow-xl rounded-sm [backface-visibility:hidden]"
+                                    className="absolute inset-0 flex flex-col items-center justify-center p-8 bg-white border border-border-soft shadow-md rounded-sm [backface-visibility:hidden]"
                                 >
-                                    <div className="absolute inset-2 border border-gray-700/25 rounded-sm pointer-events-none" />
+                                    <div className="absolute inset-2 border border-border-soft/50 rounded-sm pointer-events-none" />
                                     {city.icon()}
-                                    <h3 className="text-2xl font-serif text-[#F5F3EF] mt-2 tracking-wide text-center">
+                                    <h3 className="text-2xl font-serif text-text-primary mt-2 tracking-wide text-center">
                                         {city.name}
                                     </h3>
-                                    <div className="relative w-10 h-px bg-gray-600 mt-5 overflow-hidden">
+                                    <div className="relative w-10 h-px bg-border-soft mt-5 overflow-hidden">
                                         <div className="absolute inset-0 bg-primary-red -translate-x-full group-hover:translate-x-0 group-focus:translate-x-0 transition-transform duration-500" />
                                     </div>
                                     {/* tap hint – visible on touch devices only */}
@@ -205,27 +205,27 @@ export default function ProgrammeExperience() {
 
                                 {/* ── BACK ── */}
                                 <div
-                                    className="absolute inset-0 flex flex-col p-6 bg-gradient-to-br from-[#1e1e1e] to-[#282828] border border-primary-red/40 shadow-2xl rounded-sm [backface-visibility:hidden] [transform:rotateY(180deg)]"
+                                    className="absolute inset-0 flex flex-col p-6 bg-rice-white border border-primary-red/40 shadow-xl rounded-sm [backface-visibility:hidden] [transform:rotateY(180deg)]"
                                 >
                                     <div className="absolute inset-1.5 border border-primary-red/10 rounded-sm pointer-events-none" />
 
                                     {/* Header */}
-                                    <div className="pb-3 mb-3 border-b border-gray-700/60">
+                                    <div className="pb-3 mb-3 border-b border-border-soft">
                                         <h4 className="text-primary-red font-serif text-lg leading-tight">{city.name}</h4>
-                                        <span className="text-gray-500 text-[10px] uppercase tracking-[0.2em]">{city.theme}</span>
+                                        <span className="text-text-secondary text-[10px] uppercase tracking-[0.2em]">{city.theme}</span>
                                     </div>
 
                                     {/* Body */}
                                     <div className="flex-1 overflow-hidden space-y-2.5">
                                         {city.texts.map((text, i) => (
-                                            <p key={i} className="text-gray-300 text-[12px] leading-relaxed border-l-2 border-gray-700/50 pl-2.5">{text}</p>
+                                            <p key={i} className="text-text-primary text-[12px] leading-relaxed border-l-2 border-border-soft pl-2.5">{text}</p>
                                         ))}
                                     </div>
 
                                     {/* Derived benefit */}
-                                    <div className="mt-3 pt-3 border-t border-gray-700/60">
-                                        <span className="text-[9px] text-gray-500 uppercase tracking-widest block mb-1">Derived Benefit</span>
-                                        <p className="text-[#B89B5E] text-[12px] font-serif italic leading-snug">&ldquo;{city.benefit}&rdquo;</p>
+                                    <div className="mt-3 pt-3 border-t border-border-soft">
+                                        <span className="text-[9px] text-text-secondary uppercase tracking-widest block mb-1">Derived Benefit</span>
+                                        <p className="text-kyoto-gold text-[12px] font-serif italic leading-snug">&ldquo;{city.benefit}&rdquo;</p>
                                     </div>
                                 </div>
                             </div>
@@ -244,10 +244,10 @@ export default function ProgrammeExperience() {
                     <div className="absolute top-0 left-0 w-2 h-full bg-primary-red"></div>
 
                     <div className="flex-1 space-y-3 relative z-10 w-full md:w-auto">
-                        <h3 className="text-2xl md:text-3xl font-serif text-charcoal leading-tight">
+                        <h3 className="text-2xl md:text-3xl font-serif text-text-primary leading-tight">
                             Every Location Has a Purpose.
                         </h3>
-                        <p className="text-gray-600 text-base max-w-2xl">
+                        <p className="text-text-secondary text-base max-w-2xl">
                             See how this 9-day journey is academically structured, supervised, and outcome-driven.
                         </p>
                     </div>
@@ -256,7 +256,7 @@ export default function ProgrammeExperience() {
                             href="#register"
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
-                            className="block w-full text-center bg-primary-red text-white px-8 py-4 rounded-lg font-semibold hover:bg-black hover:text-white transition-all duration-300 group shadow-lg"
+                            className="block w-full text-center bg-primary-red text-white px-8 py-4 rounded-lg font-semibold hover:bg-deep-indigo transition-all duration-300 group shadow-sm"
                         >
                             Reserve Your Orientation Seat
                         </motion.a>

@@ -14,7 +14,7 @@ export default function ProblemOutcome() {
     const yText = useTransform(scrollYProgress, [0, 1], ["0%", "-40%"]);
 
     return (
-        <section ref={containerRef} className="bg-[#F5F3EF] ma-spacing-mob ma-spacing-desk border-b border-[#e6dac3] overflow-hidden relative">
+        <section ref={containerRef} className="bg-sakura-light ma-spacing-mob ma-spacing-desk border-b border-border-soft overflow-hidden relative">
             {/* Subtle wave pattern with parallax */}
             <motion.div
                 className="absolute inset-0 pointer-events-none origin-top"
@@ -30,7 +30,7 @@ export default function ProblemOutcome() {
                 style={{ y: yText }}
                 className="absolute right-4 md:right-12 top-1/2 pointer-events-none hidden lg:block"
             >
-                <p className="text-[#e6dac3] font-serif text-8xl writing-vertical-rl tracking-widest opacity-20 transform -translate-y-1/2">
+                <p className="text-white font-serif text-8xl writing-vertical-rl tracking-widest opacity-50 transform -translate-y-1/2">
                     洞察
                 </p>
             </motion.div>
@@ -46,17 +46,17 @@ export default function ProblemOutcome() {
                         transition={{ duration: 0.6 }}
                         className="space-y-6"
                     >
-                        <h2 className="text-3xl md:text-4xl font-serif text-charcoal leading-tight">
+                        <h2 className="text-3xl md:text-4xl font-serif text-text-primary leading-tight">
                             Because Academics Alone Are No Longer Enough.
                         </h2>
                         <div className="w-12 h-px bg-primary-red"></div>
-                        <p className="text-base md:text-lg text-gray-600">
+                        <p className="text-base md:text-lg text-text-secondary">
                             Your child lives in a world that rewards more than grades. It rewards adaptability, cultural awareness, and composure under uncertainty.
                         </p>
-                        <p className="text-base md:text-lg text-gray-600">
+                        <p className="text-base md:text-lg text-text-secondary">
                             Yet most exposure today is filtered through screens. Real-world systems thinking is rarely observed firsthand.
                         </p>
-                        <p className="text-base md:text-lg text-gray-600">
+                        <p className="text-base md:text-lg text-text-secondary">
                             Japan offers a rare opportunity to experience a society where heritage and innovation evolve together.
                         </p>
                     </motion.div>
@@ -67,15 +67,15 @@ export default function ProblemOutcome() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="bg-[#F5F3EF] p-8 md:p-12 shadow-md border-l-4 border-kyoto-gold"
+                        className="bg-white p-8 md:p-12 shadow-md border-l-4 border-kyoto-gold"
                     >
-                        <h3 className="text-2xl font-serif text-charcoal mb-4">
+                        <h3 className="text-2xl font-serif text-text-primary mb-4">
                             What Students Gain
                         </h3>
-                        <p className="text-gray-600 mb-6">
+                        <p className="text-text-secondary mb-6">
                             Students do not simply see Japan. They observe systems. They experience discipline. They learn through immersion.
                         </p>
-                        <ul className="space-y-4 text-sm text-charcoal font-medium">
+                        <ul className="space-y-4 text-sm text-text-primary font-medium">
                             {[
                                 "Confidence in unfamiliar environments",
                                 "Exposure to structured global systems",
@@ -104,23 +104,23 @@ export default function ProblemOutcome() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    className="mt-16 md:mt-24 bg-charcoal p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl relative overflow-hidden"
+                    className="mt-16 md:mt-24 bg-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-md border border-border-soft relative overflow-hidden"
                 >
                     {/* Decorative accent */}
                     <div className="absolute top-0 left-0 w-2 h-full bg-primary-red"></div>
 
                     <div className="flex-1 space-y-3 relative z-10 w-full md:w-auto">
-                        <h3 className="text-2xl md:text-3xl font-serif text-white leading-tight">
+                        <h3 className="text-2xl md:text-3xl font-serif text-text-primary leading-tight">
                             See the Structure. Ask Your Questions. Decide with Confidence.
                         </h3>
-                        <p className="text-gray-300 text-base max-w-2xl">
+                        <p className="text-text-secondary text-base max-w-2xl">
                             The Parent Orientation walks you through itinerary, safety, supervision, and investment — clearly and transparently.
                         </p>
                     </div>
                     <div className="w-full md:w-auto flex-shrink-0 relative z-10">
                         <a
                             href="#register"
-                            className="block w-full text-center bg-primary-red text-white px-8 py-4 rounded-sm font-semibold hover:bg-black transition-all duration-300 group"
+                            className="block w-full text-center bg-primary-red text-white px-8 py-4 rounded-sm font-semibold hover:bg-deep-indigo transition-all duration-300 group shadow-sm"
                         >
                             Attend the Orientation Session
                         </a>

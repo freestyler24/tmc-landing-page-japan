@@ -54,7 +54,7 @@ export default function FAQ() {
     };
 
     return (
-        <section id="faqs" className="bg-[#181818] ma-spacing-mob ma-spacing-desk relative overflow-hidden border-t border-[#2a2a2a] border-b border-gray-900">
+        <section id="faqs" className="bg-deep-indigo ma-spacing-mob ma-spacing-desk relative overflow-hidden border-t border-b border-white/10">
             {/* Ambient Background Glows */}
             <div className="absolute top-0 left-[-10%] w-[40%] h-[40%] bg-primary-red/5 rounded-full blur-3xl pointer-events-none"></div>
             <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-kyoto-gold/5 rounded-full blur-3xl pointer-events-none"></div>
@@ -86,11 +86,11 @@ export default function FAQ() {
                     <span className="text-primary-red text-[11px] md:text-[13px] uppercase tracking-[0.3em] font-semibold mb-4 block">
                         Clarifications
                     </span>
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#F5F3EF] mb-6">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6">
                         Frequently Asked Questions
                     </h2>
                     <div className="w-12 h-px bg-primary-red mx-auto mb-6"></div>
-                    <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
                         Everything you need to know about the Japan 2026 tour
                     </p>
                 </motion.div>
@@ -115,7 +115,7 @@ export default function FAQ() {
                             setSearchQuery(e.target.value);
                             setOpenIndex(null);
                         }}
-                        className="block w-full pl-14 pr-4 py-4 rounded-sm border border-gray-800 bg-[#181818] text-[#F5F3EF] placeholder-gray-500 focus:outline-none focus:border-primary-red/50 focus:ring-1 focus:ring-primary-red/50 transition-all shadow-sm"
+                        className="block w-full pl-14 pr-4 py-4 rounded-sm border border-white/20 bg-white/5 text-white placeholder-white/50 focus:outline-none focus:border-primary-red/50 focus:ring-1 focus:ring-primary-red/50 transition-all shadow-sm"
                     />
                 </motion.div>
 
@@ -137,8 +137,8 @@ export default function FAQ() {
                                     setOpenIndex(null);
                                 }}
                                 className={`flex items-center gap-2 px-6 py-3 rounded-sm text-[13px] uppercase tracking-[0.1em] font-semibold transition-all shadow-sm ${isActive
-                                    ? 'bg-primary-red text-[#F5F3EF] border border-primary-red/0'
-                                    : 'bg-[#181818] text-gray-400 border border-gray-800 hover:bg-[#2a2a2a] hover:text-[#F5F3EF]'
+                                    ? 'bg-primary-red text-white border border-primary-red/0'
+                                    : 'bg-white/5 text-white/70 border border-white/20 hover:bg-white/10 hover:text-white'
                                     }`}
                             >
                                 <span className={`text-base ${isActive ? 'opacity-100' : 'opacity-70 grayscale'}`}>{cat.icon}</span>
@@ -174,17 +174,17 @@ export default function FAQ() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.2 }}
                                 key={faq.question}
-                                className="border border-gray-800 bg-[#181818] overflow-hidden transition-all hover:border-gray-700 rounded-sm"
+                                className="border border-white/20 bg-white/5 overflow-hidden transition-all hover:border-white/40 rounded-sm"
                             >
                                 <button
                                     onClick={() => setOpenIndex(isOpen ? null : globalIdx)}
                                     className="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none group"
                                 >
-                                    <span className={`font-serif text-lg md:text-xl pr-8 transition-colors ${isOpen ? 'text-primary-red' : 'text-[#F5F3EF] group-hover:text-gray-300'}`}>
+                                    <span className={`font-serif text-lg md:text-xl pr-8 transition-colors ${isOpen ? 'text-primary-red' : 'text-white group-hover:text-white/80'}`}>
                                         {faq.question}
                                     </span>
                                     <span
-                                        className={`transition-transform duration-300 flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full border ${isOpen ? 'rotate-180 border-primary-red/30 bg-primary-red/10 text-primary-red' : 'border-gray-700 text-gray-500 group-hover:border-gray-600'}`}
+                                        className={`transition-transform duration-300 flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full border ${isOpen ? 'rotate-180 border-primary-red/30 bg-primary-red/10 text-primary-red' : 'border-white/20 text-white/50 group-hover:border-white/40 group-hover:text-white/80'}`}
                                     >
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
@@ -200,9 +200,9 @@ export default function FAQ() {
                                             exit={{ height: 0, opacity: 0 }}
                                             transition={{ duration: 0.3 }}
                                         >
-                                            <div className="px-6 pb-6 pt-2 border-t border-gray-800/50">
+                                            <div className="px-6 pb-6 pt-2 border-t border-white/10">
                                                 <div
-                                                    className="text-gray-400 leading-relaxed text-[15px] space-y-4"
+                                                    className="text-white/80 leading-relaxed text-[15px] space-y-4"
                                                     dangerouslySetInnerHTML={{ __html: formatAnswer(faq.answer) }}
                                                 />
                                             </div>

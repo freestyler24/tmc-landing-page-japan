@@ -86,13 +86,13 @@ export default function Registration() {
     };
 
     return (
-        <section id="register" className="bg-[#FAF9F6] ma-spacing-mob ma-spacing-desk relative border-t border-b border-[#e6dac3] overflow-hidden">
+        <section id="register" className="bg-sakura-light ma-spacing-mob ma-spacing-desk relative border-t border-b border-border-soft overflow-hidden">
             {/* Lively Geometric Pattern */}
             <div className="absolute inset-0 pointer-events-none opacity-[0.04]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M20 0L40 20L20 40L0 20L20 0Z' fill='none' stroke='%23B89B5E' stroke-width='1'/%3E%3C/svg%3E")`, backgroundSize: '40px 40px' }}></div>
 
             {/* Large Kanji watermark */}
-            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 0.03 }} viewport={{ once: true }} className="absolute -left-10 top-1/4 pointer-events-none hidden lg:block">
-                <p className="text-charcoal font-serif text-9xl tracking-widest writing-vertical-rl">
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 0.5 }} viewport={{ once: true }} className="absolute -left-10 top-1/4 pointer-events-none hidden lg:block">
+                <p className="text-white font-serif text-9xl tracking-widest writing-vertical-rl">
                     登録
                 </p>
             </motion.div>
@@ -106,10 +106,10 @@ export default function Registration() {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-12"
                 >
-                    <h2 className="text-4xl md:text-5xl font-serif text-charcoal mb-4">
+                    <h2 className="text-4xl md:text-5xl font-serif text-text-primary mb-4">
                         Register for the Parent Orientation <br className="hidden md:block" />— Japan 2026
                     </h2>
-                    <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto mb-8">
+                    <p className="text-text-secondary text-base md:text-lg max-w-2xl mx-auto mb-8">
                         Submitting this form reserves your seat for the orientation session where we will cover:
                     </p>
 
@@ -121,7 +121,7 @@ export default function Registration() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="w-full max-w-2xl bg-white p-8 md:p-12 shadow-2xl border border-[#B89B5E] relative mx-4 md:mx-auto"
+                    className="w-full max-w-2xl bg-white p-8 md:p-12 shadow-2xl border border-kyoto-gold relative mx-4 md:mx-auto"
                 >
 
                     <div className="flex justify-between mb-8">
@@ -168,9 +168,9 @@ export default function Registration() {
                                     transition={{ duration: 0.3 }}
                                     className="space-y-4"
                                 >
-                                    <h3 className="text-xl font-bold font-serif text-charcoal mb-4">Step 1: Student Information</h3>
+                                    <h3 className="text-xl font-bold font-serif text-text-primary mb-4">Step 1: Student Information</h3>
                                     <div>
-                                        <label className="block text-sm font-bold text-charcoal mb-2">Student Full Name *</label>
+                                        <label className="block text-sm font-bold text-text-primary mb-2">Student Full Name *</label>
                                         <input
                                             type="text"
                                             name="student_name"
@@ -178,11 +178,11 @@ export default function Registration() {
                                             value={formData.student_name}
                                             onChange={handleChange}
                                             placeholder="Enter student's full name"
-                                            className="w-full bg-gray-50 border border-gray-200 text-charcoal px-4 py-3 focus:outline-none focus:border-primary-red focus:bg-white"
+                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 focus:outline-none focus:border-primary-red focus:bg-white"
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-bold text-charcoal mb-2">Grade *</label>
+                                        <label className="block text-sm font-bold text-text-primary mb-2">Grade *</label>
                                         <input
                                             type="text"
                                             name="grade"
@@ -190,17 +190,17 @@ export default function Registration() {
                                             value={formData.grade}
                                             onChange={handleChange}
                                             placeholder="e.g., 8th Grade"
-                                            className="w-full bg-gray-50 border border-gray-200 text-charcoal px-4 py-3 focus:outline-none focus:border-primary-red focus:bg-white"
+                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 focus:outline-none focus:border-primary-red focus:bg-white"
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-bold text-charcoal mb-2">School *</label>
+                                        <label className="block text-sm font-bold text-text-primary mb-2">School *</label>
                                         <select
                                             name="school"
                                             required
                                             value={formData.school}
                                             onChange={handleChange}
-                                            className="w-full bg-gray-50 border border-gray-200 text-charcoal px-4 py-3 focus:outline-none focus:border-primary-red focus:bg-white appearance-none"
+                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 focus:outline-none focus:border-primary-red focus:bg-white appearance-none"
                                         >
                                             <option value="" disabled>Select school</option>
                                             <option value="School of India KR Pet">School of India KR Pet</option>
@@ -219,7 +219,7 @@ export default function Registration() {
                                             whileTap={{ scale: 0.98 }}
                                             type="button"
                                             onClick={nextStep}
-                                            className="w-full bg-charcoal text-white py-4 text-lg font-bold hover:bg-black transition-colors shadow-md"
+                                            className="w-full bg-deep-indigo text-white py-4 text-lg font-bold hover:bg-black transition-colors shadow-md"
                                         >
                                             Next &rarr;
                                         </motion.button>
@@ -237,9 +237,9 @@ export default function Registration() {
                                     transition={{ duration: 0.3 }}
                                     className="space-y-4"
                                 >
-                                    <h3 className="text-xl font-bold font-serif text-charcoal mb-4">Step 2: Parent Information</h3>
+                                    <h3 className="text-xl font-bold font-serif text-text-primary mb-4">Step 2: Parent Information</h3>
                                     <div>
-                                        <label className="block text-sm font-bold text-charcoal mb-2">Parent Name *</label>
+                                        <label className="block text-sm font-bold text-text-primary mb-2">Parent Name *</label>
                                         <input
                                             type="text"
                                             name="parent_name"
@@ -247,11 +247,11 @@ export default function Registration() {
                                             value={formData.parent_name}
                                             onChange={handleChange}
                                             placeholder="Enter parent's name"
-                                            className="w-full bg-gray-50 border border-gray-200 text-charcoal px-4 py-3 focus:outline-none focus:border-primary-red focus:bg-white"
+                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 focus:outline-none focus:border-primary-red focus:bg-white"
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-bold text-charcoal mb-2">Email *</label>
+                                        <label className="block text-sm font-bold text-text-primary mb-2">Email *</label>
                                         <input
                                             type="email"
                                             name="parent_email"
@@ -259,11 +259,11 @@ export default function Registration() {
                                             value={formData.parent_email}
                                             onChange={handleChange}
                                             placeholder="email@example.com"
-                                            className="w-full bg-gray-50 border border-gray-200 text-charcoal px-4 py-3 focus:outline-none focus:border-primary-red focus:bg-white"
+                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 focus:outline-none focus:border-primary-red focus:bg-white"
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-bold text-charcoal mb-2">Phone *</label>
+                                        <label className="block text-sm font-bold text-text-primary mb-2">Phone *</label>
                                         <input
                                             type="tel"
                                             name="parent_phone"
@@ -271,7 +271,7 @@ export default function Registration() {
                                             value={formData.parent_phone}
                                             onChange={handleChange}
                                             placeholder="+91 XXXXX XXXXX"
-                                            className="w-full bg-gray-50 border border-gray-200 text-charcoal px-4 py-3 focus:outline-none focus:border-primary-red focus:bg-white"
+                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 focus:outline-none focus:border-primary-red focus:bg-white"
                                         />
                                     </div>
                                     <div className="flex gap-4 pt-4">
@@ -280,7 +280,7 @@ export default function Registration() {
                                             whileTap={{ scale: 0.98 }}
                                             type="button"
                                             onClick={prevStep}
-                                            className="w-1/3 bg-gray-200 text-charcoal py-4 text-lg font-bold hover:bg-gray-300 transition-colors shadow-md"
+                                            className="w-1/3 bg-gray-200 text-text-primary py-4 text-lg font-bold hover:bg-gray-300 transition-colors shadow-md"
                                         >
                                             &larr; Back
                                         </motion.button>
@@ -289,7 +289,7 @@ export default function Registration() {
                                             whileTap={{ scale: 0.98 }}
                                             type="button"
                                             onClick={nextStep}
-                                            className="w-2/3 bg-charcoal text-white py-4 text-lg font-bold hover:bg-black transition-colors shadow-md"
+                                            className="w-2/3 bg-deep-indigo text-white py-4 text-lg font-bold hover:bg-black transition-colors shadow-md"
                                         >
                                             Next &rarr;
                                         </motion.button>
@@ -307,14 +307,14 @@ export default function Registration() {
                                     transition={{ duration: 0.3 }}
                                     className="space-y-4"
                                 >
-                                    <h3 className="text-xl font-bold font-serif text-charcoal mb-4">Step 3: Passport Information</h3>
+                                    <h3 className="text-xl font-bold font-serif text-text-primary mb-4">Step 3: Passport Information</h3>
 
                                     <div>
-                                        <label className="block text-sm font-bold text-charcoal mb-4">
+                                        <label className="block text-sm font-bold text-text-primary mb-4">
                                             Is your child's passport valid for 6 months from October 2026 (i.e., valid until May 2027)? *
                                         </label>
                                         <div className="space-y-3">
-                                            <label className="flex items-start gap-3 cursor-pointer p-3 border border-gray-200 rounded hover:bg-gray-50 transition-colors">
+                                            <label className="flex items-start gap-3 cursor-pointer p-3 border border-border-soft rounded hover:bg-rice-white transition-colors">
                                                 <input
                                                     type="radio"
                                                     name="passport_status"
@@ -322,11 +322,11 @@ export default function Registration() {
                                                     value="Yes, passport is valid until May 2027 or later"
                                                     checked={formData.passport_status === 'Yes, passport is valid until May 2027 or later'}
                                                     onChange={handleChange}
-                                                    className="mt-1 w-4 h-4 text-primary-red focus:ring-primary-red border-gray-300"
+                                                    className="mt-1 w-4 h-4 text-primary-red focus:ring-primary-red border-border-soft"
                                                 />
-                                                <span className="text-gray-700 text-sm font-medium">Yes, passport is valid until May 2027 or later</span>
+                                                <span className="text-text-primary text-sm font-medium">Yes, passport is valid until May 2027 or later</span>
                                             </label>
-                                            <label className="flex items-start gap-3 cursor-pointer p-3 border border-gray-200 rounded hover:bg-gray-50 transition-colors">
+                                            <label className="flex items-start gap-3 cursor-pointer p-3 border border-border-soft rounded hover:bg-rice-white transition-colors">
                                                 <input
                                                     type="radio"
                                                     name="passport_status"
@@ -334,11 +334,11 @@ export default function Registration() {
                                                     value="No, passport expires before May 2027"
                                                     checked={formData.passport_status === 'No, passport expires before May 2027'}
                                                     onChange={handleChange}
-                                                    className="mt-1 w-4 h-4 text-primary-red focus:ring-primary-red border-gray-300"
+                                                    className="mt-1 w-4 h-4 text-primary-red focus:ring-primary-red border-border-soft"
                                                 />
-                                                <span className="text-gray-700 text-sm font-medium">No, passport expires before May 2027</span>
+                                                <span className="text-text-primary text-sm font-medium">No, passport expires before May 2027</span>
                                             </label>
-                                            <label className="flex items-start gap-3 cursor-pointer p-3 border border-gray-200 rounded hover:bg-gray-50 transition-colors">
+                                            <label className="flex items-start gap-3 cursor-pointer p-3 border border-border-soft rounded hover:bg-rice-white transition-colors">
                                                 <input
                                                     type="radio"
                                                     name="passport_status"
@@ -346,16 +346,16 @@ export default function Registration() {
                                                     value="Passport not yet obtained"
                                                     checked={formData.passport_status === 'Passport not yet obtained'}
                                                     onChange={handleChange}
-                                                    className="mt-1 w-4 h-4 text-primary-red focus:ring-primary-red border-gray-300"
+                                                    className="mt-1 w-4 h-4 text-primary-red focus:ring-primary-red border-border-soft"
                                                 />
-                                                <span className="text-gray-700 text-sm font-medium">Passport not yet obtained</span>
+                                                <span className="text-text-primary text-sm font-medium">Passport not yet obtained</span>
                                             </label>
                                         </div>
                                     </div>
 
                                     <div className="bg-red-50 p-5 mt-6 border-l-4 border-primary-red">
-                                        <p className="text-sm text-charcoal font-bold mb-1">Important Note:</p>
-                                        <p className="text-sm text-gray-700 leading-relaxed">
+                                        <p className="text-sm text-text-primary font-bold mb-1">Important Note:</p>
+                                        <p className="text-sm text-text-secondary leading-relaxed">
                                             If your child doesn't have a passport or it expires before May 2027, please apply immediately under the Tatkal scheme. Contact us at <a href="mailto:mail@themodernclassroom.in" className="text-primary-red font-medium hover:underline">mail@themodernclassroom.in</a> or <a href="tel:+919900786677" className="text-primary-red font-medium hover:underline">+91-9900786677</a> for assistance.
                                         </p>
                                     </div>
@@ -366,7 +366,7 @@ export default function Registration() {
                                             whileTap={{ scale: 0.98 }}
                                             type="button"
                                             onClick={prevStep}
-                                            className="w-1/3 bg-gray-200 text-charcoal py-4 text-lg font-bold hover:bg-gray-300 transition-colors shadow-md"
+                                            className="w-1/3 bg-gray-200 text-text-primary py-4 text-lg font-bold hover:bg-gray-300 transition-colors shadow-md"
                                         >
                                             &larr; Back
                                         </motion.button>
@@ -375,7 +375,7 @@ export default function Registration() {
                                             whileTap={{ scale: 0.98 }}
                                             type="submit"
                                             disabled={isSubmitting}
-                                            className="w-2/3 bg-primary-red text-white py-4 text-lg font-bold hover:bg-black transition-colors shadow-md disabled:bg-opacity-50 disabled:cursor-not-allowed"
+                                            className="w-2/3 bg-primary-red text-white py-4 text-lg font-bold hover:bg-deep-indigo transition-colors shadow-md disabled:bg-opacity-50 disabled:cursor-not-allowed"
                                         >
                                             {isSubmitting ? 'Submitting...' : 'Reserve Orientation Seat'}
                                         </motion.button>
@@ -384,7 +384,7 @@ export default function Registration() {
                             )}
                         </AnimatePresence>
 
-                        <p className="text-xs text-gray-500 text-center mt-6">
+                        <p className="text-xs text-text-secondary text-center mt-6">
                             Your data is secure. You will be redirected to the confirmation page.
                         </p>
 
@@ -406,10 +406,10 @@ export default function Registration() {
                             { title: 'Investment Structure', desc: 'See the full transparent financial breakdown.' },
                             { title: 'Live Q&A', desc: 'Get all your specific questions answered directly.' }
                         ].map((item, i) => (
-                            <div key={i} className="bg-white p-5 border border-gray-100 shadow-sm relative overflow-hidden group hover:border-[#B89B5E]/50 hover:shadow-md transition-all">
+                            <div key={i} className="bg-white p-5 border border-border-soft shadow-sm relative overflow-hidden group hover:border-kyoto-gold/50 hover:shadow-md transition-all">
                                 <div className="absolute top-0 left-0 w-1 h-full bg-[#B89B5E] opacity-50 group-hover:opacity-100 transition-opacity"></div>
-                                <h4 className="font-bold font-serif text-charcoal text-[15px] uppercase tracking-wider mb-1">{item.title}</h4>
-                                <p className="text-xs text-gray-500 font-sans">{item.desc}</p>
+                                <h4 className="font-bold font-serif text-text-primary text-[15px] uppercase tracking-wider mb-1">{item.title}</h4>
+                                <p className="text-xs text-text-secondary font-sans">{item.desc}</p>
                             </div>
                         ))}
                     </div>

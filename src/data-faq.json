@@ -97,7 +97,7 @@
   {
     "category": "Registration & Preparation",
     "question": "What if my child doesn't have a passport?",
-    "answer": "Apply immediately under the Tatkal scheme. Contact us at mail@themodernclassroom.in or +91-9900786677 for assistance with the passport application process."
+    "answer": "Apply immediately under the Tatkal scheme. Contact us at <a href=\"mailto:mail@themodernclassroom.in\" class=\"text-primary-red hover:underline\">mail@themodernclassroom.in</a> or <a href=\"tel:+919900786677\" class=\"text-primary-red hover:underline\">+91-9900786677</a> for assistance with the passport application process."
   },
   {
     "category": "Registration & Preparation",
@@ -117,6 +117,6 @@
   {
     "category": "Registration & Preparation",
     "question": "Who can I contact for support or more information?",
-    "answer": "**Email:** mail@themodernclassroom.in\n\n**Phone:** +91-9900786677, 9886753632, 080 4371 2595\n\n**Website:** www.themodernclassroom.in\n\n**Office Hours:**\n- Monday-Friday: 10 AM-6 PM\n- Saturday: 10 AM-2 PM"
+    "answer": "**Email:** <a href=\"mailto:mail@themodernclassroom.in\" class=\"text-primary-red hover:underline\">mail@themodernclassroom.in</a>\n\n**Phone:** <a href=\"tel:+919900786677\" class=\"text-primary-red hover:underline\">+91-9900786677</a>, <a href=\"tel:+919886753632\" class=\"text-primary-red hover:underline\">9886753632</a>, <a href=\"tel:+9108043712595\" class=\"text-primary-red hover:underline\">080 4371 2595</a>\n\n**Website:** <a href=\"https://www.themodernclassroom.in\" class=\"text-primary-red hover:underline\">www.themodernclassroom.in</a>\n\n**Office Hours:**\n- Monday-Friday: 10 AM-6 PM\n- Saturday: 10 AM-2 PM"
   }
 ]

@@ -183,7 +183,7 @@ function ThankYouContent() {
                     <div className="space-y-3">
                         <h3 className="text-xl font-serif text-[#F5F3EF] mb-2">Questions?</h3>
                         <p className="text-primary-red hover:text-white transition-colors cursor-pointer">mail@themodernclassroom.in</p>
-                        <p className="text-gray-400">+91-9900786677 | 9886753632</p>
+                        <p className="text-gray-400"><a href="tel:+919900786677" className="hover:text-white hover:underline">+91-9900786677</a> | <a href="tel:+919886753632" className="hover:text-white hover:underline">9886753632</a></p>
                     </div>
 
                     <div className="pt-8">
