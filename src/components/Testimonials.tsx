@@ -8,19 +8,19 @@ export default function Testimonials() {
             quote: "Phenomenal work and meticulous planning by the entire team. They offer an incredible experiential learning approach that truly integrates outbound learning and life skills.",
             author: "Priya S.",
             initials: "P",
-            color: "bg-primary-red"
+            color: "bg-kyoto-gold"
         },
         {
             quote: "The personal involvement and genuineness of the staff gave us complete peace of mind. Safety was clearly their top priority, and the level of supervision was outstanding.",
             author: "Rahul M.",
             initials: "R",
-            color: "bg-[#B89B5E]"
+            color: "bg-kyoto-gold"
         },
         {
             quote: "A truly unique educational experience. The real-world learning and exposure to structured global cultures they provided was completely exceptional.",
             author: "Anjali K.",
             initials: "A",
-            color: "bg-primary-red"
+            color: "bg-kyoto-gold"
         }
     ];
 
@@ -77,7 +77,7 @@ export default function Testimonials() {
                                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-6 bg-white/60 shadow-sm border border-black/5 -rotate-2 z-10"></div>
 
                                 <div>
-                                    <div className="flex text-primary-red mb-6 text-sm">
+                                    <div className="flex text-kyoto-gold mb-6 text-sm">
                                         ★★★★★
                                     </div>
                                     <p className="text-text-primary font-serif italic text-lg leading-relaxed mb-8">

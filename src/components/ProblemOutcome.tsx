@@ -50,13 +50,13 @@ export default function ProblemOutcome() {
                             Because Academics Alone Are No Longer Enough.
                         </h2>
                         <div className="w-12 h-px bg-primary-red"></div>
-                        <p className="text-base md:text-lg text-text-secondary">
+                        <p className="text-base md:text-lg text-gray-700">
                             Your child lives in a world that rewards more than grades. It rewards adaptability, cultural awareness, and composure under uncertainty.
                         </p>
-                        <p className="text-base md:text-lg text-text-secondary">
+                        <p className="text-base md:text-lg text-gray-700">
                             Yet most exposure today is filtered through screens. Real-world systems thinking is rarely observed firsthand.
                         </p>
-                        <p className="text-base md:text-lg text-text-secondary">
+                        <p className="text-base md:text-lg text-gray-700">
                             Japan offers a rare opportunity to experience a society where heritage and innovation evolve together.
                         </p>
                     </motion.div>

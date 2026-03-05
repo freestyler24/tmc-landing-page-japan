@@ -184,7 +184,7 @@ export default function Hero() {
                             key={i}
                             whileHover={{ scale: 1.04, y: -4 }}
                             transition={{ duration: 0.25 }}
-                            className="group relative bg-white border border-kyoto-gold/25 p-5 md:p-6 hover:border-kyoto-gold/60 transition-colors duration-300 text-center cursor-default shadow-sm overflow-hidden"
+                            className="group relative bg-white border border-kyoto-gold/40 p-5 md:p-6 hover:border-kyoto-gold/70 transition-colors duration-300 text-center cursor-default shadow-md overflow-hidden"
                         >
                             {/* Top accent line on hover */}
                             <div className="absolute top-0 left-0 right-0 h-[2px] bg-kyoto-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

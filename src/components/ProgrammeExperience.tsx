@@ -169,8 +169,8 @@ export default function ProgrammeExperience() {
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, margin: "-50px" }}
-                    variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
+                    viewport={{ once: true, margin: "0px" }}
+                    variants={{ hidden: { opacity: 0 }, visible: { transition: { staggerChildren: 0.15 } } }}
                     className="flex flex-wrap justify-center gap-x-5 gap-y-12 md:gap-y-6 mb-16 md:mb-20 max-w-5xl mx-auto"
                 >
                     {cities.map((city, idx) => (

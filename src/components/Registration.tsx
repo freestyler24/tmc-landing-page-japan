@@ -178,7 +178,7 @@ export default function Registration() {
                                             value={formData.student_name}
                                             onChange={handleChange}
                                             placeholder="Enter student's full name"
-                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 transition-all duration-300 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red/50 focus:bg-white focus:shadow-[0_0_15px_rgba(210,31,43,0.1)]"
+                                            className="w-full bg-white border border-border-soft text-text-primary px-4 py-3 transition-all duration-300 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red/50 focus:bg-white focus:shadow-[0_0_15px_rgba(210,31,43,0.1)]"
                                         />
                                     </div>
                                     <div>
@@ -190,7 +190,7 @@ export default function Registration() {
                                             value={formData.grade}
                                             onChange={handleChange}
                                             placeholder="e.g., 8th Grade"
-                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 transition-all duration-300 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red/50 focus:bg-white focus:shadow-[0_0_15px_rgba(210,31,43,0.1)]"
+                                            className="w-full bg-white border border-border-soft text-text-primary px-4 py-3 transition-all duration-300 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red/50 focus:bg-white focus:shadow-[0_0_15px_rgba(210,31,43,0.1)]"
                                         />
                                     </div>
                                     <div>
@@ -200,7 +200,7 @@ export default function Registration() {
                                             required
                                             value={formData.school}
                                             onChange={handleChange}
-                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 transition-all duration-300 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red/50 focus:bg-white focus:shadow-[0_0_15px_rgba(210,31,43,0.1)] appearance-none"
+                                            className="w-full bg-white border border-border-soft text-text-primary px-4 py-3 transition-all duration-300 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red/50 focus:bg-white focus:shadow-[0_0_15px_rgba(210,31,43,0.1)] appearance-none"
                                         >
                                             <option value="" disabled>Select school</option>
                                             <option value="School of India KR Pet">School of India KR Pet</option>
@@ -247,7 +247,7 @@ export default function Registration() {
                                             value={formData.parent_name}
                                             onChange={handleChange}
                                             placeholder="Enter parent's name"
-                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 transition-all duration-300 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red/50 focus:bg-white focus:shadow-[0_0_15px_rgba(210,31,43,0.1)]"
+                                            className="w-full bg-white border border-border-soft text-text-primary px-4 py-3 transition-all duration-300 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red/50 focus:bg-white focus:shadow-[0_0_15px_rgba(210,31,43,0.1)]"
                                         />
                                     </div>
                                     <div>
@@ -259,7 +259,7 @@ export default function Registration() {
                                             value={formData.parent_email}
                                             onChange={handleChange}
                                             placeholder="email@example.com"
-                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 transition-all duration-300 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red/50 focus:bg-white focus:shadow-[0_0_15px_rgba(210,31,43,0.1)]"
+                                            className="w-full bg-white border border-border-soft text-text-primary px-4 py-3 transition-all duration-300 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red/50 focus:bg-white focus:shadow-[0_0_15px_rgba(210,31,43,0.1)]"
                                         />
                                     </div>
                                     <div>
@@ -271,7 +271,7 @@ export default function Registration() {
                                             value={formData.parent_phone}
                                             onChange={handleChange}
                                             placeholder="+91 XXXXX XXXXX"
-                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 transition-all duration-300 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red/50 focus:bg-white focus:shadow-[0_0_15px_rgba(210,31,43,0.1)]"
+                                            className="w-full bg-white border border-border-soft text-text-primary px-4 py-3 transition-all duration-300 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red/50 focus:bg-white focus:shadow-[0_0_15px_rgba(210,31,43,0.1)]"
                                         />
                                     </div>
                                     <div className="flex gap-4 pt-4">
