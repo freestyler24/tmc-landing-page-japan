@@ -178,7 +178,7 @@ export default function Registration() {
                                             value={formData.student_name}
                                             onChange={handleChange}
                                             placeholder="Enter student's full name"
-                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 focus:outline-none focus:border-primary-red focus:bg-white"
+                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 transition-all duration-300 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red/50 focus:bg-white focus:shadow-[0_0_15px_rgba(210,31,43,0.1)]"
                                         />
                                     </div>
                                     <div>
@@ -190,7 +190,7 @@ export default function Registration() {
                                             value={formData.grade}
                                             onChange={handleChange}
                                             placeholder="e.g., 8th Grade"
-                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 focus:outline-none focus:border-primary-red focus:bg-white"
+                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 transition-all duration-300 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red/50 focus:bg-white focus:shadow-[0_0_15px_rgba(210,31,43,0.1)]"
                                         />
                                     </div>
                                     <div>
@@ -200,7 +200,7 @@ export default function Registration() {
                                             required
                                             value={formData.school}
                                             onChange={handleChange}
-                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 focus:outline-none focus:border-primary-red focus:bg-white appearance-none"
+                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 transition-all duration-300 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red/50 focus:bg-white focus:shadow-[0_0_15px_rgba(210,31,43,0.1)] appearance-none"
                                         >
                                             <option value="" disabled>Select school</option>
                                             <option value="School of India KR Pet">School of India KR Pet</option>
@@ -219,9 +219,9 @@ export default function Registration() {
                                             whileTap={{ scale: 0.98 }}
                                             type="button"
                                             onClick={nextStep}
-                                            className="w-full bg-deep-indigo text-white py-4 text-lg font-bold hover:bg-black transition-colors shadow-md"
+                                            className="w-full bg-deep-indigo text-white py-4 text-lg font-bold hover:bg-black transition-colors shadow-md group"
                                         >
-                                            Next &rarr;
+                                            Next <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
                                         </motion.button>
                                     </div>
                                 </motion.div>
@@ -247,7 +247,7 @@ export default function Registration() {
                                             value={formData.parent_name}
                                             onChange={handleChange}
                                             placeholder="Enter parent's name"
-                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 focus:outline-none focus:border-primary-red focus:bg-white"
+                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 transition-all duration-300 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red/50 focus:bg-white focus:shadow-[0_0_15px_rgba(210,31,43,0.1)]"
                                         />
                                     </div>
                                     <div>
@@ -259,7 +259,7 @@ export default function Registration() {
                                             value={formData.parent_email}
                                             onChange={handleChange}
                                             placeholder="email@example.com"
-                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 focus:outline-none focus:border-primary-red focus:bg-white"
+                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 transition-all duration-300 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red/50 focus:bg-white focus:shadow-[0_0_15px_rgba(210,31,43,0.1)]"
                                         />
                                     </div>
                                     <div>
@@ -271,7 +271,7 @@ export default function Registration() {
                                             value={formData.parent_phone}
                                             onChange={handleChange}
                                             placeholder="+91 XXXXX XXXXX"
-                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 focus:outline-none focus:border-primary-red focus:bg-white"
+                                            className="w-full bg-rice-white border border-border-soft text-text-primary px-4 py-3 transition-all duration-300 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red/50 focus:bg-white focus:shadow-[0_0_15px_rgba(210,31,43,0.1)]"
                                         />
                                     </div>
                                     <div className="flex gap-4 pt-4">
@@ -280,18 +280,18 @@ export default function Registration() {
                                             whileTap={{ scale: 0.98 }}
                                             type="button"
                                             onClick={prevStep}
-                                            className="w-1/3 bg-gray-200 text-text-primary py-4 text-lg font-bold hover:bg-gray-300 transition-colors shadow-md"
+                                            className="w-1/3 bg-gray-200 text-text-primary py-4 text-lg font-bold hover:bg-gray-300 transition-colors shadow-md group"
                                         >
-                                            &larr; Back
+                                            <span className="inline-block transition-transform duration-300 group-hover:-translate-x-1">&larr;</span> Back
                                         </motion.button>
                                         <motion.button
                                             whileHover={{ scale: 1.02 }}
                                             whileTap={{ scale: 0.98 }}
                                             type="button"
                                             onClick={nextStep}
-                                            className="w-2/3 bg-deep-indigo text-white py-4 text-lg font-bold hover:bg-black transition-colors shadow-md"
+                                            className="w-2/3 bg-deep-indigo text-white py-4 text-lg font-bold hover:bg-black transition-colors shadow-md group"
                                         >
-                                            Next &rarr;
+                                            Next <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
                                         </motion.button>
                                     </div>
                                 </motion.div>
@@ -366,18 +366,18 @@ export default function Registration() {
                                             whileTap={{ scale: 0.98 }}
                                             type="button"
                                             onClick={prevStep}
-                                            className="w-1/3 bg-gray-200 text-text-primary py-4 text-lg font-bold hover:bg-gray-300 transition-colors shadow-md"
+                                            className="w-1/3 bg-gray-200 text-text-primary py-4 text-lg font-bold hover:bg-gray-300 transition-colors shadow-md group"
                                         >
-                                            &larr; Back
+                                            <span className="inline-block transition-transform duration-300 group-hover:-translate-x-1">&larr;</span> Back
                                         </motion.button>
                                         <motion.button
                                             whileHover={{ scale: 1.02 }}
                                             whileTap={{ scale: 0.98 }}
                                             type="submit"
                                             disabled={isSubmitting}
-                                            className="w-2/3 bg-primary-red text-white py-4 text-lg font-bold hover:bg-deep-indigo transition-colors shadow-md disabled:bg-opacity-50 disabled:cursor-not-allowed"
+                                            className="w-2/3 bg-primary-red text-white py-4 text-lg font-bold hover:bg-deep-indigo transition-colors shadow-md disabled:bg-opacity-50 disabled:cursor-not-allowed group"
                                         >
-                                            {isSubmitting ? 'Submitting...' : 'Reserve Orientation Seat'}
+                                            {isSubmitting ? 'Submitting...' : <>Reserve Orientation Seat <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">&rarr;</span></>}
                                         </motion.button>
                                     </div>
                                 </motion.div>

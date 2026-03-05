@@ -157,7 +157,13 @@ export default function FAQ() {
                 </motion.div>
 
                 {/* FAQ Accordion */}
-                <div className="space-y-4 mb-16 min-h-[400px]">
+                <motion.div
+                    key={activeCategory + searchQuery}
+                    initial="hidden"
+                    animate="visible"
+                    variants={{ visible: { transition: { staggerChildren: 0.05 } } }}
+                    className="space-y-4 mb-16 min-h-[400px]"
+                >
                     {filteredFaqs.length === 0 && (
                         <div className="text-center text-gray-500 py-10">
                             No questions found matching your search.
@@ -170,9 +176,10 @@ export default function FAQ() {
 
                         return (
                             <motion.div
-                                initial={{ opacity: 0, y: 10 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.2 }}
+                                variants={{
+                                    hidden: { opacity: 0, y: 15 },
+                                    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } }
+                                }}
                                 key={faq.question}
                                 className="border border-white/20 bg-white/5 overflow-hidden transition-all hover:border-white/40 rounded-sm"
                             >
@@ -212,7 +219,7 @@ export default function FAQ() {
                             </motion.div>
                         );
                     })}
-                </div>
+                </motion.div>
 
                 {/* SEO FAQ Schema */}
                 <script

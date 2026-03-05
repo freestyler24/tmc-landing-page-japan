@@ -181,54 +181,65 @@ export default function ProgrammeExperience() {
                             tabIndex={0}
                             className="group [perspective:1200px] w-[260px] h-[340px] flex-shrink-0 cursor-pointer outline-none"
                         >
-                            {/* Flip inner container */}
-                            <div
-                                className="relative w-full h-full transition-transform duration-700 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus:[transform:rotateY(180deg)]"
+                            {/* Floating wrapper */}
+                            <motion.div
+                                animate={{ y: [0, -8, 0] }}
+                                transition={{
+                                    y: {
+                                        duration: 4 + (idx * 0.5),
+                                        repeat: Infinity,
+                                        ease: "easeInOut"
+                                    }
+                                }}
+                                className="w-full h-full"
                             >
-                                {/* ── FRONT ── */}
-                                <div
-                                    className="absolute inset-0 flex flex-col items-center justify-center p-8 bg-white border border-border-soft shadow-md rounded-sm [backface-visibility:hidden]"
-                                >
-                                    <div className="absolute inset-2 border border-border-soft/50 rounded-sm pointer-events-none" />
-                                    {city.icon()}
-                                    <h3 className="text-2xl font-serif text-text-primary mt-2 tracking-wide text-center">
-                                        {city.name}
-                                    </h3>
-                                    <div className="relative w-10 h-px bg-border-soft mt-5 overflow-hidden">
-                                        <div className="absolute inset-0 bg-primary-red -translate-x-full group-hover:translate-x-0 group-focus:translate-x-0 transition-transform duration-500" />
+                                {/* Flip inner container */}
+                                <div className="relative w-full h-full transition-transform duration-700 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus:[transform:rotateY(180deg)]">
+                                    {/* ── FRONT ── */}
+                                    <div
+                                        className="absolute inset-0 flex flex-col items-center justify-center p-8 bg-white border border-border-soft shadow-md rounded-sm [backface-visibility:hidden]"
+                                    >
+                                        <div className="absolute inset-2 border border-border-soft/50 rounded-sm pointer-events-none" />
+                                        {city.icon()}
+                                        <h3 className="text-2xl font-serif text-text-primary mt-2 tracking-wide text-center">
+                                            {city.name}
+                                        </h3>
+                                        <div className="relative w-10 h-px bg-border-soft mt-5 overflow-hidden">
+                                            <div className="absolute inset-0 bg-primary-red -translate-x-full group-hover:translate-x-0 group-focus:translate-x-0 transition-transform duration-500" />
+                                        </div>
+                                        {/* tap hint – visible on touch devices only */}
+                                        <span className="md:hidden absolute bottom-4 left-0 right-0 text-center text-gray-500 text-[10px] uppercase tracking-widest">
+                                            Tap to flip
+                                        </span>
                                     </div>
-                                    {/* tap hint – visible on touch devices only */}
-                                    <span className="md:hidden absolute bottom-4 left-0 right-0 text-center text-gray-500 text-[10px] uppercase tracking-widest">
-                                        Tap to flip
-                                    </span>
+
+                                    {/* ── BACK ── */}
+                                    <div
+                                        className="absolute inset-0 flex flex-col p-6 bg-rice-white border border-primary-red/40 shadow-xl rounded-sm [backface-visibility:hidden] [transform:rotateY(180deg)]"
+                                    >
+                                        <div className="absolute inset-1.5 border border-primary-red/10 rounded-sm pointer-events-none" />
+
+                                        {/* Header */}
+                                        <div className="pb-3 mb-3 border-b border-border-soft">
+                                            <h4 className="text-primary-red font-serif text-lg leading-tight">{city.name}</h4>
+                                            <span className="text-text-secondary text-[10px] uppercase tracking-[0.2em]">{city.theme}</span>
+                                        </div>
+
+                                        {/* Body */}
+                                        <div className="flex-1 overflow-hidden space-y-2.5">
+                                            {city.texts.map((text, i) => (
+                                                <p key={i} className="text-text-primary text-[12px] leading-relaxed border-l-2 border-border-soft pl-2.5">{text}</p>
+                                            ))}
+                                        </div>
+
+                                        {/* Derived benefit */}
+                                        <div className="mt-3 pt-3 border-t border-border-soft">
+                                            <span className="text-[9px] text-text-secondary uppercase tracking-widest block mb-1">Derived Benefit</span>
+                                            <p className="text-kyoto-gold text-[12px] font-serif italic leading-snug">&ldquo;{city.benefit}&rdquo;</p>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                {/* ── BACK ── */}
-                                <div
-                                    className="absolute inset-0 flex flex-col p-6 bg-rice-white border border-primary-red/40 shadow-xl rounded-sm [backface-visibility:hidden] [transform:rotateY(180deg)]"
-                                >
-                                    <div className="absolute inset-1.5 border border-primary-red/10 rounded-sm pointer-events-none" />
-
-                                    {/* Header */}
-                                    <div className="pb-3 mb-3 border-b border-border-soft">
-                                        <h4 className="text-primary-red font-serif text-lg leading-tight">{city.name}</h4>
-                                        <span className="text-text-secondary text-[10px] uppercase tracking-[0.2em]">{city.theme}</span>
-                                    </div>
-
-                                    {/* Body */}
-                                    <div className="flex-1 overflow-hidden space-y-2.5">
-                                        {city.texts.map((text, i) => (
-                                            <p key={i} className="text-text-primary text-[12px] leading-relaxed border-l-2 border-border-soft pl-2.5">{text}</p>
-                                        ))}
-                                    </div>
-
-                                    {/* Derived benefit */}
-                                    <div className="mt-3 pt-3 border-t border-border-soft">
-                                        <span className="text-[9px] text-text-secondary uppercase tracking-widest block mb-1">Derived Benefit</span>
-                                        <p className="text-kyoto-gold text-[12px] font-serif italic leading-snug">&ldquo;{city.benefit}&rdquo;</p>
-                                    </div>
-                                </div>
-                            </div>
+                            </motion.div>
                         </motion.div>
                     ))}
                 </motion.div>

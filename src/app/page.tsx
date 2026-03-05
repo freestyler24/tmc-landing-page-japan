@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import Logos from '@/components/Logos';
 import TrailerVideo from '@/components/TrailerVideo';
 import ProblemOutcome from '@/components/ProblemOutcome';
 import ProgrammeExperience from '@/components/ProgrammeExperience';
@@ -11,12 +12,14 @@ import Brochure from '@/components/Brochure';
 import Registration from '@/components/Registration';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
+import FloatingCTA from '@/components/FloatingCTA';
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-offwhite text-charcoal">
       <Header />
       <Hero />
+      <Logos />
       <TrailerVideo />
       <ProblemOutcome />
       <ProgrammeExperience />
@@ -28,6 +31,7 @@ export default function Home() {
       <FAQ />
       <FinalCTA />
       <Footer />
+      <FloatingCTA />
     </main>
   );
 }

@@ -1,8 +1,8 @@
 "use client";
 
-import Image from 'next/image';
 import { useRef, useState, useEffect } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { PulseFitHero } from '@/components/ui/pulse-fit-hero';
 
 export default function Hero() {
     const fadeUp = {
@@ -13,8 +13,6 @@ export default function Hero() {
     const targetDate = new Date('2026-10-01T00:00:00').getTime();
 
     const [timeLeft, setTimeLeft] = useState(() => {
-        // Initialize with zeros or calculated time immediately to avoid hydration mismatch as much as possible, 
-        // though typically it's better to just mount first.
         return { days: '234', hours: '14', minutes: '45', seconds: '00' };
     });
 
@@ -22,7 +20,6 @@ export default function Hero() {
         const calculateTimeLeft = () => {
             const now = new Date().getTime();
             const difference = targetDate - now;
-
             if (difference > 0) {
                 const updatedTime = {
                     days: String(Math.floor(difference / (1000 * 60 * 60 * 24))).padStart(3, '0'),
@@ -33,202 +30,222 @@ export default function Hero() {
                 setTimeLeft(updatedTime);
             }
         };
-
         calculateTimeLeft();
         const timer = setInterval(calculateTimeLeft, 1000);
         return () => clearInterval(timer);
     }, [targetDate]);
 
-    const staggerContainer = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1
-            }
-        }
-    };
     const containerRef = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ["start start", "end start"]
-    });
 
-    const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-    const yText = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
-    const opacityFade = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+    const tourDestinations = [
+        {
+            image: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=600&h=800&fit=crop",
+            category: "METROPOLIS",
+            title: "Tokyo",
+        },
+        {
+            image: "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?h=800&fit=crop",
+            category: "ICONIC",
+            title: "Mount Fuji",
+        },
+        {
+            image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?h=800&fit=crop",
+            category: "HERITAGE",
+            title: "Kyoto",
+        },
+        {
+            image: "/osaka.jpg",
+            category: "CULINARY",
+            title: "Osaka",
+        },
+    ];
+
+    // Decorative corner SVG for the frame
+    const FrameCorner = ({ rotate = 0 }: { rotate?: number }) => (
+        <svg
+            width="60" height="60" viewBox="0 0 60 60" fill="none"
+            className="text-kyoto-gold"
+            style={{ transform: `rotate(${rotate}deg)` }}
+        >
+            <line x1="0" y1="0" x2="60" y2="0" stroke="currentColor" strokeWidth="1.5" />
+            <line x1="0" y1="0" x2="0" y2="60" stroke="currentColor" strokeWidth="1.5" />
+            <line x1="10" y1="10" x2="50" y2="10" stroke="currentColor" strokeWidth="0.8" opacity="0.6" />
+            <line x1="10" y1="10" x2="10" y2="50" stroke="currentColor" strokeWidth="0.8" opacity="0.6" />
+            <line x1="8" y1="0" x2="0" y2="8" stroke="currentColor" strokeWidth="0.8" opacity="0.4" />
+            <line x1="18" y1="0" x2="0" y2="18" stroke="currentColor" strokeWidth="0.8" opacity="0.3" />
+            <line x1="28" y1="0" x2="0" y2="28" stroke="currentColor" strokeWidth="0.8" opacity="0.2" />
+        </svg>
+    );
+
+    const heroTitle = (
+        <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={{
+                hidden: { opacity: 0 },
+                visible: { opacity: 1, transition: { staggerChildren: 0.12 } }
+            }}
+            className="text-center relative w-full"
+        >
+            {/* ── DECORATIVE GOLD FRAME ── */}
+            <motion.div
+                variants={fadeUp}
+                className="relative mx-auto max-w-3xl"
+            >
+                {/* Outer border */}
+                <div className="relative border border-kyoto-gold/50 p-8 md:p-12">
+
+                    {/* Diagonal hatching background pattern */}
+                    <div
+                        className="absolute inset-0 pointer-events-none opacity-[0.06]"
+                        style={{
+                            backgroundImage: `repeating-linear-gradient(
+                                45deg,
+                                #C8A84B,
+                                #C8A84B 1px,
+                                transparent 1px,
+                                transparent 14px
+                            )`
+                        }}
+                    />
+
+                    {/* Corner ornaments */}
+                    <div className="absolute top-0 left-0 -translate-x-px -translate-y-px">
+                        <FrameCorner rotate={0} />
+                    </div>
+                    <div className="absolute top-0 right-0 translate-x-px -translate-y-px">
+                        <FrameCorner rotate={90} />
+                    </div>
+                    <div className="absolute bottom-0 right-0 translate-x-px translate-y-px">
+                        <FrameCorner rotate={180} />
+                    </div>
+                    <div className="absolute bottom-0 left-0 -translate-x-px translate-y-px">
+                        <FrameCorner rotate={270} />
+                    </div>
+
+                    {/* Inner content */}
+                    <div className="relative z-10">
+                        <motion.p
+                            variants={fadeUp}
+                            className="font-sans font-medium tracking-[0.22em] text-[10px] md:text-[11px] mb-5 uppercase"
+                            style={{ color: '#D21F2B' }}
+                        >
+                            October 2026 &nbsp;|&nbsp; Grades 6–12 &nbsp;|&nbsp; Limited to 45 Students
+                        </motion.p>
+
+                        <motion.h1 variants={fadeUp} className="font-serif leading-[1.0]">
+                            <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight text-kyoto-gold mb-3">
+                                09 Days. 04 Cities.
+                            </span>
+                            <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-[80px] text-text-primary italic font-light leading-tight md:leading-[1.07]">
+                                Where Exposure<br className="hidden md:block" /> Becomes Perspective.
+                            </span>
+                        </motion.h1>
+                    </div>
+                </div>
+
+                {/* Thin accent line below frame */}
+                <div className="w-px h-6 bg-kyoto-gold/40 mx-auto mt-0" />
+            </motion.div>
+
+            {/* Subtitle below frame */}
+            <motion.div variants={fadeUp} className="mt-8 text-center">
+                <p className="text-text-primary font-sans text-lg md:text-xl lg:text-2xl font-light leading-relaxed">
+                    This is not tourism.
+                </p>
+                <p className="text-primary-red font-sans text-lg md:text-xl lg:text-2xl font-semibold italic leading-relaxed">
+                    It is guided international exposure.
+                </p>
+                <p className="text-text-secondary font-sans text-sm md:text-base mt-3">
+                    Students observe how disciplined societies think, organise, and operate.
+                </p>
+            </motion.div>
+        </motion.div>
+    );
 
     return (
-        <section ref={containerRef} className="bg-rice-white relative overflow-hidden pt-[110px] pb-14 md:pt-[170px] md:pb-[120px]">
+        <div ref={containerRef}>
+            <PulseFitHero title={heroTitle} programs={tourDestinations}>
 
-            {/* Ambient Background Glows */}
-            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-kyoto-gold/5 rounded-full blur-3xl pointer-events-none"></div>
-            <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-primary-red/5 rounded-full blur-3xl pointer-events-none"></div>
-
-            {/* Background Pattern with Parallax */}
-            <motion.div
-                className="absolute inset-0 pointer-events-none origin-top"
-                style={{
-                    y: yBg,
-                    opacity: 0.12,
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg stroke='%23c0b090' stroke-width='1' fill='none'%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='40'/%3E%3Ccircle cx='0' cy='80' r='10'/%3E%3Ccircle cx='0' cy='80' r='20'/%3E%3Ccircle cx='0' cy='80' r='30'/%3E%3Ccircle cx='0' cy='80' r='40'/%3E%3Ccircle cx='80' cy='80' r='10'/%3E%3Ccircle cx='80' cy='80' r='20'/%3E%3Ccircle cx='80' cy='80' r='30'/%3E%3Ccircle cx='80' cy='80' r='40'/%3E%3Ccircle cx='80' cy='0' r='10'/%3E%3Ccircle cx='80' cy='0' r='20'/%3E%3Ccircle cx='80' cy='0' r='30'/%3E%3Ccircle cx='80' cy='0' r='40'/%3E%3Ccircle cx='0' cy='0' r='10'/%3E%3Ccircle cx='0' cy='0' r='20'/%3E%3Ccircle cx='0' cy='0' r='30'/%3E%3Ccircle cx='0' cy='0' r='40'/%3E%3C/g%3E%3C/svg%3E")`
-                }}
-            />
-
-            {/* Vertical Japanese Typography (Watermarks) */}
-            <motion.div
-                style={{ y: yText, opacity: opacityFade }}
-                className="absolute left-8 md:left-16 top-1/4 pointer-events-none hidden lg:block"
-            >
-                <p className="text-kyoto-gold font-serif text-6xl writing-vertical-rl tracking-widest opacity-40">
-                    成長
-                </p>
-            </motion.div>
-            <motion.div
-                style={{ y: useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]), opacity: opacityFade }}
-                className="absolute right-8 md:right-16 top-1/3 pointer-events-none hidden lg:block"
-            >
-                <p className="text-kyoto-gold font-serif text-6xl writing-vertical-rl tracking-widest opacity-40">
-                    規律
-                </p>
-            </motion.div>
-
-            {/* Floating Ambient Particles (Sakura abstraction) */}
-            <motion.div
-                animate={{
-                    y: [0, -20, 0],
-                    x: [0, 10, 0],
-                    rotate: [0, 45, 0]
-                }}
-                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-1/4 right-[20%] w-3 h-3 rounded-tr-xl rounded-bl-xl bg-primary-red/20 blur-[1px]"
-            />
-            <motion.div
-                animate={{
-                    y: [0, 30, 0],
-                    x: [0, -15, 0],
-                    rotate: [0, -45, 0]
-                }}
-                transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-                className="absolute bottom-1/3 left-[15%] w-4 h-4 rounded-tl-xl rounded-br-xl bg-kyoto-gold/30 blur-[1px]"
-            />
-
-            <div className="container-max relative z-10 flex flex-col items-center text-center">
-
-
-                {/* ── STUNNING GLASSMORPHISM V4 HERO ── */}
-
-                {/* Deep Radial Glow Behind Headline - Using Primary Red */}
-                <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full max-w-2xl h-64 bg-[#C8102E]/10 rounded-[100%] blur-[100px] pointer-events-none"></div>
-
+                {/* The 4 Pillars */}
                 <motion.div
-                    initial="hidden"
-                    animate="visible"
-                    variants={staggerContainer}
-                    className="max-w-5xl mx-auto px-4 sm:px-6 md:px-0 relative z-10 w-full"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5 mt-10 mb-10"
                 >
-                    {/* The Magnetic Hook */}
-                    <motion.div variants={fadeUp} className="text-center mb-10 md:mb-14 relative">
-                        <p className="text-primary-red font-sans font-bold tracking-[0.25em] text-[10px] md:text-xs mb-6 uppercase">
-                            October 2026 &nbsp;|&nbsp; Grades 6–12 &nbsp;|&nbsp; Limited to 45 Students
-                        </p>
-                        <h1 className="font-serif leading-[1.05] drop-shadow-sm">
-                            <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mb-2 md:mb-4 text-text-primary">09 Days. 04 Cities.</span>
-                            <span className="block text-4xl sm:text-6xl md:text-[76px] lg:text-[90px] text-kyoto-gold italic font-light drop-shadow-sm leading-tight md:leading-[1.1]">Where Exposure Becomes Perspective.</span>
-                        </h1>
-                    </motion.div>
-
-                    {/* The Core Message - Frosted Glass Panel */}
-                    <motion.div variants={fadeUp} className="relative max-w-3xl mx-auto mb-12 md:mb-16">
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-kyoto-gold/10 to-transparent blur-md"></div>
-                        <div className="relative bg-white/60 backdrop-blur-xl border border-kyoto-gold/30 p-6 md:p-10 rounded-2xl shadow-lg text-center">
-                            <h2 className="text-text-primary font-sans text-lg md:text-2xl lg:text-3xl font-light leading-relaxed mb-4">
-                                This is not tourism.<br />
-                                <span className="font-semibold text-primary-red">It is guided international exposure.</span>
-                            </h2>
-                            <p className="text-text-secondary font-sans text-sm md:text-base max-w-xl mx-auto">
-                                Students observe how disciplined societies think, organise, and operate.
-                            </p>
-                        </div>
-                    </motion.div>
-
-                    {/* The 4 Pillars - Interactive Floating Badges */}
-                    <motion.div variants={fadeUp} className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-16 md:mb-20">
-                        {[
-                            { title: 'Confidence', desc: 'Composure in unfamiliar environments.' },
-                            { title: 'Global Perspective', desc: 'Exposure to structured global systems.' },
-                            { title: 'Cultural Awareness', desc: 'Understanding beyond textbooks.' },
-                            { title: 'Guided Independence', desc: 'Freedom within supervision.' }
-                        ].map((item, i) => (
-                            <motion.div
-                                key={i}
-                                whileHover={{ scale: 1.05, y: -5 }}
-                                className="group relative bg-white/80 backdrop-blur-md border border-border-soft p-5 md:p-6 rounded-xl hover:border-kyoto-gold/50 transition-all duration-300 text-center cursor-default shadow-md overflow-hidden"
-                            >
-                                <div className="absolute inset-0 bg-gradient-to-b from-kyoto-gold/0 to-kyoto-gold/0 group-hover:to-kyoto-gold/10 transition-colors duration-500"></div>
-                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-primary-red opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-b-full shadow-sm"></div>
-                                <h3 className="text-text-primary font-serif font-bold text-base md:text-xl mb-2 relative z-10">{item.title}</h3>
-                                <p className="text-text-secondary font-sans text-[11px] md:text-xs leading-relaxed relative z-10">{item.desc}</p>
-                            </motion.div>
-                        ))}
-                    </motion.div>
-
-                    {/* The Action Center - Countdown & CTA */}
-                    <motion.div variants={fadeUp} className="flex flex-col items-center pt-8 pb-4">
-                        <p className="text-kyoto-gold font-sans font-semibold text-[10px] md:text-xs uppercase tracking-[0.2em] mb-6 drop-shadow-sm">
-                            Parent Orientation Registration Closes In
-                        </p>
-
-                        {/* Glass Timer */}
-                        <div className="flex justify-center gap-4 sm:gap-6 md:gap-10 mb-10 text-center">
-                            {[
-                                { label: 'DAYS', value: timeLeft.days },
-                                { label: 'HOURS', value: timeLeft.hours },
-                                { label: 'MINUTES', value: timeLeft.minutes },
-                                { label: 'SECONDS', value: timeLeft.seconds }
-                            ].map((time, i) => (
-                                <div key={i} className="flex flex-col items-center">
-                                    <div className="bg-white/80 backdrop-blur-sm border border-border-soft w-16 h-16 md:w-24 md:h-24 flex items-center justify-center rounded-xl shadow-lg mb-3 relative overflow-hidden group">
-                                        <div className="absolute inset-0 bg-gradient-to-t from-primary-red/5 to-transparent"></div>
-                                        <span className="text-text-primary font-serif text-3xl md:text-5xl font-light tabular-nums relative z-10">
-                                            {time.value}
-                                        </span>
-                                    </div>
-                                    <span className="text-[9px] md:text-[11px] font-sans font-bold tracking-[0.2em] text-text-secondary">{time.label}</span>
-                                </div>
-                            ))}
-                        </div>
-
-                        {/* CTA Button */}
-                        <motion.a
-                            href="#register"
-                            whileHover={{ scale: 1.03 }}
-                            whileTap={{ scale: 0.97 }}
-                            className="relative inline-flex items-center justify-center bg-primary-red hover:bg-deep-indigo text-white px-10 md:px-14 py-4 md:py-5 rounded-sm overflow-hidden group shadow-md hover:shadow-lg transition-all"
+                    {[
+                        { title: 'Confidence', desc: 'Composure in unfamiliar environments.' },
+                        { title: 'Global Perspective', desc: 'Exposure to structured global systems.' },
+                        { title: 'Cultural Awareness', desc: 'Understanding beyond textbooks.' },
+                        { title: 'Guided Independence', desc: 'Freedom within supervision.' }
+                    ].map((item, i) => (
+                        <motion.div
+                            key={i}
+                            whileHover={{ scale: 1.04, y: -4 }}
+                            transition={{ duration: 0.25 }}
+                            className="group relative bg-white border border-kyoto-gold/25 p-5 md:p-6 hover:border-kyoto-gold/60 transition-colors duration-300 text-center cursor-default shadow-sm overflow-hidden"
                         >
-                            <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-full group-hover:h-56 opacity-10"></span>
-                            <span className="relative font-sans text-xs md:text-sm font-bold tracking-[0.15em] uppercase">
-                                Attend the Parent Orientation
-                            </span>
-                        </motion.a>
-                    </motion.div>
+                            {/* Top accent line on hover */}
+                            <div className="absolute top-0 left-0 right-0 h-[2px] bg-kyoto-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                            <h3 className="text-text-primary font-serif font-semibold text-sm md:text-base mb-2">{item.title}</h3>
+                            <p className="text-text-secondary font-sans text-[10px] md:text-xs leading-relaxed">{item.desc}</p>
+                        </motion.div>
+                    ))}
                 </motion.div>
 
-                {/* School Logos MOVED to the bottom */}
+                {/* Countdown & CTA */}
                 <motion.div
-                    initial="hidden"
-                    animate="visible"
-                    variants={fadeUp}
-                    className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-14 mt-16 md:mt-24 pt-8 md:pt-12 border-t border-border-soft w-full max-w-4xl"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.55 }}
+                    className="flex flex-col items-center pb-6"
                 >
-                    <Image src="/images/TMC logo.png" alt="TMC Logo" width={300} height={150} className="object-contain h-14 sm:h-16 md:h-20 lg:h-24 w-auto opacity-80 hover:opacity-100 transition-opacity mix-blend-multiply" />
-                    <div className="hidden sm:block w-px h-10 md:h-16 bg-border-soft"></div>
-                    <Image src="/images/updated_dps_logo.png" alt="DPS Logo" width={300} height={150} className="object-contain h-14 sm:h-16 md:h-20 lg:h-24 w-auto opacity-80 hover:opacity-100 transition-opacity mix-blend-multiply" />
-                    <div className="hidden sm:block w-px h-10 md:h-16 bg-border-soft"></div>
-                    <Image src="/images/SOI Logo.jpg" alt="SOI Logo" width={300} height={150} className="object-contain h-14 sm:h-16 md:h-20 lg:h-24 w-auto opacity-80 hover:opacity-100 transition-opacity mix-blend-multiply" />
-                </motion.div>
+                    <p className="text-text-secondary font-sans font-semibold text-[10px] md:text-xs uppercase tracking-[0.25em] mb-6">
+                        Parent Orientation Registration Closes In
+                    </p>
 
-            </div>
-        </section>
+                    {/* Timer */}
+                    <div className="flex justify-center gap-6 sm:gap-10 md:gap-14 mb-10 text-center">
+                        {[
+                            { label: 'DAYS', value: timeLeft.days },
+                            { label: 'HOURS', value: timeLeft.hours },
+                            { label: 'MINUTES', value: timeLeft.minutes },
+                            { label: 'SECONDS', value: timeLeft.seconds }
+                        ].map((time, i) => (
+                            <div key={i} className="flex flex-col items-center">
+                                <span className="text-text-primary font-serif text-4xl md:text-6xl font-light tabular-nums">
+                                    {time.value}
+                                </span>
+                                <span className="text-[9px] md:text-[10px] font-sans font-bold tracking-[0.22em] text-text-secondary mt-2">
+                                    {time.label}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* CTA */}
+                    <motion.a
+                        href="#register"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        animate={{ scale: [1, 1.015, 1] }}
+                        transition={{
+                            scale: {
+                                duration: 2.5,
+                                repeat: Infinity,
+                                ease: "easeInOut"
+                            }
+                        }}
+                        className="relative inline-flex items-center justify-center bg-primary-red text-white px-12 md:px-16 py-4 md:py-5 overflow-hidden group shadow hover:shadow-md transition-shadow"
+                    >
+                        <span className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+                        <span className="relative font-sans text-xs md:text-sm font-bold tracking-[0.18em] uppercase">
+                            Attend the Parent Orientation
+                        </span>
+                    </motion.a>
+                </motion.div>
+            </PulseFitHero>
+        </div>
     );
 }

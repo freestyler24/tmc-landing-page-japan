@@ -109,7 +109,7 @@ export default function Brochure() {
                                     name="parent_name"
                                     required
                                     placeholder="Enter full name"
-                                    className="w-full bg-white border border-border-soft text-text-primary px-4 py-3 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red transition-colors"
+                                    className="w-full bg-white border border-border-soft text-text-primary px-4 py-3 transition-all duration-300 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red/50 focus:shadow-[0_0_15px_rgba(210,31,43,0.1)]"
                                 />
                             </div>
 
@@ -120,7 +120,7 @@ export default function Brochure() {
                                     name="phone_number"
                                     required
                                     placeholder="+91"
-                                    className="w-full bg-white border border-border-soft text-text-primary px-4 py-3 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red transition-colors"
+                                    className="w-full bg-white border border-border-soft text-text-primary px-4 py-3 transition-all duration-300 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red/50 focus:shadow-[0_0_15px_rgba(210,31,43,0.1)]"
                                 />
                             </div>
 
@@ -130,7 +130,7 @@ export default function Brochure() {
                                     name="school"
                                     required
                                     defaultValue=""
-                                    className="w-full bg-white border border-border-soft text-text-primary px-4 py-3 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red appearance-none transition-colors"
+                                    className="w-full bg-white border border-border-soft text-text-primary px-4 py-3 transition-all duration-300 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red/50 focus:shadow-[0_0_15px_rgba(210,31,43,0.1)] appearance-none"
                                 >
                                     <option value="" disabled>Select your school</option>
                                     <option value="dps">DPS</option>
@@ -146,7 +146,7 @@ export default function Brochure() {
                                     name="email"
                                     required
                                     placeholder="Enter email address"
-                                    className="w-full bg-white border border-border-soft text-text-primary px-4 py-3 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red transition-colors"
+                                    className="w-full bg-white border border-border-soft text-text-primary px-4 py-3 transition-all duration-300 focus:outline-none focus:border-primary-red focus:ring-1 focus:ring-primary-red/50 focus:shadow-[0_0_15px_rgba(210,31,43,0.1)]"
                                 />
                             </div>
                         </div>
@@ -156,9 +156,9 @@ export default function Brochure() {
                             whileTap={{ scale: 0.98 }}
                             type="submit"
                             disabled={isSubmitting}
-                            className="w-full bg-primary-red text-white hover:bg-deep-indigo px-6 py-4 font-semibold transition-colors mt-2 disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-wider text-sm shadow-md"
+                            className="w-full bg-primary-red text-white hover:bg-deep-indigo px-6 py-4 font-semibold transition-colors mt-2 disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-wider text-sm shadow-md group"
                         >
-                            {isSubmitting ? 'Processing...' : 'Download Programme Brochure'}
+                            {isSubmitting ? 'Processing...' : <>Download Programme Brochure <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">&rarr;</span></>}
                         </motion.button>
                     </form>
 

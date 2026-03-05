@@ -88,14 +88,24 @@ export default function Investment() {
                         <motion.div
                             variants={fadeUp}
                             key={inst.num}
-                            className="bg-rice-white text-text-primary rounded-sm shadow-md overflow-hidden border border-border-soft hover:shadow-lg hover:border-kyoto-gold/50 transition-all transform hover:-translate-y-1 duration-300"
+                            className={`bg-rice-white text-text-primary rounded-sm shadow-md overflow-hidden border transition-all duration-300 relative ${inst.num === 1
+                                    ? 'border-primary-red ring-2 ring-primary-red/10 shadow-xl lg:scale-105 z-10'
+                                    : 'border-border-soft hover:shadow-lg hover:border-kyoto-gold/50 transform hover:-translate-y-1'
+                                }`}
                         >
-                            {/* Red top accent bar */}
-                            <div className="h-1.5 bg-primary-red"></div>
+                            {inst.num === 1 && (
+                                <div className="absolute top-3 right-3 bg-primary-red/10 text-primary-red text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-wider">
+                                    Start Here
+                                </div>
+                            )}
+                            <div className={`h-1.5 ${inst.num === 1 ? 'bg-primary-red shadow-[0_0_10px_rgba(210,31,43,0.5)]' : 'bg-primary-red/60'}`}></div>
                             <div className="p-6">
                                 {/* Header */}
                                 <div className="flex items-center gap-3 mb-4">
-                                    <span className="w-9 h-9 rounded-full bg-primary-red/10 text-primary-red font-bold text-sm flex items-center justify-center border border-primary-red/20">
+                                    <span className={`w-9 h-9 rounded-full font-bold text-sm flex items-center justify-center border ${inst.num === 1
+                                            ? 'bg-primary-red text-white border-primary-red'
+                                            : 'bg-primary-red/10 text-primary-red border-primary-red/20'
+                                        }`}>
                                         {inst.num}
                                     </span>
                                     <div>

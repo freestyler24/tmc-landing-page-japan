@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef, useEffect } from 'react';
+import { motion, useScroll, useTransform, useInView, animate } from 'framer-motion';
 
 export default function TrustSafety() {
     const containerRef = useRef(null);
@@ -11,6 +11,24 @@ export default function TrustSafety() {
     });
 
     const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+
+    const countRef = useRef<HTMLDivElement>(null);
+    const isInView = useInView(countRef, { once: true, margin: "-50px" });
+
+    useEffect(() => {
+        if (isInView) {
+            const controls = animate(0, 20, {
+                duration: 2,
+                ease: "easeOut",
+                onUpdate: (latest) => {
+                    if (countRef.current) {
+                        countRef.current.textContent = `1:${Math.round(latest).toString().padStart(2, '0')}`;
+                    }
+                }
+            });
+            return controls.stop;
+        }
+    }, [isInView]);
 
     return (
         <section id="safety" ref={containerRef} className="bg-deep-indigo ma-spacing-mob ma-spacing-desk border-b border-white/10 relative overflow-hidden">
@@ -49,40 +67,60 @@ export default function TrustSafety() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="max-w-4xl mx-auto bg-white/5 border border-white/10 shadow-sm p-6 md:p-10 hover:border-white/20 transition-all rounded-sm"
                 >
-                    <h3 className="text-lg font-bold tracking-wider mb-6 text-primary-red uppercase text-center">Safety & Supervision Framework</h3>
-                    <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        variants={{
-                            visible: { transition: { staggerChildren: 0.05 } }
-                        }}
-                        className="grid sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4"
-                    >
-                        {[
-                            '1:20 teacher-to-student supervision ratio',
-                            'Trained tour directors',
-                            '4-star twin-sharing accommodation',
-                            'Return international airfare',
-                            'Visa processing',
-                            'English-speaking local guides',
-                            'Private transportation',
-                            'Travel insurance',
-                            'Maximum 45 students per batch'
-                        ].map((item, i) => (
-                            <motion.div
-                                variants={{
-                                    hidden: { opacity: 0, x: -10 },
-                                    visible: { opacity: 1, x: 0 }
-                                }}
-                                key={i}
-                                className="flex items-start gap-3 text-sm text-[rgba(255,255,255,0.92)] py-2 border-b border-white/10"
-                            >
-                                <span className="text-primary-red text-xs mt-1">■</span>
-                                {item}
-                            </motion.div>
-                        ))}
-                    </motion.div>
+                    <h3 className="text-lg font-bold tracking-wider mb-8 text-primary-red uppercase text-center border-b border-white/10 pb-4">Safety & Supervision Framework</h3>
+
+                    <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-center">
+                        {/* Massive 1:20 Callout */}
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.3 }}
+                            className="bg-primary-red/10 border border-primary-red/20 rounded-lg p-8 text-center md:w-1/3 flex-shrink-0"
+                        >
+                            <span className="block text-primary-red font-sans font-bold tracking-widest text-xs uppercase mb-2">Core Standard</span>
+                            <div ref={countRef} className="text-6xl md:text-7xl font-serif text-white mb-2 leading-none">
+                                1:00
+                            </div>
+                            <p className="text-white/80 text-sm leading-relaxed max-w-[200px] mx-auto">
+                                Teacher-to-student supervision ratio ensures personal attention and safety.
+                            </p>
+                        </motion.div>
+
+                        {/* Remaining List */}
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            variants={{
+                                visible: { transition: { staggerChildren: 0.05 } }
+                            }}
+                            className="grid sm:grid-cols-2 gap-x-8 gap-y-4 flex-1"
+                        >
+                            {[
+                                'Trained tour directors',
+                                '4-star twin-sharing accommodation',
+                                'Return international airfare',
+                                'Visa processing',
+                                'English-speaking local guides',
+                                'Private transportation',
+                                'Travel insurance',
+                                'Maximum 45 students per batch'
+                            ].map((item, i) => (
+                                <motion.div
+                                    variants={{
+                                        hidden: { opacity: 0, x: -10 },
+                                        visible: { opacity: 1, x: 0 }
+                                    }}
+                                    key={i}
+                                    className="flex items-start gap-3 text-sm text-[rgba(255,255,255,0.92)] py-2 border-b border-white/10"
+                                >
+                                    <span className="text-primary-red text-xs mt-1">■</span>
+                                    {item}
+                                </motion.div>
+                            ))}
+                        </motion.div>
+                    </div>
                 </motion.div>
 
                 <motion.div
