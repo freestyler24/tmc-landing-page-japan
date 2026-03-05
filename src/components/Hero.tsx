@@ -225,25 +225,26 @@ export default function Hero() {
                     </div>
 
                     {/* CTA */}
-                    <motion.a
-                        href="#register"
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
+                    <motion.div
                         animate={{ scale: [1, 1.015, 1] }}
                         transition={{
-                            scale: {
-                                duration: 2.5,
-                                repeat: Infinity,
-                                ease: "easeInOut"
-                            }
+                            duration: 2.5,
+                            repeat: Infinity,
+                            ease: "easeInOut"
                         }}
-                        className="relative inline-flex items-center justify-center bg-primary-red text-white px-12 md:px-16 py-4 md:py-5 overflow-hidden group shadow hover:shadow-md transition-shadow"
                     >
-                        <span className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-                        <span className="relative font-sans text-xs md:text-sm font-bold tracking-[0.18em] uppercase">
-                            Attend the Parent Orientation
-                        </span>
-                    </motion.a>
+                        <motion.a
+                            href="#register"
+                            whileHover={{ scale: 1.03 }}
+                            whileTap={{ scale: 0.97 }}
+                            className="relative inline-flex items-center justify-center bg-primary-red text-white px-12 md:px-16 py-4 md:py-5 overflow-hidden group shadow hover:shadow-md transition-shadow"
+                        >
+                            <span className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+                            <span className="relative font-sans text-xs md:text-sm font-bold tracking-[0.18em] uppercase">
+                                Attend the Parent Orientation
+                            </span>
+                        </motion.a>
+                    </motion.div>
                 </motion.div>
             </PulseFitHero>
         </div>
