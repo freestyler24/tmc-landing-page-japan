@@ -72,7 +72,7 @@ export default function ProblemOutcome() {
                         <h3 className="text-2xl font-serif text-text-primary mb-4">
                             What Students Gain
                         </h3>
-                        <p className="text-text-secondary mb-6">
+                        <p className="mb-6 font-serif text-base leading-relaxed text-kyoto-gold font-semibold italic">
                             Students do not simply see Japan. They observe systems. They experience discipline. They learn through immersion.
                         </p>
                         <ul className="space-y-4 text-sm text-text-primary font-medium">

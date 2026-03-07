@@ -26,8 +26,9 @@ export default function Logos() {
                         animate={{ y: [0, -8, 0] }}
                         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                         whileHover={{ scale: 1.05 }}
+                        className="flex items-center justify-center w-28 h-20 sm:w-32 sm:h-24 md:w-36 md:h-28"
                     >
-                        <Image src="/images/TMC logo.png" alt="TMC Logo" width={300} height={150} className="object-contain h-16 sm:h-20 md:h-24 lg:h-28 w-auto mix-blend-multiply transition-all duration-500" />
+                        <Image src="/images/TMC logo.png" alt="TMC Logo" width={144} height={112} quality={100} unoptimized className="object-contain w-full h-full mix-blend-multiply transition-all duration-500" />
                     </motion.div>
 
                     <div className="hidden md:block w-px h-12 md:h-20 bg-border-soft/50"></div>
@@ -36,8 +37,9 @@ export default function Logos() {
                         animate={{ y: [0, -8, 0] }}
                         transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.2 }}
                         whileHover={{ scale: 1.05 }}
+                        className="flex items-center justify-center w-28 h-20 sm:w-32 sm:h-24 md:w-36 md:h-28"
                     >
-                        <Image src="/images/updated_dps_logo.png" alt="DPS Logo" width={300} height={150} className="object-contain h-16 sm:h-20 md:h-24 lg:h-28 w-auto mix-blend-multiply transition-all duration-500" />
+                        <Image src="/images/updated_dps_logo.png" alt="DPS Logo" width={144} height={112} quality={100} unoptimized className="object-contain w-full h-full mix-blend-multiply transition-all duration-500" />
                     </motion.div>
 
                     <div className="hidden md:block w-px h-12 md:h-20 bg-border-soft/50"></div>
@@ -46,8 +48,9 @@ export default function Logos() {
                         animate={{ y: [0, -8, 0] }}
                         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
                         whileHover={{ scale: 1.05 }}
+                        className="flex items-center justify-center w-28 h-20 sm:w-32 sm:h-24 md:w-36 md:h-28"
                     >
-                        <Image src="/images/SOI Logo.jpg" alt="School of India Logo" width={300} height={150} className="object-contain h-16 sm:h-20 md:h-24 lg:h-28 w-auto mix-blend-multiply transition-all duration-500" />
+                        <Image src="/images/SOI Logo.jpg" alt="School of India Logo" width={144} height={112} quality={100} unoptimized className="object-contain w-full h-full mix-blend-multiply transition-all duration-500 scale-[1.4]" />
                     </motion.div>
                 </motion.div>
             </div>

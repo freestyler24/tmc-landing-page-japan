@@ -21,7 +21,7 @@ export default function FinalCTA() {
                     }}
                 >
                     <motion.h2 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }} className="text-4xl md:text-6xl font-serif text-white mb-8 md:mb-10 leading-tight">
-                        Understand the Structure <br className="hidden md:block" />Before You Decide.
+                        The Details That Matter
                     </motion.h2>
 
                     <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }} className="w-12 h-1 bg-white mx-auto mb-8" style={{ opacity: 0.5 }}></motion.div>

@@ -28,7 +28,7 @@ const cities = [
         theme: 'Observing Power',
         texts: [
             "Standing at Mt. Fuji's 5th Station, students experience quiet strength.",
-            "The Hakone Ropeway and Lake Ashi cruise teach something subtle: Profound experiences come from observing, not rushing."
+            "The Hakone Ropeway and Lake Ashi cruise teach something subtle. Profound experiences come from observing, not rushing."
         ],
         benefit: "Depth over distraction.",
         icon: () => (
@@ -179,7 +179,7 @@ export default function ProgrammeExperience() {
                             variants={fadeUp}
                             key={idx}
                             tabIndex={0}
-                            className="group [perspective:1200px] w-[260px] h-[340px] flex-shrink-0 cursor-pointer outline-none"
+                            className="group [perspective:1200px] w-[260px] h-[380px] flex-shrink-0 cursor-pointer outline-none"
                         >
                             {/* Floating wrapper */}
                             <motion.div
@@ -226,7 +226,7 @@ export default function ProgrammeExperience() {
                                         </div>
 
                                         {/* Body */}
-                                        <div className="flex-1 overflow-hidden space-y-2.5">
+                                        <div className="flex-1 overflow-y-auto space-y-2.5">
                                             {city.texts.map((text, i) => (
                                                 <p key={i} className="text-text-primary text-[12px] leading-relaxed border-l-2 border-border-soft pl-2.5">{text}</p>
                                             ))}

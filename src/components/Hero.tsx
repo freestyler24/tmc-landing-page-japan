@@ -10,10 +10,10 @@ export default function Hero() {
         visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
     };
 
-    const targetDate = new Date('2026-10-01T00:00:00').getTime();
+    const targetDate = new Date('2026-05-31T00:00:00').getTime();
 
     const [timeLeft, setTimeLeft] = useState(() => {
-        return { days: '234', hours: '14', minutes: '45', seconds: '00' };
+        return { days: '84', hours: '14', minutes: '45', seconds: '00' };
     });
 
     useEffect(() => {
@@ -22,7 +22,7 @@ export default function Hero() {
             const difference = targetDate - now;
             if (difference > 0) {
                 const updatedTime = {
-                    days: String(Math.floor(difference / (1000 * 60 * 60 * 24))).padStart(3, '0'),
+                    days: String(Math.floor(difference / (1000 * 60 * 60 * 24))),
                     hours: String(Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0'),
                     minutes: String(Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0'),
                     seconds: String(Math.floor((difference % (1000 * 60)) / 1000)).padStart(2, '0')
@@ -175,7 +175,7 @@ export default function Hero() {
                     className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5 mt-10 mb-10"
                 >
                     {[
-                        { title: 'Confidence', desc: 'Composure in unfamiliar environments.' },
+                        { title: 'Global Confidence', desc: 'Composure in unfamiliar environments.' },
                         { title: 'Global Perspective', desc: 'Exposure to structured global systems.' },
                         { title: 'Cultural Awareness', desc: 'Understanding beyond textbooks.' },
                         { title: 'Guided Independence', desc: 'Freedom within supervision.' }

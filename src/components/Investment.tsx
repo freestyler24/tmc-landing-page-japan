@@ -42,11 +42,11 @@ export default function Investment() {
                     </h2>
                     <div className="w-12 h-px bg-primary-red mx-auto mb-6 opacity-80"></div>
                     <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-                        The complete cost structure, inclusions, and installment details will be explained during the Parent Orientation session.
+                        The complete cost structure, inclusions, and instalment details will be explained during the parent orientation session.
                     </p>
                 </motion.div>
 
-                {/* Installment Cards */}
+                {/* Instalment Cards */}
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -59,7 +59,7 @@ export default function Investment() {
                     {[
                         {
                             num: 1,
-                            title: 'First Installment',
+                            title: 'First Instalment',
                             subtitle: 'Registration Fee',
                             amount: '₹9,999',
                             note: 'Non-refundable',
@@ -68,7 +68,7 @@ export default function Investment() {
                         },
                         {
                             num: 2,
-                            title: 'Second Installment',
+                            title: 'Second Instalment',
                             subtitle: 'Mid-term Payment',
                             amount: '₹1,20,000',
                             note: null,
@@ -77,7 +77,7 @@ export default function Investment() {
                         },
                         {
                             num: 3,
-                            title: 'Third Installment',
+                            title: 'Third Instalment',
                             subtitle: 'Final Payment',
                             amount: '₹1,60,000',
                             note: null,
@@ -89,8 +89,8 @@ export default function Investment() {
                             variants={fadeUp}
                             key={inst.num}
                             className={`bg-rice-white text-text-primary rounded-sm shadow-md overflow-hidden border transition-all duration-300 relative ${inst.num === 1
-                                    ? 'border-primary-red ring-2 ring-primary-red/10 shadow-xl lg:scale-105 z-10'
-                                    : 'border-border-soft hover:shadow-lg hover:border-kyoto-gold/50 transform hover:-translate-y-1'
+                                ? 'border-primary-red ring-2 ring-primary-red/10 shadow-xl lg:scale-105 z-10'
+                                : 'border-border-soft hover:shadow-lg hover:border-kyoto-gold/50 transform hover:-translate-y-1'
                                 }`}
                         >
                             {inst.num === 1 && (
@@ -103,8 +103,8 @@ export default function Investment() {
                                 {/* Header */}
                                 <div className="flex items-center gap-3 mb-4">
                                     <span className={`w-9 h-9 rounded-full font-bold text-sm flex items-center justify-center border ${inst.num === 1
-                                            ? 'bg-primary-red text-white border-primary-red'
-                                            : 'bg-primary-red/10 text-primary-red border-primary-red/20'
+                                        ? 'bg-primary-red text-white border-primary-red'
+                                        : 'bg-primary-red/10 text-primary-red border-primary-red/20'
                                         }`}>
                                         {inst.num}
                                     </span>

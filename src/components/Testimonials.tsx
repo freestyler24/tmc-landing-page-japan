@@ -118,7 +118,7 @@ export default function Testimonials() {
 
                     <div className="flex-1 space-y-3 relative z-10 w-full md:w-auto">
                         <h3 className="text-2xl md:text-3xl font-serif text-text-primary leading-tight">
-                            Growth Is Designed — Not Accidental.
+                            Growth Is Designed Not Accidental.
                         </h3>
                         <p className="text-text-secondary text-base max-w-2xl">
                             Join the Parent Orientation to see how supervision, structure, and exposure work together.

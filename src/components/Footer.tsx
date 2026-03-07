@@ -17,7 +17,7 @@ export default function Footer() {
                     <p className="text-kyoto-gold font-serif italic text-lg md:text-xl tracking-wide mb-8">
                         Where Precision Fuels Possibility
                     </p>
-                    <Image src="/images/TMC logo.png" alt="The Modern Classroom" width={150} height={60} className="object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                    <Image src="/images/TMC logo.png" alt="The Modern Classroom" width={120} height={60} quality={100} unoptimized className="object-contain max-w-[120px] opacity-80 hover:opacity-100 transition-opacity" />
                 </div>
 
                 {/* Contact Information */}

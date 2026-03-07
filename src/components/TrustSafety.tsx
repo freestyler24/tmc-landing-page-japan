@@ -52,14 +52,77 @@ export default function TrustSafety() {
                     className="text-center mb-12 md:mb-16"
                 >
                     <h2 className="text-3xl md:text-5xl font-serif text-white mb-4 md:mb-6">
-                        Structured for Safety. Designed for Growth.
+                        Engineered for Safety. Designed for Growth.
                     </h2>
                     <p className="text-base md:text-lg text-[rgba(255,255,255,0.92)] max-w-2xl mx-auto">
-                        Your child&apos;s well-being is non-negotiable.
+                        Your child&apos;s safety and well-being are non-negotiable. Every element has been designed with care.
                     </p>
                 </motion.div>
 
-                {/* Safety Framework Grid */}
+                {/* 4 Stat Cards */}
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-50px" }}
+                    variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.1 } } }}
+                    className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-10"
+                >
+                    {[
+                        {
+                            icon: (
+                                <svg className="w-8 h-8 text-primary-red mx-auto mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                </svg>
+                            ),
+                            title: '1:20 Teacher Ratio',
+                            desc: 'Trained Tour Directors with structured oversight'
+                        },
+                        {
+                            icon: (
+                                <svg className="w-8 h-8 text-primary-red mx-auto mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" />
+                                    <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                                    <line x1="12" y1="12" x2="12" y2="16" />
+                                    <line x1="10" y1="14" x2="14" y2="14" />
+                                </svg>
+                            ),
+                            title: '4-Star Hotels',
+                            desc: 'Twin sharing rooms ensuring comfort and safety'
+                        },
+                        {
+                            icon: (
+                                <svg className="w-8 h-8 text-primary-red mx-auto mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M3 11l19-9-9 19-2-8-8-2z" />
+                                </svg>
+                            ),
+                            title: 'All Meals Included',
+                            desc: 'Mix of Indian, Continental, and Japanese cuisine'
+                        },
+                        {
+                            icon: (
+                                <svg className="w-8 h-8 text-primary-red mx-auto mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                                    <line x1="12" y1="22.08" x2="12" y2="12" />
+                                </svg>
+                            ),
+                            title: 'International Flights',
+                            desc: 'Return airfare with leading carriers included'
+                        }
+                    ].map((card, i) => (
+                        <motion.div
+                            key={i}
+                            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+                            className="bg-white/5 border border-white/10 rounded-sm p-6 text-center hover:border-white/20 transition-all"
+                        >
+                            {card.icon}
+                            <h4 className="text-white font-serif font-semibold text-sm md:text-base mb-1">{card.title}</h4>
+                            <p className="text-white/60 text-xs leading-relaxed">{card.desc}</p>
+                        </motion.div>
+                    ))}
+                </motion.div>
+
+                {/* What's Included */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -67,60 +130,37 @@ export default function TrustSafety() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="max-w-4xl mx-auto bg-white/5 border border-white/10 shadow-sm p-6 md:p-10 hover:border-white/20 transition-all rounded-sm"
                 >
-                    <h3 className="text-lg font-bold tracking-wider mb-8 text-primary-red uppercase text-center border-b border-white/10 pb-4">Safety & Supervision Framework</h3>
-
-                    <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-center">
-                        {/* Massive 1:20 Callout */}
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: 0.3 }}
-                            className="bg-primary-red/10 border border-primary-red/20 rounded-lg p-8 text-center md:w-1/3 flex-shrink-0"
-                        >
-                            <span className="block text-primary-red font-sans font-bold tracking-widest text-xs uppercase mb-2">Core Standard</span>
-                            <div ref={countRef} className="text-6xl md:text-7xl font-serif text-white mb-2 leading-none">
-                                1:00
-                            </div>
-                            <p className="text-white/80 text-sm leading-relaxed max-w-[200px] mx-auto">
-                                Teacher-to-student supervision ratio ensures personal attention and safety.
-                            </p>
-                        </motion.div>
-
-                        {/* Remaining List */}
-                        <motion.div
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                            variants={{
-                                visible: { transition: { staggerChildren: 0.05 } }
-                            }}
-                            className="grid sm:grid-cols-2 gap-x-8 gap-y-4 flex-1"
-                        >
-                            {[
-                                'Trained tour directors',
-                                '4-star twin-sharing accommodation',
-                                'Return international airfare',
-                                'Visa processing',
-                                'English-speaking local guides',
-                                'Private transportation',
-                                'Travel insurance',
-                                'Maximum 45 students per batch'
-                            ].map((item, i) => (
-                                <motion.div
-                                    variants={{
-                                        hidden: { opacity: 0, x: -10 },
-                                        visible: { opacity: 1, x: 0 }
-                                    }}
-                                    key={i}
-                                    className="flex items-start gap-3 text-sm text-[rgba(255,255,255,0.92)] py-2 border-b border-white/10"
-                                >
-                                    <span className="text-primary-red text-xs mt-1">■</span>
-                                    {item}
-                                </motion.div>
-                            ))}
-                        </motion.div>
-                    </div>
+                    <h3 className="text-lg font-serif font-semibold text-white mb-6">What&apos;s Included</h3>
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={{ visible: { transition: { staggerChildren: 0.05 } } }}
+                        className="grid sm:grid-cols-2 gap-x-8 gap-y-3"
+                    >
+                        {[
+                            'Return international airfare & Japan tourist visa processing',
+                            '4-Star hotels with twin sharing rooms',
+                            'All meals: Continental breakfast + Indian/Japanese cuisine',
+                            'All entrance fees and guided tours',
+                            'Bullet train experience (Tokyo to Kyoto)',
+                            'Travel insurance & dedicated tour directors',
+                            'Private coach with regulated driving hours',
+                            'Luggage courier support (Tokyo to Osaka)'
+                        ].map((item, i) => (
+                            <motion.div
+                                variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}
+                                key={i}
+                                className="flex items-start gap-3 text-sm text-[rgba(255,255,255,0.85)] py-2 border-b border-white/10"
+                            >
+                                <svg className="w-4 h-4 text-primary-red mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                    <polyline points="22 4 12 14.01 9 11.01" />
+                                </svg>
+                                {item}
+                            </motion.div>
+                        ))}
+                    </motion.div>
                 </motion.div>
 
                 <motion.div
@@ -146,20 +186,25 @@ export default function TrustSafety() {
                     {/* Decorative accent */}
                     <div className="absolute top-0 left-0 w-2 h-full bg-primary-red"></div>
 
-                    <div className="flex-1 space-y-3 relative z-10 w-full md:w-auto">
-                        <h3 className="text-2xl md:text-3xl font-serif text-white leading-tight">
-                            Independence Within Structure Begins with Trust.
-                        </h3>
-                        <p className="text-white/80 text-base max-w-2xl">
-                            Join the Parent Orientation to review the complete safety and operational framework.
-                        </p>
+                    <div className="flex items-center gap-4 flex-1 relative z-10 w-full md:w-auto">
+                        <svg className="w-10 h-10 text-primary-red flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                        <div className="space-y-1">
+                            <h3 className="text-xl md:text-2xl font-serif text-white leading-tight">
+                                Your Child&apos;s Safety is Guaranteed
+                            </h3>
+                            <p className="text-white/70 text-sm">
+                                1:20 teacher ratio, 4-star hotels, comprehensive insurance. Every detail covered.
+                            </p>
+                        </div>
                     </div>
                     <div className="w-full md:w-auto flex-shrink-0 relative z-10">
                         <a
                             href="#register"
                             className="block w-full text-center bg-primary-red text-white px-8 py-4 rounded-sm font-semibold hover:bg-white hover:text-primary-red transition-all duration-300 group shadow-sm"
                         >
-                            Learn More at the Orientation
+                            Register for Orientation →
                         </a>
                     </div>
                 </motion.div>
