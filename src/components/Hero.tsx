@@ -253,9 +253,10 @@ export default function Hero() {
                             whileTap={{ scale: 0.97 }}
                             animate={{ scale: [1, 1.015, 1] }}
                             transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-                            className="inline-flex items-center justify-center bg-primary-red text-white py-[14px] px-[32px] rounded-[8px] font-sans font-semibold text-[14px] tracking-wide min-w-[280px] shadow-sm hover:shadow-md transition-shadow"
+                            className="relative inline-flex items-center justify-center bg-primary-red text-white py-[14px] px-[32px] rounded-[8px] font-sans font-semibold text-[14px] tracking-wide min-w-[280px] shadow-sm hover:shadow-lg transition-all hover:bg-deep-indigo cursor-pointer overflow-hidden group"
                         >
-                            Attend Parent Orientation
+                            <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-full group-hover:h-56 opacity-10"></span>
+                            <span className="relative">Attend Parent Orientation</span>
                         </motion.a>
                     </motion.div>
                 </div>
