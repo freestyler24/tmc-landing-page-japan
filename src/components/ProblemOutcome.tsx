@@ -90,8 +90,8 @@ export default function ProblemOutcome() {
                                     transition={{ duration: 0.4, delay: 0.4 + (i * 0.1) }}
                                     className="flex items-start gap-3"
                                 >
-                                    <span className="text-primary-red text-lg">■</span>
-                                    {item}
+                                    <span className="text-primary-red text-[15px] mt-[2px] flex-shrink-0 leading-none">■</span>
+                                    <span className="leading-snug">{item}</span>
                                 </motion.li>
                             ))}
                         </ul>
