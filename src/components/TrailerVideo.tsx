@@ -70,7 +70,7 @@ export default function TrailerVideo() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="w-full max-w-5xl mb-16 relative group"
+                    className="w-full max-w-6xl mb-16 relative group"
                 >
                     {/* Dark premium frame matching the flip cards */}
                     <div className="relative bg-rice-white p-2 md:p-3 shadow-md border border-border-soft rounded-sm">
@@ -89,8 +89,8 @@ export default function TrailerVideo() {
                             </Script>
                             <div dangerouslySetInnerHTML={{
                                 __html: `
-                            <style>wistia-player[media-id='zwq5w6rf4r']:not(:defined) {background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/zwq5w6rf4r/swatch'); display: block; filter: blur(5px); padding-top:50.0%; }</style>
-                            <wistia-player media-id="zwq5w6rf4r" aspect="2.0"></wistia-player>
+                            <style>wistia-player[media-id='zwq5w6rf4r']:not(:defined) {background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/zwq5w6rf4r/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style>
+                            <wistia-player media-id="zwq5w6rf4r" aspect="1.777"></wistia-player>
                             ` }} />
                         </div>
                     </div>
