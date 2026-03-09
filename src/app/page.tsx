@@ -1,6 +1,5 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import Logos from '@/components/Logos';
 import TrailerVideo from '@/components/TrailerVideo';
 import ProblemOutcome from '@/components/ProblemOutcome';
 import ProgrammeExperience from '@/components/ProgrammeExperience';
@@ -19,7 +18,6 @@ export default function Home() {
     <main className="min-h-screen bg-offwhite text-charcoal">
       <Header />
       <Hero />
-      <Logos />
       <TrailerVideo />
       <ProblemOutcome />
       <ProgrammeExperience />
