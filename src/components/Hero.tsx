@@ -188,7 +188,7 @@ export default function Hero() {
                         <div className="relative w-full aspect-[4/3] border-[2px] border-kyoto-gold rounded-[12px] overflow-hidden bg-rice-white shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
                             <Image src="/images/japan_hero.png" alt="Japan 2026 Educational Immersion Program" fill className="object-cover" priority />
                             <div className="absolute top-0 left-0 right-0 bg-white/90 backdrop-blur-sm px-5 py-4">
-                                <h2 className="font-serif text-[18px] font-bold text-primary-red leading-snug mb-2">
+                                <h2 className="font-serif text-[18px] font-bold text-primary-red leading-normal mb-2 pb-1">
                                     Japan 2026 Educational Immersion Program
                                 </h2>
                                 <p className="font-sans text-[13px] text-text-secondary mt-2">
@@ -276,7 +276,7 @@ export default function Hero() {
                         />
                         {/* Title overlay — white bg, red title, dark subtitle */}
                         <div className="absolute top-0 left-0 right-0 bg-white/90 backdrop-blur-sm px-6 py-5">
-                            <h2 className="font-serif text-[17px] md:text-[18px] font-bold text-primary-red leading-tight whitespace-nowrap overflow-hidden text-ellipsis mb-2">
+                            <h2 className="font-serif text-[17px] md:text-[18px] font-bold text-primary-red leading-normal whitespace-nowrap overflow-hidden text-ellipsis mb-2 pb-1">
                                 Japan 2026 Educational Immersion Program
                             </h2>
                             <p className="font-sans text-[13px] md:text-[14px] text-text-secondary mt-2 leading-snug">
