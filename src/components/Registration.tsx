@@ -356,7 +356,7 @@ export default function Registration() {
                                     <div className="bg-red-50 p-5 mt-6 border-l-4 border-primary-red">
                                         <p className="text-sm text-text-primary font-bold mb-1">Important Note:</p>
                                         <p className="text-sm text-text-secondary leading-relaxed">
-                                            If your child doesn't have a passport or it expires before May 2027, please apply immediately under the Tatkal scheme. Contact us at <a href="mailto:mail@themodernclassroom.in" className="text-primary-red font-medium hover:underline">mail@themodernclassroom.in</a> or <a href="tel:+919900786677" className="text-primary-red font-medium hover:underline">+91-9900786677</a> for assistance.
+                                            If your child doesn't have a passport or it expires before May 2027, please apply immediately under the Tatkal scheme. Contact us at <a href="mailto:mail@themodernclassroom.in" className="text-primary-red font-medium hover:underline">mail@themodernclassroom.in</a> or <a href="tel:+919900786677" className="text-primary-red font-medium hover:underline">9900786677</a> for assistance.
                                         </p>
                                     </div>
 

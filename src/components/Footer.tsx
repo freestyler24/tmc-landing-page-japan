@@ -37,7 +37,7 @@ export default function Footer() {
                     <div className="flex flex-col items-center">
                         <span className="text-[10px] text-white/50 font-bold uppercase tracking-[0.2em] mb-3">Direct Contact</span>
                         <div className="text-white/80 space-y-1 text-sm md:text-base">
-                            <p><a href="tel:+919900786677" className="hover:text-white hover:underline">+91-9900786677</a> <span className="opacity-30 mx-2">|</span> <a href="tel:+919886753632" className="hover:text-white hover:underline">9886753632</a></p>
+                            <p><a href="tel:+919900786677" className="hover:text-white hover:underline">9900786677</a> <span className="opacity-30 mx-2">|</span> <a href="tel:+919886753632" className="hover:text-white hover:underline">9886753632</a></p>
                             <p><a href="tel:+9108043712595" className="hover:text-white hover:underline">080 4371 2595</a></p>
                         </div>
                     </div>
