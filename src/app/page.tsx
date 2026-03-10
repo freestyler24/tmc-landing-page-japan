@@ -18,6 +18,16 @@ export const metadata = {
   title: "Japan 2026 Educational Immersion Program | The Modern Classroom",
   description:
     "A 9-day educational immersion in Japan for Grades 6–12. Cultural exposure, global perspective, and guided independence.",
+  keywords: [
+  "Japan educational immersion program",
+  "Japan educational tour for students",
+  "student cultural immersion Japan",
+  "Japan student exposure program",
+  "international exposure program for students",
+  "Japan study tour for school students",
+  "Japan cultural learning program",
+  "Japan education trip for grades 6-12",
+],
   alternates: {
     canonical: "https://japan.themodernclassroom.in",
   },
