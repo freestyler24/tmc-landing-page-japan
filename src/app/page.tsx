@@ -115,6 +115,17 @@ export default function Home() {
     }),
   }}
 />
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "The Modern Classroom",
+      url: "https://japan.themodernclassroom.in"
+    }),
+  }}
+/>
       <Header />
       <Hero />
       <TrailerVideo />
