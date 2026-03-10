@@ -28,7 +28,7 @@ export const metadata = {
     siteName: "The Modern Classroom",
     images: [
       {
-        url: "/images/japan_hero.png",
+        url: "https://japan.themodernclassroom.in/images/japan_hero.png",
         width: 1200,
         height: 630,
         alt: "Japan 2026 Educational Immersion Program",
