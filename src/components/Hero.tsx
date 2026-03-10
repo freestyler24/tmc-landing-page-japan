@@ -161,7 +161,7 @@ export default function Hero() {
                             October 2026 &nbsp;|&nbsp; Grades 6-12
                         </span>
                         <span className="inline-flex items-center bg-primary-red text-white font-sans font-semibold tracking-[0.04em] text-[12px] px-[12px] py-[5px] rounded-[6px] shadow-sm animate-pulse">
-                            Limited to 45 Students
+                            Limited to 45 Students per Batch
                         </span>
                     </motion.div>
 
