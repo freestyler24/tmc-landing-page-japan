@@ -57,7 +57,7 @@ export default function TrailerVideo() {
                     <div className="flex items-center justify-center gap-4 py-4">
                         <div className="h-px w-12 bg-border-soft"></div>
                         <p className="text-base md:text-lg text-kyoto-gold font-serif italic">
-                            "Notice the precision. The structure. The quiet discipline. <br className="hidden md:block" />This is not tourism. It is structured exposure."
+                            Notice the precision. The structure. The quiet discipline. <br className="hidden md:block" />This is not tourism. It is structured exposure.
                         </p>
                         <div className="h-px w-12 bg-border-soft"></div>
                     </div>
