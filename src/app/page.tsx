@@ -21,7 +21,7 @@ export const metadata = {
     canonical: "https://japan.themodernclassroom.in",
   },
   openGraph: {
-    title: "Japan 2026 Educational Immersion Program",
+    title: "Japan 2026 Educational Immersion Program | The Modern Classroom",
     description:
       "A structured international exposure program in Japan for Grades 6–12 students.",
     url: "https://japan.themodernclassroom.in",
@@ -37,6 +37,13 @@ export const metadata = {
     locale: "en_IN",
     type: "website",
   },
+  twitter: {
+  card: "summary_large_image",
+  title: "Japan 2026 Educational Immersion Program | The Modern Classroom",
+  description:
+    "A structured international exposure program in Japan for Grades 6–12 students.",
+  images: ["https://japan.themodernclassroom.in/images/japan_hero.png"],
+},
 };
 
 export default function Home() {
