@@ -89,7 +89,22 @@ export default function Home() {
     }),
   }}
 />
-
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "The Modern Classroom",
+      url: "https://themodernclassroom.in",
+      logo: "https://japan.themodernclassroom.in/images/tmc_logo.png",
+      sameAs: [
+        "https://www.linkedin.com/company/the-modern-classroom",
+        "https://www.instagram.com/themodernclassroom"
+      ]
+    }),
+  }}
+/>
       <Header />
       <Hero />
       <TrailerVideo />
