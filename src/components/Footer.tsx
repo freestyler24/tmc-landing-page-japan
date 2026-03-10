@@ -49,7 +49,7 @@ export default function Footer() {
                     <span className="hidden md:inline opacity-30">•</span>
                     <span>1:20 Supervision Framework</span>
                     <span className="hidden md:inline opacity-30">•</span>
-                    <span>October 2026 Cohort</span>
+                    <span>Japan 2026 Educational Immersion</span>
                 </div>
             </div>
         </footer>
