@@ -195,7 +195,7 @@ export default function TrustSafety() {
                                 Your Child&apos;s Safety is Guaranteed
                             </h3>
                             <p className="text-white/70 text-sm">
-                                1:20 teacher ratio, 4-star hotels, comprehensive insurance. Every detail covered.
+                                1:20 student-to-teacher ratio, 4-star hotels, comprehensive insurance. Every detail covered.
                             </p>
                         </div>
                     </div>

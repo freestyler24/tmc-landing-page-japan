@@ -9,7 +9,7 @@ const cities = [
         theme: 'Urban Precision',
         texts: [
             "Your child navigates one of the world's most complex cities with growing independence.",
-            "From Asakusa Sensoji Temple to Shibuya Crossing, from school exchanges to TeamLab's digital universe — Tokyo teaches adaptability in real time."
+            "From Asakusa Sensoji Temple to Shibuya Crossing, from school exchanges to TeamLab's digital universe, Tokyo teaches adaptability in real time."
         ],
         benefit: "Exposure to structured complexity builds composure.",
         icon: () => (

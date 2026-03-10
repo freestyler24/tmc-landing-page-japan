@@ -85,7 +85,7 @@ export default function Brochure() {
                         </p>
                         <div className="flex items-center justify-center gap-3 text-primary-red text-xs md:text-sm font-semibold uppercase tracking-widest">
                             <span className="hidden md:block w-16 h-px bg-primary-red opacity-50"></span>
-                            Select your school to receive the correct branded version
+                            Select your school to receive the respective version of the itinerary
                             <span className="hidden md:block w-16 h-px bg-primary-red opacity-50"></span>
                         </div>
                     </div>

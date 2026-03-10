@@ -114,7 +114,7 @@ export default function ProblemOutcome() {
                             See the Structure. Ask Your Questions. Decide with Confidence.
                         </h3>
                         <p className="text-text-secondary text-base max-w-2xl">
-                            The Parent Orientation walks you through itinerary, safety, supervision, and investment — clearly and transparently.
+                            The Parent Orientation walks you through the itinerary, safety protocols, supervision and investment, clearly and transparently.
                         </p>
                     </div>
                     <div className="w-full md:w-auto flex-shrink-0 relative z-10">
