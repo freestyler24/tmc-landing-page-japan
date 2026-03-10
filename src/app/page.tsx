@@ -85,7 +85,6 @@ export default function Home() {
         url: "https://japan.themodernclassroom.in",
         availability: "https://schema.org/LimitedAvailability",
         priceCurrency: "INR",
-        price: "0",
       },
     }),
   }}
