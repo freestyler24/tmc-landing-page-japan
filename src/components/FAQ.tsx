@@ -228,12 +228,13 @@ export default function FAQ() {
                         __html: JSON.stringify({
                             '@context': 'https://schema.org',
                             '@type': 'FAQPage',
+                            "name": "Japan 2026 Educational Immersion Program FAQs",
                             mainEntity: faqs.map(faq => ({
                                 '@type': 'Question',
                                 name: faq.question,
                                 acceptedAnswer: {
                                     '@type': 'Answer',
-                                    text: faq.answer,
+                                    text: faq.answer.replace(/<[^>]*>/g, ""),
                                 },
                             })),
                         }),
