@@ -14,6 +14,7 @@ import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 
 export const metadata = {
+  metadataBase: new URL("https://japan.themodernclassroom.in"),
   title: "Japan 2026 Educational Immersion Program | The Modern Classroom",
   description:
     "A 9-day educational immersion in Japan for Grades 6–12. Cultural exposure, global perspective, and guided independence.",
@@ -42,13 +43,54 @@ export const metadata = {
   title: "Japan 2026 Educational Immersion Program | The Modern Classroom",
   description:
     "A structured international exposure program in Japan for Grades 6–12 students.",
-  images: ["https://japan.themodernclassroom.in/images/japan_hero.png"],
+  images: ["https://japan.themodernclassroom.in/images/japan_og.png"],
 },
 };
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-offwhite text-charcoal">
+
+    <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Event",
+      name: "Japan 2026 Educational Immersion Program",
+      description:
+        "A 9-day educational immersion program in Japan for Grades 6–12 students focused on cultural exposure, discipline, and global perspective.",
+      startDate: "2026-10-01",
+      endDate: "2026-10-09",
+      eventStatus: "https://schema.org/EventScheduled",
+      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+      location: {
+        "@type": "Place",
+        name: "Japan",
+        address: {
+          "@type": "PostalAddress",
+          addressCountry: "JP",
+        },
+      },
+      image: [
+        "https://japan.themodernclassroom.in/images/japan_og.png"
+      ],
+      organizer: {
+        "@type": "Organization",
+        name: "The Modern Classroom",
+        url: "https://themodernclassroom.in",
+      },
+      offers: {
+        "@type": "Offer",
+        url: "https://japan.themodernclassroom.in",
+        availability: "https://schema.org/LimitedAvailability",
+        priceCurrency: "INR",
+        price: "0",
+      },
+    }),
+  }}
+/>
+
       <Header />
       <Hero />
       <TrailerVideo />
